@@ -1,6 +1,7 @@
 {
 	"name": "@bgunnarsson/react-primitives",
 	"version": "0.1.0",
+	"description": "Unstyled, accessible React component primitives built on Radix UI",
 	"type": "module",
 	"exports": {
 		".": {
@@ -9,6 +10,9 @@
 			"require": "./dist/index.cjs"
 		}
 	},
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"publishConfig": {
 		"access": "restricted"
 	},
@@ -16,6 +20,16 @@
 	"files": [
 		"dist"
 	],
+	"keywords": [
+		"react",
+		"components",
+		"primitives",
+		"radix-ui",
+		"accessible",
+		"unstyled",
+		"headless"
+	],
+	"license": "MIT",
 	"scripts": {
 		"build": "tsup",
 		"dev": "storybook dev -p 6006",
@@ -28,48 +42,47 @@
 		"react-dom": ">=18"
 	},
 	"dependencies": {
-		"@radix-ui/react-accordion": "latest",
-		"@radix-ui/react-alert-dialog": "^1.1.15",
-		"@radix-ui/react-aspect-ratio": "latest",
-		"@radix-ui/react-avatar": "latest",
-		"@radix-ui/react-checkbox": "latest",
-		"@radix-ui/react-collapsible": "latest",
-		"@radix-ui/react-context-menu": "^2.2.16",
-		"@radix-ui/react-dialog": "latest",
-		"@radix-ui/react-dropdown-menu": "latest",
-		"@radix-ui/react-hover-card": "^1.1.15",
-		"@radix-ui/react-popover": "latest",
-		"@radix-ui/react-progress": "latest",
-		"@radix-ui/react-radio-group": "latest",
-		"@radix-ui/react-scroll-area": "latest",
-		"@radix-ui/react-select": "latest",
-		"@radix-ui/react-separator": "latest",
-		"@radix-ui/react-slider": "latest",
-		"@radix-ui/react-slot": "latest",
-		"@radix-ui/react-switch": "latest",
-		"@radix-ui/react-tabs": "latest",
-		"@radix-ui/react-toggle": "latest",
-		"@radix-ui/react-toggle-group": "^1.1.11",
-		"@radix-ui/react-tooltip": "latest",
-		"cmdk": "^1.1.1",
-		"embla-carousel-react": "^8.6.0",
-		"react-day-picker": "^9.14.0",
-		"sonner": "^2.0.7",
-		"vaul": "^1.1.2",
-		"yet-another-react-lightbox": "^3.29.1"
+		"@radix-ui/react-accordion": "1.2.12",
+		"@radix-ui/react-alert-dialog": "1.1.15",
+		"@radix-ui/react-avatar": "1.1.11",
+		"@radix-ui/react-checkbox": "1.3.3",
+		"@radix-ui/react-collapsible": "1.1.12",
+		"@radix-ui/react-context-menu": "2.2.16",
+		"@radix-ui/react-dialog": "1.1.15",
+		"@radix-ui/react-dropdown-menu": "2.1.16",
+		"@radix-ui/react-hover-card": "1.1.15",
+		"@radix-ui/react-popover": "1.1.15",
+		"@radix-ui/react-progress": "1.1.8",
+		"@radix-ui/react-radio-group": "1.3.8",
+		"@radix-ui/react-scroll-area": "1.2.10",
+		"@radix-ui/react-select": "2.2.6",
+		"@radix-ui/react-separator": "1.1.8",
+		"@radix-ui/react-slider": "1.3.6",
+		"@radix-ui/react-slot": "1.2.3",
+		"@radix-ui/react-switch": "1.2.6",
+		"@radix-ui/react-tabs": "1.1.13",
+		"@radix-ui/react-toggle": "1.1.10",
+		"@radix-ui/react-toggle-group": "1.1.11",
+		"@radix-ui/react-tooltip": "1.2.8",
+		"cmdk": "1.1.1",
+		"embla-carousel-react": "8.6.0",
+		"react-day-picker": "9.14.0",
+		"sonner": "2.0.7",
+		"vaul": "1.1.2",
+		"yet-another-react-lightbox": "3.29.1"
 	},
 	"devDependencies": {
-		"@figma/code-connect": "latest",
-		"@storybook/addon-a11y": "^8",
-		"@storybook/addon-designs": "^8",
-		"@storybook/addon-essentials": "^8.6.14",
-		"@storybook/react": "^8.6.18",
-		"@storybook/react-vite": "^8",
-		"@types/react": "^18",
-		"@types/react-dom": "^18",
-		"storybook": "^8",
-		"tailwindcss": "^4",
-		"tsup": "latest",
-		"typescript": "latest"
+		"@figma/code-connect": "1.4.2",
+		"@storybook/addon-a11y": "8.6.18",
+		"@storybook/addon-designs": "8.2.1",
+		"@storybook/addon-essentials": "8.6.14",
+		"@storybook/react": "8.6.18",
+		"@storybook/react-vite": "8.6.18",
+		"@types/react": "18.3.28",
+		"@types/react-dom": "18.3.7",
+		"storybook": "8.6.18",
+		"tailwindcss": "4.2.2",
+		"tsup": "8.5.1",
+		"typescript": "5.9.3"
 	}
 }

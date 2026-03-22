@@ -1,6 +1,7 @@
 # @bgunnarsson/react-primitives
 
-An unstyled, accessible React component library for bgunnarsson projects. Built on [Radix UI](https://www.radix-ui.com/) primitives — components ship with zero CSS and are styled entirely via `className` in the consuming project.
+An unstyled, accessible React component library. Built on [Radix UI](https://www.radix-ui.com/) primitives — components ship with zero CSS and are styled entirely via `className` in the consuming project.
+
 
 ## Philosophy
 
