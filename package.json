@@ -1,6 +1,6 @@
 {
 	"name": "@bgunnarsson/react-primitives",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Unstyled, accessible React component primitives built on Radix UI",
 	"type": "module",
 	"exports": {
