@@ -965,6 +965,14 @@ var CodeBlock = ({ code, title, children, ...props }) => {
     /* @__PURE__ */ jsx55("pre", { "data-slot": "pre", children: /* @__PURE__ */ jsx55("code", { "data-slot": "code", children: children ?? code }) })
   ] });
 };
+
+// src/components/Header/Header.tsx
+import { jsx as jsx56 } from "react/jsx-runtime";
+var Header2 = (props) => /* @__PURE__ */ jsx56("header", { ...props });
+
+// src/components/Footer/Footer.tsx
+import { jsx as jsx57 } from "react/jsx-runtime";
+var Footer = (props) => /* @__PURE__ */ jsx57("footer", { ...props });
 export {
   Accordion,
   AccordionContent,
@@ -1066,12 +1074,14 @@ export {
   EmptyStateIcon,
   EmptyStateTitle,
   FileInput,
+  Footer,
   FormControl,
   FormField,
   FormLabel,
   FormMessage,
   Grid,
   GridItem,
+  Header2 as Header,
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,

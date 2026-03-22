@@ -331,3 +331,9 @@ export type { ContainerProps } from './components/Container'
 
 export { CodeBlock } from './components/CodeBlock'
 export type { CodeBlockProps } from './components/CodeBlock'
+
+export { Header } from './components/Header'
+export type { HeaderProps } from './components/Header'
+
+export { Footer } from './components/Footer'
+export type { FooterProps } from './components/Footer'
