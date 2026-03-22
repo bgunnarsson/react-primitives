@@ -325,3 +325,6 @@ export type { DatePickerProps } from './components/DatePicker'
 
 export { Grid, GridItem } from './components/Grid'
 export type { GridProps, GridItemProps } from './components/Grid'
+
+export { Container } from './components/Container'
+export type { ContainerProps } from './components/Container'

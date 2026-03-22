@@ -938,6 +938,10 @@ var DatePicker = ({
 import { jsx as jsx53 } from "react/jsx-runtime";
 var Grid = (props) => /* @__PURE__ */ jsx53("div", { ...props });
 var GridItem = (props) => /* @__PURE__ */ jsx53("div", { ...props });
+
+// src/components/Container/Container.tsx
+import { jsx as jsx54 } from "react/jsx-runtime";
+var Container = (props) => /* @__PURE__ */ jsx54("div", { ...props });
 export {
   Accordion,
   AccordionContent,
@@ -987,6 +991,7 @@ export {
   ComboboxItem,
   ComboboxList,
   ComboboxTrigger,
+  Container,
   ContextMenu,
   ContextMenuCheckboxItem,
   ContextMenuContent,

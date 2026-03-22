@@ -78,12 +78,13 @@ pnpm build-storybook  # Build static Storybook
 
 ## Component Reference
 
-55 components across layout, form, navigation, overlay, and media categories.
+56 components across layout, form, navigation, overlay, and media categories.
 
 ### Layout & Content
 
 | Component | Description |
 |---|---|
+| [Container](src/components/Container/Container.md) | Generic div wrapper accepting all HTML attributes |
 | [Card](src/components/Card/Card.md) | Flexible container for composing any card layout |
 | [EmptyState](src/components/EmptyState/EmptyState.md) | Zero-data placeholder with icon, title, description, and action |
 | [Grid](src/components/Grid/Grid.md) | CSS grid container and item wrapper |
@@ -149,7 +150,7 @@ pnpm build-storybook  # Build static Storybook
 | [HoverCard](src/components/HoverCard/HoverCard.md) | Hover-triggered preview popover |
 | [Popover](src/components/Popover/Popover.md) | Click-triggered floating panel |
 | [Sheet](src/components/Sheet/Sheet.md) | Sliding panel from any screen edge |
-| [Toast](src/components/Toast/Toast.md) | Toast notification system |
+| [Toaster](src/components/Toast/Toast.md) | Toast notification system |
 | [Tooltip](src/components/Tooltip/Tooltip.md) | Hover/focus tooltip |
 
 ### Disclosure & Interaction
