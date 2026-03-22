@@ -942,6 +942,29 @@ var GridItem = (props) => /* @__PURE__ */ jsx53("div", { ...props });
 // src/components/Container/Container.tsx
 import { jsx as jsx54 } from "react/jsx-runtime";
 var Container = (props) => /* @__PURE__ */ jsx54("div", { ...props });
+
+// src/components/CodeBlock/CodeBlock.tsx
+import { useState } from "react";
+import { jsx as jsx55, jsxs as jsxs15 } from "react/jsx-runtime";
+var CodeBlock = ({ code, title, children, ...props }) => {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = () => {
+    navigator.clipboard.writeText(code).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2e3);
+    });
+  };
+  return /* @__PURE__ */ jsxs15("div", { ...props, children: [
+    /* @__PURE__ */ jsxs15("div", { "data-slot": "header", children: [
+      title && /* @__PURE__ */ jsx55("span", { "data-slot": "title", children: title }),
+      /* @__PURE__ */ jsx55("button", { "data-slot": "copy", "data-copied": copied, onClick: handleCopy, type: "button", "aria-label": "Copy code", children: copied ? /* @__PURE__ */ jsx55("svg", { xmlns: "http://www.w3.org/2000/svg", width: "16", height: "16", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", children: /* @__PURE__ */ jsx55("polyline", { points: "20 6 9 17 4 12" }) }) : /* @__PURE__ */ jsxs15("svg", { xmlns: "http://www.w3.org/2000/svg", width: "16", height: "16", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", children: [
+        /* @__PURE__ */ jsx55("rect", { width: "14", height: "14", x: "8", y: "8", rx: "2", ry: "2" }),
+        /* @__PURE__ */ jsx55("path", { d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" })
+      ] }) })
+    ] }),
+    /* @__PURE__ */ jsx55("pre", { "data-slot": "pre", children: /* @__PURE__ */ jsx55("code", { "data-slot": "code", children: children ?? code }) })
+  ] });
+};
 export {
   Accordion,
   AccordionContent,
@@ -980,6 +1003,7 @@ export {
   Checkbox,
   CheckboxGroup,
   CheckboxGroupItem,
+  CodeBlock,
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,

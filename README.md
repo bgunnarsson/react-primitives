@@ -78,12 +78,13 @@ pnpm build-storybook  # Build static Storybook
 
 ## Component Reference
 
-56 components across layout, form, navigation, overlay, and media categories.
+57 components across layout, form, navigation, overlay, and media categories.
 
 ### Layout & Content
 
 | Component | Description |
 |---|---|
+| [CodeBlock](src/components/CodeBlock/CodeBlock.md) | Code display with title, copy button, and optional syntax highlighting |
 | [Container](src/components/Container/Container.md) | Generic div wrapper accepting all HTML attributes |
 | [Card](src/components/Card/Card.md) | Flexible container for composing any card layout |
 | [EmptyState](src/components/EmptyState/EmptyState.md) | Zero-data placeholder with icon, title, description, and action |

@@ -328,3 +328,6 @@ export type { GridProps, GridItemProps } from './components/Grid'
 
 export { Container } from './components/Container'
 export type { ContainerProps } from './components/Container'
+
+export { CodeBlock } from './components/CodeBlock'
+export type { CodeBlockProps } from './components/CodeBlock'
