@@ -1,10 +1,10 @@
-import React__default from 'react';
+import * as react_jsx_runtime from 'react/jsx-runtime';
 
 interface TimeValue {
     hours: number;
     minutes: number;
 }
-interface TimePickerProps extends Omit<React__default.HTMLAttributes<HTMLDivElement>, 'onChange' | 'defaultValue'> {
+interface TimePickerProps {
     value?: TimeValue;
     defaultValue?: TimeValue;
     onValueChange?: (value: TimeValue) => void;
@@ -12,10 +12,14 @@ interface TimePickerProps extends Omit<React__default.HTMLAttributes<HTMLDivElem
     hour12?: boolean;
     disabled?: boolean;
     name?: string;
-    inputClassName?: string;
-    inputStyle?: React__default.CSSProperties;
+    placeholder?: string;
     'aria-label'?: string;
+    triggerClassName?: string;
+    contentClassName?: string;
+    columnClassName?: string;
+    itemClassName?: string;
+    itemSelectedClassName?: string;
 }
-declare const TimePicker: React__default.ForwardRefExoticComponent<TimePickerProps & React__default.RefAttributes<HTMLDivElement>>;
+declare const TimePicker: ({ value: valueProp, defaultValue, onValueChange, step, hour12, disabled, name, placeholder, "aria-label": ariaLabel, triggerClassName, contentClassName, columnClassName, itemClassName, itemSelectedClassName, }: TimePickerProps) => react_jsx_runtime.JSX.Element;
 
 export { TimePicker, type TimePickerProps, type TimeValue };
