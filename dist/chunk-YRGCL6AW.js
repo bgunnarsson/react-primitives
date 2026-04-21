@@ -1,0 +1,39 @@
+// src/components/Menubar/Menubar.tsx
+import {
+  Root,
+  Menu,
+  Trigger,
+  Portal,
+  Content,
+  Item,
+  Group,
+  Label,
+  Separator,
+  CheckboxItem,
+  ItemIndicator,
+  RadioGroup,
+  RadioItem,
+  Sub,
+  SubTrigger,
+  SubContent
+} from "@radix-ui/react-menubar";
+
+export {
+  Root,
+  Menu,
+  Trigger,
+  Portal,
+  Content,
+  Item,
+  Group,
+  Label,
+  Separator,
+  CheckboxItem,
+  ItemIndicator,
+  RadioGroup,
+  RadioItem,
+  Sub,
+  SubTrigger,
+  SubContent
+};
+//# sourceMappingURL=chunk-YRGCL6AW.js.map
