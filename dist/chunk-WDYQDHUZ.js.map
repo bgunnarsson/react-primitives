@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/components/Badge/Badge.tsx"],"sourcesContent":["import React from 'react'\n\nexport interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {}\n\nexport const Badge = (props: BadgeProps) => (\n  <span {...props} />\n)\n"],"mappings":";AAKE;AADK,IAAM,QAAQ,CAAC,UACpB,oBAAC,UAAM,GAAG,OAAO;","names":[]}

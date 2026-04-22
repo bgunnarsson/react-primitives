@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/components/Footer/Footer.tsx"],"sourcesContent":["import React from 'react'\n\nexport interface FooterProps extends React.HTMLAttributes<HTMLElement> {}\n\nexport const Footer = (props: FooterProps) => (\n  <footer {...props} />\n)\n"],"mappings":";AAKE;AADK,IAAM,SAAS,CAAC,UACrB,oBAAC,YAAQ,GAAG,OAAO;","names":[]}

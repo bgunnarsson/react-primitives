@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/components/Container/Container.tsx"],"sourcesContent":["import React from 'react'\n\nexport interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {}\n\nexport const Container = (props: ContainerProps) => (\n  <div {...props} />\n)\n"],"mappings":";AAKE;AADK,IAAM,YAAY,CAAC,UACxB,oBAAC,SAAK,GAAG,OAAO;","names":[]}

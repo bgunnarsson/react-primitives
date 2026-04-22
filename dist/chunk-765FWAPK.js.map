@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/components/Header/Header.tsx"],"sourcesContent":["import React from 'react'\n\nexport interface HeaderProps extends React.HTMLAttributes<HTMLElement> {}\n\nexport const Header = (props: HeaderProps) => (\n  <header {...props} />\n)\n"],"mappings":";AAKE;AADK,IAAM,SAAS,CAAC,UACrB,oBAAC,YAAQ,GAAG,OAAO;","names":[]}
