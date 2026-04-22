@@ -1,6 +1,6 @@
 {
 	"name": "@bgunnarsson/react-primitives",
-	"version": "0.1.8",
+	"version": "0.1.9",
 	"description": "Unstyled, accessible React component primitives built on Radix UI",
 	"type": "module",
 	"exports": {
@@ -399,7 +399,7 @@
 	"module": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"publishConfig": {
-		"access": "restricted"
+		"access": "public"
 	},
 	"sideEffects": false,
 	"files": [
