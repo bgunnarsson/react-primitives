@@ -1,0 +1,1 @@
+export { Separator as ResizableHandle, SeparatorProps as ResizableHandleProps, Panel as ResizablePanel, Group as ResizablePanelGroup, GroupProps as ResizablePanelGroupProps, PanelProps as ResizablePanelProps } from 'react-resizable-panels';
