@@ -35,6 +35,8 @@ export { Carousel, CarouselApi, CarouselContent, CarouselContentProps, CarouselI
 export { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerHandle, DrawerOverlay, DrawerPortal, DrawerTitle, DrawerTrigger } from './Drawer.js';
 export { Icon, IconProps } from './Icon.js';
 export { Picture, PictureProps, PictureSource } from './Picture.js';
+export { DEFAULT_DENSITIES, Image, ImageFormat, ImageProps, ImageUrlBuilder, ImageUrlParams, buildImageUrl, buildSrcSet } from './Image.js';
+export { CropImage, CropImageCrop, CropImageProps } from './CropImage.js';
 export { ToggleGroup, ToggleGroupItem, ToggleGroupItemProps, ToggleGroupProps } from './ToggleGroup.js';
 export { FormControl, FormControlProps, FormField, FormFieldProps, FormLabel, FormLabelProps, FormMessage, FormMessageProps } from './Form.js';
 export { VideoPlayer, VideoPlayerProps } from './VideoPlayer.js';
@@ -75,6 +77,17 @@ export { TreeItem, TreeItemProps, TreeView, TreeViewProps } from './TreeView.js'
 export { Rating, RatingProps } from './Rating.js';
 export { ColorPicker, ColorPickerHsla, ColorPickerHslaProps, ColorPickerInput, ColorPickerInputProps, ColorPickerProps, ColorPickerRgba, ColorPickerRgbaProps, ColorPickerWithAlpha, ColorPickerWithAlphaProps } from './ColorPicker.js';
 export { TimePicker, TimePickerProps, TimeValue } from './TimePicker.js';
+export { Flex, FlexProps, Stack, StackProps } from './Stack.js';
+export { Box, BoxProps } from './Box.js';
+export { PasswordInput, PasswordInputProps } from './PasswordInput.js';
+export { SearchInput, SearchInputProps } from './SearchInput.js';
+export { Mention, MentionProps, MentionRenderProps } from './Mention.js';
+export { Editable, EditableControls, EditableControlsProps, EditableInput, EditableInputProps, EditablePreview, EditablePreviewProps, EditableProps, EditableTextarea, EditableTextareaProps } from './Editable.js';
+export { Timeline, TimelineConnector, TimelineConnectorProps, TimelineContent, TimelineContentProps, TimelineDescription, TimelineDescriptionProps, TimelineIndicator, TimelineIndicatorProps, TimelineItem, TimelineItemProps, TimelineProps, TimelineTime, TimelineTimeProps, TimelineTitle, TimelineTitleProps } from './Timeline.js';
+export { Mark, MarkProps } from './Mark.js';
+export { Status, StatusIndicator, StatusIndicatorProps, StatusLabel, StatusLabelProps, StatusProps } from './Status.js';
+export { Banner, BannerActions, BannerActionsProps, BannerClose, BannerCloseProps, BannerDescription, BannerDescriptionProps, BannerIcon, BannerIconProps, BannerProps, BannerTitle, BannerTitleProps } from './Banner.js';
+export { FocusScope, FocusScopeProps } from './FocusScope.js';
 export { REGEXP_ONLY_CHARS, REGEXP_ONLY_DIGITS, REGEXP_ONLY_DIGITS_AND_CHARS } from 'input-otp';
 export { Slide } from 'yet-another-react-lightbox';
 import 'react/jsx-runtime';

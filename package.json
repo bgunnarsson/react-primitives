@@ -189,6 +189,16 @@
 			"import": "./dist/Picture.js",
 			"require": "./dist/Picture.cjs"
 		},
+		"./components/Image": {
+			"types": "./dist/Image.d.ts",
+			"import": "./dist/Image.js",
+			"require": "./dist/Image.cjs"
+		},
+		"./components/CropImage": {
+			"types": "./dist/CropImage.d.ts",
+			"import": "./dist/CropImage.js",
+			"require": "./dist/CropImage.cjs"
+		},
 		"./components/Popover": {
 			"types": "./dist/Popover.d.ts",
 			"import": "./dist/Popover.js",
@@ -393,6 +403,61 @@
 			"types": "./dist/VisuallyHidden.d.ts",
 			"import": "./dist/VisuallyHidden.js",
 			"require": "./dist/VisuallyHidden.cjs"
+		},
+		"./components/Banner": {
+			"types": "./dist/Banner.d.ts",
+			"import": "./dist/Banner.js",
+			"require": "./dist/Banner.cjs"
+		},
+		"./components/Box": {
+			"types": "./dist/Box.d.ts",
+			"import": "./dist/Box.js",
+			"require": "./dist/Box.cjs"
+		},
+		"./components/Editable": {
+			"types": "./dist/Editable.d.ts",
+			"import": "./dist/Editable.js",
+			"require": "./dist/Editable.cjs"
+		},
+		"./components/FocusScope": {
+			"types": "./dist/FocusScope.d.ts",
+			"import": "./dist/FocusScope.js",
+			"require": "./dist/FocusScope.cjs"
+		},
+		"./components/Mark": {
+			"types": "./dist/Mark.d.ts",
+			"import": "./dist/Mark.js",
+			"require": "./dist/Mark.cjs"
+		},
+		"./components/Mention": {
+			"types": "./dist/Mention.d.ts",
+			"import": "./dist/Mention.js",
+			"require": "./dist/Mention.cjs"
+		},
+		"./components/PasswordInput": {
+			"types": "./dist/PasswordInput.d.ts",
+			"import": "./dist/PasswordInput.js",
+			"require": "./dist/PasswordInput.cjs"
+		},
+		"./components/SearchInput": {
+			"types": "./dist/SearchInput.d.ts",
+			"import": "./dist/SearchInput.js",
+			"require": "./dist/SearchInput.cjs"
+		},
+		"./components/Stack": {
+			"types": "./dist/Stack.d.ts",
+			"import": "./dist/Stack.js",
+			"require": "./dist/Stack.cjs"
+		},
+		"./components/Status": {
+			"types": "./dist/Status.d.ts",
+			"import": "./dist/Status.js",
+			"require": "./dist/Status.cjs"
+		},
+		"./components/Timeline": {
+			"types": "./dist/Timeline.d.ts",
+			"import": "./dist/Timeline.js",
+			"require": "./dist/Timeline.cjs"
 		}
 	},
 	"main": "./dist/index.cjs",

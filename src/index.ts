@@ -231,6 +231,12 @@ export type { IconProps } from './components/Icon'
 export { Picture } from './components/Picture'
 export type { PictureProps, PictureSource } from './components/Picture'
 
+export { Image, buildImageUrl, buildSrcSet, DEFAULT_DENSITIES } from './components/Image'
+export type { ImageProps, ImageFormat, ImageUrlParams, ImageUrlBuilder } from './components/Image'
+
+export { CropImage } from './components/CropImage'
+export type { CropImageProps, CropImageCrop } from './components/CropImage'
+
 export { ToggleGroup, ToggleGroupItem } from './components/ToggleGroup'
 export type { ToggleGroupProps, ToggleGroupItemProps } from './components/ToggleGroup'
 
@@ -495,3 +501,80 @@ export type {
 
 export { TimePicker } from './components/TimePicker'
 export type { TimePickerProps, TimeValue } from './components/TimePicker'
+
+export { Stack, Flex } from './components/Stack'
+export type { StackProps, FlexProps } from './components/Stack'
+
+export { Box } from './components/Box'
+export type { BoxProps } from './components/Box'
+
+export { PasswordInput } from './components/PasswordInput'
+export type { PasswordInputProps } from './components/PasswordInput'
+
+export { SearchInput } from './components/SearchInput'
+export type { SearchInputProps } from './components/SearchInput'
+
+export { Mention } from './components/Mention'
+export type { MentionProps, MentionRenderProps } from './components/Mention'
+
+export {
+  Editable,
+  EditablePreview,
+  EditableInput,
+  EditableTextarea,
+  EditableControls,
+} from './components/Editable'
+export type {
+  EditableProps,
+  EditablePreviewProps,
+  EditableInputProps,
+  EditableTextareaProps,
+  EditableControlsProps,
+} from './components/Editable'
+
+export {
+  Timeline,
+  TimelineItem,
+  TimelineIndicator,
+  TimelineConnector,
+  TimelineContent,
+  TimelineTitle,
+  TimelineDescription,
+  TimelineTime,
+} from './components/Timeline'
+export type {
+  TimelineProps,
+  TimelineItemProps,
+  TimelineIndicatorProps,
+  TimelineConnectorProps,
+  TimelineContentProps,
+  TimelineTitleProps,
+  TimelineDescriptionProps,
+  TimelineTimeProps,
+} from './components/Timeline'
+
+export { Mark } from './components/Mark'
+export type { MarkProps } from './components/Mark'
+
+export { Status, StatusIndicator, StatusLabel } from './components/Status'
+export type { StatusProps, StatusIndicatorProps, StatusLabelProps } from './components/Status'
+
+export {
+  Banner,
+  BannerIcon,
+  BannerTitle,
+  BannerDescription,
+  BannerActions,
+  BannerClose,
+} from './components/Banner'
+export type {
+  BannerProps,
+  BannerIconProps,
+  BannerTitleProps,
+  BannerDescriptionProps,
+  BannerActionsProps,
+  BannerCloseProps,
+} from './components/Banner'
+
+export { FocusScope } from './components/FocusScope'
+export type { FocusScopeProps } from './components/FocusScope'
