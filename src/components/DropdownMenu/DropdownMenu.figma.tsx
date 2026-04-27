@@ -1,4 +1,3 @@
-import React from 'react'
 import { figma } from '@figma/code-connect'
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from './DropdownMenu'
 
@@ -7,7 +6,7 @@ figma.connect(DropdownMenu, 'FIGMA_COMPONENT_URL', {
   example: () => (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button>Open</button>
+        <button type="button">Open</button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem>Item</DropdownMenuItem>

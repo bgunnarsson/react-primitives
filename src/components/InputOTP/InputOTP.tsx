@@ -23,7 +23,9 @@ export const InputOTPSlot = React.forwardRef<HTMLDivElement, InputOTPSlotProps>(
   ({ index, className, ...props }, ref) => {
     const context = React.useContext(OTPInputContext)
     const slot = context.slots[index]
-    if (!slot) return null
+    if (!slot) {
+      return null
+    }
     const { char, hasFakeCaret, isActive } = slot
     return (
       <div ref={ref} data-active={isActive ? '' : undefined} className={className} {...props}>
@@ -39,7 +41,7 @@ export interface InputOTPSeparatorProps extends React.HTMLAttributes<HTMLDivElem
 
 export const InputOTPSeparator = React.forwardRef<HTMLDivElement, InputOTPSeparatorProps>(
   ({ className, children = '-', ...props }, ref) => (
-    <div ref={ref} role="separator" className={className} {...props}>
+    <div ref={ref} aria-hidden="true" className={className} {...props}>
       {children}
     </div>
   )

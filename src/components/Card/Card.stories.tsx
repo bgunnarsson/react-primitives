@@ -1,4 +1,4 @@
-import React from 'react'
+import type React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Card, CardContent } from './Card'
 
@@ -107,6 +107,7 @@ export const ProductCard: Story = {
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 8 }}>
           <span style={{ fontSize: 18, fontWeight: 700, color: '#111827' }}>$129</span>
           <button
+            type="button"
             style={{
               padding: '7px 14px',
               borderRadius: 8,

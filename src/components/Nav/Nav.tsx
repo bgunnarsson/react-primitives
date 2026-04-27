@@ -1,4 +1,4 @@
-import React from 'react'
+import type React from 'react'
 
 export interface NavProps extends React.HTMLAttributes<HTMLElement> {}
 export const Nav = ({ className, ...props }: NavProps) => <nav className={className} {...props} />

@@ -1,4 +1,4 @@
-import React from 'react'
+import type React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Tooltip, TooltipTrigger, TooltipContent } from './Tooltip'
 
@@ -36,7 +36,9 @@ export const Default: Story = {
   render: () => (
     <Tooltip>
       <TooltipTrigger asChild>
-        <button style={btnStyle}>Hover me</button>
+        <button type="button" style={btnStyle}>
+          Hover me
+        </button>
       </TooltipTrigger>
       <TooltipContent style={tooltipContentStyle}>Tooltip text</TooltipContent>
     </Tooltip>
@@ -49,7 +51,9 @@ export const Sides: Story = {
       {(['top', 'right', 'bottom', 'left'] as const).map((side) => (
         <Tooltip key={side}>
           <TooltipTrigger asChild>
-            <button style={btnStyle}>{side}</button>
+            <button type="button" style={btnStyle}>
+              {side}
+            </button>
           </TooltipTrigger>
           <TooltipContent side={side} style={tooltipContentStyle}>
             Appears on the {side}
@@ -64,7 +68,9 @@ export const Instant: Story = {
   render: () => (
     <Tooltip delayDuration={0}>
       <TooltipTrigger asChild>
-        <button style={btnStyle}>No delay</button>
+        <button type="button" style={btnStyle}>
+          No delay
+        </button>
       </TooltipTrigger>
       <TooltipContent style={tooltipContentStyle}>Appears instantly</TooltipContent>
     </Tooltip>
@@ -76,7 +82,11 @@ export const OnDisabledButton: Story = {
     <Tooltip>
       <TooltipTrigger asChild>
         <span style={{ display: 'inline-block' }}>
-          <button disabled style={{ ...btnStyle, opacity: 0.5, cursor: 'not-allowed', pointerEvents: 'none' }}>
+          <button
+            type="button"
+            disabled
+            style={{ ...btnStyle, opacity: 0.5, cursor: 'not-allowed', pointerEvents: 'none' }}
+          >
             Publish
           </button>
         </span>
@@ -97,6 +107,7 @@ export const IconButton: Story = {
         <Tooltip key={label}>
           <TooltipTrigger asChild>
             <button
+              type="button"
               style={{
                 width: 34,
                 height: 34,

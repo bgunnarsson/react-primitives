@@ -44,12 +44,14 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
   ) => {
     const [uncontrolled, setUncontrolled] = React.useState(defaultValue ?? '')
     const controlled = valueProp !== undefined
-    const value = controlled ? valueProp! : uncontrolled
+    const value = controlled ? (valueProp as string) : uncontrolled
     const innerRef = React.useRef<HTMLInputElement>(null)
-    React.useImperativeHandle(ref, () => innerRef.current!, [])
+    React.useImperativeHandle(ref, () => innerRef.current as HTMLInputElement, [])
 
     const setValue = (next: string) => {
-      if (!controlled) setUncontrolled(next)
+      if (!controlled) {
+        setUncontrolled(next)
+      }
       onValueChange?.(next)
     }
 
@@ -71,7 +73,6 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
         <input
           ref={innerRef}
           type="search"
-          role="searchbox"
           value={value}
           onChange={(e) => setValue(e.target.value)}
           disabled={disabled}

@@ -13,7 +13,9 @@ const CheckboxGroupContext = React.createContext<CheckboxGroupContextValue | nul
 
 function useCheckboxGroup() {
   const ctx = React.useContext(CheckboxGroupContext)
-  if (!ctx) throw new Error('CheckboxGroupItem must be used within CheckboxGroup')
+  if (!ctx) {
+    throw new Error('CheckboxGroupItem must be used within CheckboxGroup')
+  }
   return ctx
 }
 
@@ -26,6 +28,7 @@ export interface CheckboxGroupProps extends React.HTMLAttributes<HTMLDivElement>
 
 export const CheckboxGroup = ({ name, value, onValueChange, disabled, children, ...props }: CheckboxGroupProps) => (
   <CheckboxGroupContext.Provider value={{ name, value, onValueChange, disabled }}>
+    {/* biome-ignore lint/a11y/useSemanticElements: <fieldset> would force consumer styling; role="group" preserves headless flexibility */}
     <div role="group" {...props}>
       {children}
     </div>

@@ -1,4 +1,3 @@
-import React from 'react'
 import { figma } from '@figma/code-connect'
 import { Popover, PopoverTrigger, PopoverContent } from './Popover'
 
@@ -7,7 +6,7 @@ figma.connect(Popover, 'FIGMA_COMPONENT_URL', {
   example: () => (
     <Popover>
       <PopoverTrigger asChild>
-        <button>Open</button>
+        <button type="button">Open</button>
       </PopoverTrigger>
       <PopoverContent>
         <p>Popover content</p>

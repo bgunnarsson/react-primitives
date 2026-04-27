@@ -10,7 +10,9 @@ interface TreeContextValue {
 const TreeContext = React.createContext<TreeContextValue | null>(null)
 const useTreeContext = () => {
   const ctx = React.useContext(TreeContext)
-  if (!ctx) throw new Error('TreeView parts must be rendered inside <TreeView>')
+  if (!ctx) {
+    throw new Error('TreeView parts must be rendered inside <TreeView>')
+  }
   return ctx
 }
 
@@ -33,9 +35,14 @@ export const TreeView = React.forwardRef<HTMLUListElement, TreeViewProps>(
 
     const toggle = (id: string) => {
       const next = new Set(expanded)
-      if (next.has(id)) next.delete(id)
-      else next.add(id)
-      if (!controlled) setUncontrolled(next)
+      if (next.has(id)) {
+        next.delete(id)
+      } else {
+        next.add(id)
+      }
+      if (!controlled) {
+        setUncontrolled(next)
+      }
       onExpandedChange?.(Array.from(next))
     }
 
@@ -48,7 +55,7 @@ export const TreeView = React.forwardRef<HTMLUListElement, TreeViewProps>(
 
     return (
       <TreeContext.Provider value={value}>
-        <ul ref={ref} role="tree" {...props}>
+        <ul ref={ref} {...props}>
           {children}
         </ul>
       </TreeContext.Provider>
@@ -73,7 +80,9 @@ export const TreeItem = React.forwardRef<HTMLLIElement, TreeItemProps>(
     const isSelected = ctx.selected === id
 
     const onKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
-      if (disabled) return
+      if (disabled) {
+        return
+      }
       if (e.key === 'ArrowRight' && hasChildren && !isExpanded) {
         e.preventDefault()
         ctx.toggle(id)
@@ -82,12 +91,15 @@ export const TreeItem = React.forwardRef<HTMLLIElement, TreeItemProps>(
         ctx.toggle(id)
       } else if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault()
-        if (hasChildren) ctx.toggle(id)
+        if (hasChildren) {
+          ctx.toggle(id)
+        }
         ctx.onSelect?.(id)
       }
     }
 
     return (
+      // biome-ignore lint/a11y/useFocusableInteractive: focus lives on the inner label div per the WAI tree pattern; the <li> is structural
       <li
         ref={ref}
         role="treeitem"
@@ -98,6 +110,7 @@ export const TreeItem = React.forwardRef<HTMLLIElement, TreeItemProps>(
         style={style}
         {...props}
       >
+        {/* biome-ignore lint/a11y/useSemanticElements: <button> would render visible chrome and submit forms; the inner label is purely a click target */}
         <div
           role="button"
           tabIndex={disabled ? -1 : 0}
@@ -108,13 +121,18 @@ export const TreeItem = React.forwardRef<HTMLLIElement, TreeItemProps>(
           data-has-children={hasChildren ? '' : undefined}
           onKeyDown={onKeyDown}
           onClick={() => {
-            if (disabled) return
-            if (hasChildren) ctx.toggle(id)
+            if (disabled) {
+              return
+            }
+            if (hasChildren) {
+              ctx.toggle(id)
+            }
             ctx.onSelect?.(id)
           }}
         >
           {label}
         </div>
+        {/* biome-ignore lint/a11y/useSemanticElements: WAI tree pattern requires role="group" on the nested <ul> wrapping treeitems */}
         {hasChildren && isExpanded ? <ul role="group">{children}</ul> : null}
       </li>
     )

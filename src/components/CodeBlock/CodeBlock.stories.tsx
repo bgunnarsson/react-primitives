@@ -1,4 +1,4 @@
-import React from 'react'
+import type React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { CodeBlock } from './CodeBlock'
 
@@ -28,7 +28,7 @@ const headerStyle: React.CSSProperties = {
   fontSize: 13,
 }
 
-const preStyle: React.CSSProperties = {
+const _preStyle: React.CSSProperties = {
   margin: 0,
   padding: 24,
   overflowX: 'auto',
@@ -37,7 +37,7 @@ const preStyle: React.CSSProperties = {
   lineHeight: 1.7,
 }
 
-const buttonStyle: React.CSSProperties = {
+const _buttonStyle: React.CSSProperties = {
   background: 'none',
   border: 'none',
   cursor: 'pointer',

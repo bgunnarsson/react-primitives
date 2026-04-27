@@ -44,7 +44,9 @@ const applyMask = (raw: string, mask: string, maskChar?: string) => {
       }
     } else {
       masked += m
-      if (rawIndex > 0 && lastFilled === i - 1) lastFilled = i
+      if (rawIndex > 0 && lastFilled === i - 1) {
+        lastFilled = i
+      }
     }
   }
 
@@ -67,7 +69,9 @@ const extractRaw = (input: string, mask: string) => {
         j++
       }
     } else {
-      if (ch === m) i++
+      if (ch === m) {
+        i++
+      }
       j++
     }
   }
@@ -81,9 +85,9 @@ export const MaskedInput = React.forwardRef<HTMLInputElement, MaskedInputProps>(
   ) => {
     const controlled = valueProp !== undefined
     const [uncontrolled, setUncontrolled] = React.useState(defaultValue ?? '')
-    const raw = controlled ? valueProp! : uncontrolled
+    const raw = controlled ? (valueProp as string) : uncontrolled
     const innerRef = React.useRef<HTMLInputElement>(null)
-    React.useImperativeHandle(ref, () => innerRef.current!, [])
+    React.useImperativeHandle(ref, () => innerRef.current as HTMLInputElement, [])
     const pendingCaret = React.useRef<number | null>(null)
 
     React.useEffect(() => {
@@ -100,7 +104,9 @@ export const MaskedInput = React.forwardRef<HTMLInputElement, MaskedInputProps>(
       const nextRaw = extractRaw(e.target.value, mask)
       const next = applyMask(nextRaw, mask, maskChar)
       pendingCaret.current = next.caret
-      if (!controlled) setUncontrolled(nextRaw)
+      if (!controlled) {
+        setUncontrolled(nextRaw)
+      }
       onValueChange?.(nextRaw, next.masked)
     }
 

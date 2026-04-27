@@ -1,4 +1,4 @@
-import React from 'react'
+import type React from 'react'
 
 export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'

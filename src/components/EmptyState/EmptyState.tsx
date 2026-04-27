@@ -1,4 +1,4 @@
-import React from 'react'
+import type React from 'react'
 
 export interface EmptyStateProps extends React.HTMLAttributes<HTMLDivElement> {}
 export const EmptyState = (props: EmptyStateProps) => <div {...props} />

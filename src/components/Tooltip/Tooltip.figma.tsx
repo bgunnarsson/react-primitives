@@ -8,7 +8,7 @@ figma.connect(Tooltip, 'FIGMA_COMPONENT_URL', {
   example: ({ content }) => (
     <Tooltip>
       <TooltipTrigger asChild>
-        <button>Trigger</button>
+        <button type="button">Trigger</button>
       </TooltipTrigger>
       <TooltipContent>{content}</TooltipContent>
     </Tooltip>

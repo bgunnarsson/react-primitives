@@ -38,7 +38,9 @@ export const PasswordInput = React.forwardRef<HTMLInputElement, PasswordInputPro
     const visible = controlled ? !!visibleProp : uncontrolled
 
     const setVisible = (v: boolean) => {
-      if (!controlled) setUncontrolled(v)
+      if (!controlled) {
+        setUncontrolled(v)
+      }
       onVisibilityChange?.(v)
     }
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import type React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Popover, PopoverTrigger, PopoverContent } from './Popover'
 
@@ -25,7 +25,10 @@ export const Default: Story = {
   render: () => (
     <Popover>
       <PopoverTrigger asChild>
-        <button style={{ padding: '6px 12px', borderRadius: 6, border: '1px solid #e5e7eb', cursor: 'pointer' }}>
+        <button
+          type="button"
+          style={{ padding: '6px 12px', borderRadius: 6, border: '1px solid #e5e7eb', cursor: 'pointer' }}
+        >
           Open popover
         </button>
       </PopoverTrigger>

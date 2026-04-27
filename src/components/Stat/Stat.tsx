@@ -1,4 +1,4 @@
-import React from 'react'
+import type React from 'react'
 
 export interface StatProps extends React.HTMLAttributes<HTMLDivElement> {}
 export const Stat = (props: StatProps) => <div {...props} />

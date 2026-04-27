@@ -26,7 +26,9 @@ export interface TimePickerProps {
 const pad = (n: number) => String(n).padStart(2, '0')
 
 const formatDisplay = (value: TimeValue | undefined, hour12: boolean, placeholder: string) => {
-  if (!value) return placeholder
+  if (!value) {
+    return placeholder
+  }
   if (hour12) {
     const suffix = value.hours >= 12 ? 'PM' : 'AM'
     const h12 = value.hours % 12 === 0 ? 12 : value.hours % 12
@@ -41,7 +43,9 @@ const toHour12 = (h24: number) => ({
 })
 
 const fromHour12 = (hour: number, period: 'AM' | 'PM') => {
-  if (period === 'AM') return hour === 12 ? 0 : hour
+  if (period === 'AM') {
+    return hour === 12 ? 0 : hour
+  }
   return hour === 12 ? 12 : hour + 12
 }
 
@@ -69,7 +73,9 @@ export const TimePicker = ({
   const h12 = toHour12(current.hours)
 
   const commit = (next: TimeValue) => {
-    if (!controlled) setUncontrolled(next)
+    if (!controlled) {
+      setUncontrolled(next)
+    }
     onValueChange?.(next)
   }
 
@@ -82,7 +88,9 @@ export const TimePicker = ({
   const periodRef = React.useRef<HTMLDivElement>(null)
 
   React.useEffect(() => {
-    if (!open) return
+    if (!open) {
+      return
+    }
     const id = requestAnimationFrame(() => {
       for (const ref of [hoursRef, minutesRef, periodRef]) {
         const el = ref.current?.querySelector<HTMLElement>('[data-selected="true"]')
@@ -100,8 +108,11 @@ export const TimePicker = ({
   }
 
   const selectHour = (h: number) => {
-    if (hour12) commit({ hours: fromHour12(h, h12.period), minutes: current.minutes })
-    else commit({ hours: h, minutes: current.minutes })
+    if (hour12) {
+      commit({ hours: fromHour12(h, h12.period), minutes: current.minutes })
+    } else {
+      commit({ hours: h, minutes: current.minutes })
+    }
   }
   const selectMinute = (m: number) => commit({ hours: current.hours, minutes: m })
   const selectPeriod = (p: 'AM' | 'PM') => commit({ hours: fromHour12(h12.hour, p), minutes: current.minutes })

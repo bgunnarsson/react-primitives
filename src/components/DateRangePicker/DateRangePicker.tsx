@@ -32,9 +32,13 @@ const DEFAULT_START_MONTH = new Date(now.getFullYear() - 100, 0)
 const DEFAULT_END_MONTH = new Date(now.getFullYear() + 10, 11)
 
 const defaultFormat = (range: DateRange | undefined, placeholder: string) => {
-  if (!range?.from) return placeholder
+  if (!range?.from) {
+    return placeholder
+  }
   const fmt = (d: Date) => d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })
-  if (!range.to) return fmt(range.from)
+  if (!range.to) {
+    return fmt(range.from)
+  }
   return `${fmt(range.from)} – ${fmt(range.to)}`
 }
 
@@ -57,7 +61,9 @@ export const DateRangePicker = ({
   const clickCount = React.useRef(0)
 
   const handleOpenChange = (next: boolean) => {
-    if (next) clickCount.current = 0
+    if (next) {
+      clickCount.current = 0
+    }
     setOpen(next)
   }
 

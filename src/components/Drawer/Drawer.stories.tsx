@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import type React from 'react'
+import { useState } from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import {
   Drawer,
@@ -45,7 +46,7 @@ export const Default: Story = {
     const [open, setOpen] = useState(false)
     return (
       <>
-        <button style={triggerStyle} onClick={() => setOpen(true)}>
+        <button type="button" style={triggerStyle} onClick={() => setOpen(true)}>
           Open drawer
         </button>
         <Drawer open={open} onOpenChange={setOpen}>

@@ -13,6 +13,7 @@ export const Status = React.forwardRef<HTMLSpanElement, StatusProps>(
     const visualLabel = label ?? (typeof value === 'string' ? value : undefined)
     const hasChildren = React.Children.count(children) > 0
     return (
+      // biome-ignore lint/a11y/useSemanticElements: <output> is form-associated; this is a presence/availability badge that can sit in any layout
       <span
         ref={ref}
         role="status"

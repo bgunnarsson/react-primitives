@@ -1,4 +1,3 @@
-import React from 'react'
 import { figma } from '@figma/code-connect'
 import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription, DialogClose } from './Dialog'
 

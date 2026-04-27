@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import type React from 'react'
+import { useState } from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import {
   DropdownMenu,
@@ -133,7 +134,8 @@ const StoryFrame = ({ children }: { children: React.ReactNode }) => (
 
 const CheckIndicator = () => (
   <span className="sb-dd-indicator" aria-hidden>
-    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+      <title>Check</title>
       <path
         d="M2.5 6.5L5 9l4.5-5.5"
         stroke="currentColor"
@@ -147,7 +149,8 @@ const CheckIndicator = () => (
 
 const DotIndicator = () => (
   <span className="sb-dd-indicator" aria-hidden>
-    <svg width="6" height="6" viewBox="0 0 6 6">
+    <svg width="6" height="6" viewBox="0 0 6 6" aria-hidden="true">
+      <title>Dot</title>
       <circle cx="3" cy="3" r="3" fill="currentColor" />
     </svg>
   </span>

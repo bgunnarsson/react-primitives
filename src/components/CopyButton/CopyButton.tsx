@@ -39,7 +39,9 @@ const writeToClipboard = async (value: string) => {
   ta.select()
   const ok = document.execCommand('copy')
   document.body.removeChild(ta)
-  if (!ok) throw new Error('Failed to copy')
+  if (!ok) {
+    throw new Error('Failed to copy')
+  }
 }
 
 export const CopyButton = React.forwardRef<HTMLButtonElement, CopyButtonProps>(
@@ -64,7 +66,9 @@ export const CopyButton = React.forwardRef<HTMLButtonElement, CopyButtonProps>(
 
     React.useEffect(
       () => () => {
-        if (timer.current) clearTimeout(timer.current)
+        if (timer.current) {
+          clearTimeout(timer.current)
+        }
       },
       []
     )
@@ -76,7 +80,9 @@ export const CopyButton = React.forwardRef<HTMLButtonElement, CopyButtonProps>(
         setError(null)
         setCopied(true)
         onCopy?.(v)
-        if (timer.current) clearTimeout(timer.current)
+        if (timer.current) {
+          clearTimeout(timer.current)
+        }
         timer.current = setTimeout(() => setCopied(false), resetMs)
       } catch (e) {
         const err = e instanceof Error ? e : new Error(String(e))
@@ -88,7 +94,9 @@ export const CopyButton = React.forwardRef<HTMLButtonElement, CopyButtonProps>(
 
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
       onClick?.(e)
-      if (e.defaultPrevented) return
+      if (e.defaultPrevented) {
+        return
+      }
       void copy()
     }
 

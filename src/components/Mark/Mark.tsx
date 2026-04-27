@@ -31,7 +31,9 @@ export const Mark = React.forwardRef<HTMLElement, MarkProps>(
             const isMatch = pattern.test(part)
             pattern.lastIndex = 0
             if (isMatch) {
-              if (highlight) return <React.Fragment key={i}>{highlight(part, i)}</React.Fragment>
+              if (highlight) {
+                return <React.Fragment key={i}>{highlight(part, i)}</React.Fragment>
+              }
               return <mark key={i}>{part}</mark>
             }
             return <React.Fragment key={i}>{part}</React.Fragment>

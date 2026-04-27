@@ -58,7 +58,7 @@ export const Default: Story = {
     return (
       <>
         <style>{styles}</style>
-        <button className="sb-lightbox-trigger" onClick={() => setOpen(true)}>
+        <button type="button" className="sb-lightbox-trigger" onClick={() => setOpen(true)}>
           Open lightbox
         </button>
         {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
@@ -76,7 +76,14 @@ export const FromThumbnails: Story = {
         <style>{styles}</style>
         <div className="sb-lightbox-thumbs">
           {slides.map((s, i) => (
-            <img key={s.src} src={s.src} alt={s.alt} className="sb-lightbox-thumb" onClick={() => setIndex(i)} />
+            <button
+              key={s.src}
+              type="button"
+              onClick={() => setIndex(i)}
+              style={{ padding: 0, border: 'none', background: 'none', cursor: 'pointer' }}
+            >
+              <img src={s.src} alt={s.alt} className="sb-lightbox-thumb" />
+            </button>
           ))}
         </div>
         {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}

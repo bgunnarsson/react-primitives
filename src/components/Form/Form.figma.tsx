@@ -1,4 +1,3 @@
-import React from 'react'
 import { figma } from '@figma/code-connect'
 import { FormField, FormLabel, FormControl, FormMessage } from './Form'
 import { Input } from '../Input'

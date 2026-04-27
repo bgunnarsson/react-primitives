@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import type React from 'react'
+import { useState } from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Sheet, SheetContent, SheetTitle, SheetDescription, SheetClose } from './Sheet'
 
@@ -51,7 +52,7 @@ function StorySheet({ side }: { side: 'right' | 'left' | 'bottom' | 'top' }) {
   const [open, setOpen] = useState(false)
   return (
     <>
-      <button style={triggerStyle} onClick={() => setOpen(true)}>
+      <button type="button" style={triggerStyle} onClick={() => setOpen(true)}>
         Open ({side})
       </button>
       <Sheet open={open} onOpenChange={setOpen}>

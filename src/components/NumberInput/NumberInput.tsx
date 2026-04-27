@@ -12,14 +12,20 @@ export const NumberInput = React.forwardRef<HTMLInputElement, NumberInputProps>(
   ({ value, onChange, min, max, step = 1, disabled, className, ...props }, ref) => {
     const clamp = (n: number) => {
       let v = n
-      if (min !== undefined) v = Math.max(min, v)
-      if (max !== undefined) v = Math.min(max, v)
+      if (min !== undefined) {
+        v = Math.max(min, v)
+      }
+      if (max !== undefined) {
+        v = Math.min(max, v)
+      }
       return v
     }
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       const n = parseFloat(e.target.value)
-      if (!isNaN(n)) onChange?.(clamp(n))
+      if (!Number.isNaN(n)) {
+        onChange?.(clamp(n))
+      }
     }
 
     const increment = () => onChange?.(clamp((value ?? 0) + step))

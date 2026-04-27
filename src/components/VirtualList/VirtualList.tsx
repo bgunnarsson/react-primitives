@@ -35,7 +35,9 @@ const computeOffsets = (count: number, itemSize: number | ((i: number) => number
   }
   const offsets = new Array<number>(count + 1)
   offsets[0] = 0
-  for (let i = 0; i < count; i++) offsets[i + 1] = offsets[i] + itemSize(i)
+  for (let i = 0; i < count; i++) {
+    offsets[i + 1] = offsets[i] + itemSize(i)
+  }
   return { offsets, total: offsets[count], fixed: 0 }
 }
 
@@ -44,8 +46,11 @@ const findStartIndex = (offsets: number[], scroll: number) => {
   let hi = offsets.length - 1
   while (lo < hi) {
     const mid = (lo + hi) >>> 1
-    if (offsets[mid + 1] <= scroll) lo = mid + 1
-    else hi = mid
+    if (offsets[mid + 1] <= scroll) {
+      lo = mid + 1
+    } else {
+      hi = mid
+    }
   }
   return lo
 }
@@ -66,7 +71,7 @@ function VirtualListInner<T>(
   ref: React.Ref<HTMLDivElement>
 ) {
   const innerRef = React.useRef<HTMLDivElement>(null)
-  React.useImperativeHandle(ref, () => innerRef.current!, [])
+  React.useImperativeHandle(ref, () => innerRef.current as HTMLDivElement, [])
 
   const horizontal = orientation === 'horizontal'
   const [scroll, setScroll] = React.useState(0)
@@ -74,7 +79,9 @@ function VirtualListInner<T>(
 
   React.useEffect(() => {
     const el = innerRef.current
-    if (!el) return
+    if (!el) {
+      return
+    }
     const update = () => setViewport(horizontal ? el.clientWidth : el.clientHeight)
     update()
     const ro = new ResizeObserver(update)
@@ -88,15 +95,23 @@ function VirtualListInner<T>(
   )
 
   const startIndex = (() => {
-    if (items.length === 0) return 0
-    if (offsets) return Math.max(0, findStartIndex(offsets, scroll) - overscan)
+    if (items.length === 0) {
+      return 0
+    }
+    if (offsets) {
+      return Math.max(0, findStartIndex(offsets, scroll) - overscan)
+    }
     return Math.max(0, Math.floor(scroll / fixed) - overscan)
   })()
 
   const endIndex = (() => {
-    if (items.length === 0) return 0
+    if (items.length === 0) {
+      return 0
+    }
     const target = scroll + viewport
-    if (offsets) return Math.min(items.length, findStartIndex(offsets, target) + 1 + overscan)
+    if (offsets) {
+      return Math.min(items.length, findStartIndex(offsets, target) + 1 + overscan)
+    }
     return Math.min(items.length, Math.ceil(target / fixed) + overscan)
   })()
 

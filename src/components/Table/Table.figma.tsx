@@ -1,4 +1,3 @@
-import React from 'react'
 import { figma } from '@figma/code-connect'
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from './Table'
 

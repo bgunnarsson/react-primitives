@@ -1,4 +1,3 @@
-import React from 'react'
 import { figma } from '@figma/code-connect'
 import { Breadcrumbs, BreadcrumbsList, BreadcrumbsItem, BreadcrumbsLink, BreadcrumbsPage } from './Breadcrumb'
 

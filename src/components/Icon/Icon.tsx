@@ -1,4 +1,4 @@
-import React from 'react'
+import type React from 'react'
 
 export interface IconProps extends React.SVGAttributes<SVGElement> {
   /** Icon name — maps to `#name` in sprite or `/icons/name.svg` in external mode */
@@ -19,7 +19,7 @@ export const Icon = ({
   ...props
 }: IconProps) => {
   if (mode === 'external') {
-    return <img src={`/icons/${name}.svg`} aria-hidden="true" width={size} height={size} className={className} />
+    return <img src={`/icons/${name}.svg`} alt="" aria-hidden="true" width={size} height={size} className={className} />
   }
 
   return (

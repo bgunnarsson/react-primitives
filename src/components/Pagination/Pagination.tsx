@@ -1,4 +1,4 @@
-import React from 'react'
+import type React from 'react'
 
 export interface PaginationProps extends React.HTMLAttributes<HTMLElement> {}
 export const Pagination = (props: PaginationProps) => <nav aria-label="pagination" {...props} />
@@ -17,10 +17,16 @@ export const PaginationLink = ({ isActive, ...props }: PaginationLinkProps) => (
 )
 
 export interface PaginationPreviousProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {}
-export const PaginationPrevious = (props: PaginationPreviousProps) => <a aria-label="Go to previous page" {...props} />
+export const PaginationPrevious = (props: PaginationPreviousProps) => (
+  // biome-ignore lint/a11y/useAriaPropsSupportedByRole: consumer supplies href (link role) which supports aria-label
+  <a aria-label="Go to previous page" {...props} />
+)
 
 export interface PaginationNextProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {}
-export const PaginationNext = (props: PaginationNextProps) => <a aria-label="Go to next page" {...props} />
+export const PaginationNext = (props: PaginationNextProps) => (
+  // biome-ignore lint/a11y/useAriaPropsSupportedByRole: consumer supplies href (link role) which supports aria-label
+  <a aria-label="Go to next page" {...props} />
+)
 
 export interface PaginationEllipsisProps extends React.HTMLAttributes<HTMLSpanElement> {}
 export const PaginationEllipsis = (props: PaginationEllipsisProps) => (

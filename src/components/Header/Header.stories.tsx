@@ -1,4 +1,3 @@
-import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Header } from './Header'
 
@@ -26,13 +25,13 @@ export const Default: Story = {
     >
       <span style={{ fontWeight: 600, fontSize: 16 }}>Logo</span>
       <nav style={{ display: 'flex', gap: 24, fontSize: 14, color: '#6b7280' }}>
-        <a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>
+        <a href="/" style={{ color: 'inherit', textDecoration: 'none' }}>
           Home
         </a>
-        <a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>
+        <a href="/about" style={{ color: 'inherit', textDecoration: 'none' }}>
           About
         </a>
-        <a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>
+        <a href="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>
           Contact
         </a>
       </nav>

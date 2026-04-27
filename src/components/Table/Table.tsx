@@ -1,4 +1,4 @@
-import React from 'react'
+import type React from 'react'
 
 export interface TableProps extends React.HTMLAttributes<HTMLTableElement> {}
 export const Table = ({ className, ...props }: TableProps) => (

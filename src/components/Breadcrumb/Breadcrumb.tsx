@@ -1,4 +1,4 @@
-import React from 'react'
+import type React from 'react'
 
 export interface BreadcrumbsProps extends React.HTMLAttributes<HTMLElement> {}
 export const Breadcrumbs = (props: BreadcrumbsProps) => <nav aria-label="breadcrumb" {...props} />

@@ -1,4 +1,4 @@
-import React from 'react'
+import type React from 'react'
 
 export interface GridProps extends React.HTMLAttributes<HTMLDivElement> {}
 export const Grid = (props: GridProps) => <div {...props} />

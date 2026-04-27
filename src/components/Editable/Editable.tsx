@@ -18,7 +18,9 @@ interface EditableContextValue {
 const EditableContext = React.createContext<EditableContextValue | null>(null)
 const useEditable = () => {
   const ctx = React.useContext(EditableContext)
-  if (!ctx) throw new Error('Editable subcomponents must be used inside <Editable>')
+  if (!ctx) {
+    throw new Error('Editable subcomponents must be used inside <Editable>')
+  }
   return ctx
 }
 
@@ -63,7 +65,7 @@ export const Editable = React.forwardRef<HTMLDivElement, EditableProps>(
   ) => {
     const [uncontrolledValue, setUncontrolledValue] = React.useState(defaultValue)
     const valueControlled = valueProp !== undefined
-    const value = valueControlled ? valueProp! : uncontrolledValue
+    const value = valueControlled ? (valueProp as string) : uncontrolledValue
 
     const [uncontrolledEditing, setUncontrolledEditing] = React.useState(defaultEditing)
     const editingControlled = editingProp !== undefined
@@ -73,17 +75,23 @@ export const Editable = React.forwardRef<HTMLDivElement, EditableProps>(
     const inputRef = React.useRef<HTMLInputElement | HTMLTextAreaElement>(null)
 
     const setEditing = (next: boolean) => {
-      if (!editingControlled) setUncontrolledEditing(next)
+      if (!editingControlled) {
+        setUncontrolledEditing(next)
+      }
       onEditingChange?.(next)
     }
 
     const setValue = (next: string) => {
-      if (!valueControlled) setUncontrolledValue(next)
+      if (!valueControlled) {
+        setUncontrolledValue(next)
+      }
       onValueChange?.(next)
     }
 
     const startEdit = () => {
-      if (disabled) return
+      if (disabled) {
+        return
+      }
       setDraft(value)
       setEditing(true)
     }
@@ -106,18 +114,26 @@ export const Editable = React.forwardRef<HTMLDivElement, EditableProps>(
         const node = inputRef.current
         if (node) {
           node.focus()
-          if (selectAllOnEdit && 'select' in node) node.select()
+          if (selectAllOnEdit && 'select' in node) {
+            node.select()
+          }
         }
       }
     }, [editing, selectAllOnEdit])
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
       onKeyDown?.(e)
-      if (e.defaultPrevented) return
-      if (!editing) return
+      if (e.defaultPrevented) {
+        return
+      }
+      if (!editing) {
+        return
+      }
       if (submitOnEnter && e.key === 'Enter' && !e.shiftKey) {
         const target = e.target as HTMLElement
-        if (target.tagName === 'TEXTAREA' && e.shiftKey) return
+        if (target.tagName === 'TEXTAREA' && e.shiftKey) {
+          return
+        }
         e.preventDefault()
         submit()
       } else if (cancelOnEscape && e.key === 'Escape') {
@@ -143,6 +159,7 @@ export const Editable = React.forwardRef<HTMLDivElement, EditableProps>(
 
     return (
       <EditableContext.Provider value={ctx}>
+        {/* biome-ignore lint/a11y/noStaticElementInteractions: keyDown forwards to the inner preview/input which carry their own interactive roles */}
         <div
           ref={ref}
           data-state={editing ? 'editing' : 'idle'}
@@ -161,9 +178,12 @@ export interface EditablePreviewProps extends React.HTMLAttributes<HTMLSpanEleme
 export const EditablePreview = React.forwardRef<HTMLSpanElement, EditablePreviewProps>(
   ({ children, onClick, ...rest }, ref) => {
     const { value, editing, startEdit, disabled, placeholder } = useEditable()
-    if (editing) return null
+    if (editing) {
+      return null
+    }
     const display = value || placeholder
     return (
+      // biome-ignore lint/a11y/useSemanticElements: <span role="button"> avoids native <button> form-submit / styling defaults in headless preview
       <span
         ref={ref}
         role="button"
@@ -173,7 +193,9 @@ export const EditablePreview = React.forwardRef<HTMLSpanElement, EditablePreview
         data-placeholder={!value && placeholder ? '' : undefined}
         onClick={(e) => {
           onClick?.(e)
-          if (!e.defaultPrevented) startEdit()
+          if (!e.defaultPrevented) {
+            startEdit()
+          }
         }}
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
@@ -197,10 +219,15 @@ export const EditableInput = React.forwardRef<HTMLInputElement, EditableInputPro
   const { draft, setDraft, editing, submit, cancel, inputRef, disabled, placeholder, submitOnBlur } = useEditable()
   const setRefs = (node: HTMLInputElement | null) => {
     ;(inputRef as React.MutableRefObject<HTMLInputElement | null>).current = node
-    if (typeof ref === 'function') ref(node)
-    else if (ref) (ref as React.MutableRefObject<HTMLInputElement | null>).current = node
+    if (typeof ref === 'function') {
+      ref(node)
+    } else if (ref) {
+      ;(ref as React.MutableRefObject<HTMLInputElement | null>).current = node
+    }
   }
-  if (!editing) return null
+  if (!editing) {
+    return null
+  }
   return (
     <input
       ref={setRefs}
@@ -211,9 +238,14 @@ export const EditableInput = React.forwardRef<HTMLInputElement, EditableInputPro
       placeholder={placeholder}
       onBlur={(e) => {
         props.onBlur?.(e)
-        if (e.defaultPrevented) return
-        if (submitOnBlur) submit()
-        else cancel()
+        if (e.defaultPrevented) {
+          return
+        }
+        if (submitOnBlur) {
+          submit()
+        } else {
+          cancel()
+        }
       }}
       {...props}
     />
@@ -228,10 +260,15 @@ export const EditableTextarea = React.forwardRef<HTMLTextAreaElement, EditableTe
   const { draft, setDraft, editing, submit, cancel, inputRef, disabled, placeholder, submitOnBlur } = useEditable()
   const setRefs = (node: HTMLTextAreaElement | null) => {
     ;(inputRef as React.MutableRefObject<HTMLTextAreaElement | null>).current = node
-    if (typeof ref === 'function') ref(node)
-    else if (ref) (ref as React.MutableRefObject<HTMLTextAreaElement | null>).current = node
+    if (typeof ref === 'function') {
+      ref(node)
+    } else if (ref) {
+      ;(ref as React.MutableRefObject<HTMLTextAreaElement | null>).current = node
+    }
   }
-  if (!editing) return null
+  if (!editing) {
+    return null
+  }
   return (
     <textarea
       ref={setRefs}
@@ -241,9 +278,14 @@ export const EditableTextarea = React.forwardRef<HTMLTextAreaElement, EditableTe
       placeholder={placeholder}
       onBlur={(e) => {
         props.onBlur?.(e)
-        if (e.defaultPrevented) return
-        if (submitOnBlur) submit()
-        else cancel()
+        if (e.defaultPrevented) {
+          return
+        }
+        if (submitOnBlur) {
+          submit()
+        } else {
+          cancel()
+        }
       }}
       {...props}
     />

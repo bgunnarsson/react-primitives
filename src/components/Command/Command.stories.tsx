@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import type React from 'react'
+import { useState, useEffect } from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import {
   Command,
@@ -90,6 +91,7 @@ export const AsDialog: Story = {
     return (
       <>
         <button
+          type="button"
           onClick={() => setOpen(true)}
           style={{
             padding: '8px 14px',

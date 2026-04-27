@@ -13,6 +13,7 @@ type Story = StoryObj<typeof meta>
 export const IconOnlyButton: Story = {
   render: () => (
     <button
+      type="button"
       style={{ padding: 8, borderRadius: 6, border: '1px solid #e5e7eb', background: 'white', cursor: 'pointer' }}
     >
       <span aria-hidden>X</span>

@@ -16,13 +16,17 @@ export const FileInput = React.forwardRef<HTMLInputElement, FileInputProps>(
     React.useImperativeHandle(ref, () => inputRef.current as HTMLInputElement)
 
     const handleFiles = (files: FileList | null) => {
-      if (!files) return
+      if (!files) {
+        return
+      }
       onFilesChange?.(Array.from(files))
     }
 
     const handleDragOver = (e: React.DragEvent) => {
       e.preventDefault()
-      if (!disabled) setIsDragging(true)
+      if (!disabled) {
+        setIsDragging(true)
+      }
     }
 
     const handleDragLeave = () => setIsDragging(false)
@@ -30,10 +34,13 @@ export const FileInput = React.forwardRef<HTMLInputElement, FileInputProps>(
     const handleDrop = (e: React.DragEvent) => {
       e.preventDefault()
       setIsDragging(false)
-      if (!disabled) handleFiles(e.dataTransfer.files)
+      if (!disabled) {
+        handleFiles(e.dataTransfer.files)
+      }
     }
 
     return (
+      // biome-ignore lint/a11y/noStaticElementInteractions: drag-and-drop drop zone wraps an <input type="file"> which is the keyboard-accessible control
       <div
         data-dragging={isDragging || undefined}
         data-disabled={disabled || undefined}

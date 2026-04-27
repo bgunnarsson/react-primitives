@@ -29,6 +29,7 @@ export interface FormLabelProps extends React.LabelHTMLAttributes<HTMLLabelEleme
 
 export const FormLabel = React.forwardRef<HTMLLabelElement, FormLabelProps>(({ className, ...props }, ref) => {
   const { id } = React.useContext(FormFieldContext)
+  // biome-ignore lint/a11y/noLabelWithoutControl: htmlFor is wired via FormField context to FormControl
   return <label ref={ref} htmlFor={id} className={className} {...props} />
 })
 FormLabel.displayName = 'FormLabel'
@@ -56,7 +57,9 @@ export const FormMessage = React.forwardRef<HTMLParagraphElement, FormMessagePro
   ({ className, children, ...props }, ref) => {
     const { id, error } = React.useContext(FormFieldContext)
     const message = error ?? children
-    if (!message) return null
+    if (!message) {
+      return null
+    }
     return (
       <p ref={ref} id={`${id}-message`} role="alert" className={className} {...props}>
         {message}

@@ -36,20 +36,28 @@ export const TagInput = React.forwardRef<HTMLDivElement, TagInputProps>(
   ) => {
     const [uncontrolled, setUncontrolled] = React.useState<string[]>(defaultValue ?? [])
     const controlled = valueProp !== undefined
-    const tags = controlled ? valueProp! : uncontrolled
+    const tags = controlled ? (valueProp as string[]) : uncontrolled
     const [draft, setDraft] = React.useState('')
     const inputRef = React.useRef<HTMLInputElement>(null)
 
     const setTags = (next: string[]) => {
-      if (!controlled) setUncontrolled(next)
+      if (!controlled) {
+        setUncontrolled(next)
+      }
       onValueChange?.(next)
     }
 
     const addTag = (raw: string) => {
       const tag = raw.trim()
-      if (!tag) return
-      if (!allowDuplicates && tags.includes(tag)) return
-      if (maxTags !== undefined && tags.length >= maxTags) return
+      if (!tag) {
+        return
+      }
+      if (!allowDuplicates && tags.includes(tag)) {
+        return
+      }
+      if (maxTags !== undefined && tags.length >= maxTags) {
+        return
+      }
       setTags([...tags, tag])
     }
 
@@ -73,6 +81,8 @@ export const TagInput = React.forwardRef<HTMLDivElement, TagInputProps>(
     }
 
     return (
+      // biome-ignore lint/a11y/noStaticElementInteractions: click is a focus-forwarder to the inner <input>, which owns keyboard interaction
+      // biome-ignore lint/a11y/useKeyWithClickEvents: click only forwards focus; keyboard control lives on the inner <input>
       <div
         ref={ref}
         className={className}
@@ -83,7 +93,9 @@ export const TagInput = React.forwardRef<HTMLDivElement, TagInputProps>(
       >
         {tags.map((tag, i) => {
           const remove = () => removeAt(i)
-          if (renderTag) return <React.Fragment key={`${tag}-${i}`}>{renderTag(tag, i, remove)}</React.Fragment>
+          if (renderTag) {
+            return <React.Fragment key={`${tag}-${i}`}>{renderTag(tag, i, remove)}</React.Fragment>
+          }
           return (
             <span key={`${tag}-${i}`} data-tag>
               {tag}

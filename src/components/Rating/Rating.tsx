@@ -34,11 +34,15 @@ export const Rating = React.forwardRef<HTMLDivElement, RatingProps>(
     const [uncontrolled, setUncontrolled] = React.useState(defaultValue)
     const [hover, setHover] = React.useState<number | null>(null)
     const controlled = valueProp !== undefined
-    const value = controlled ? valueProp! : uncontrolled
+    const value = controlled ? (valueProp as number) : uncontrolled
 
     const setValue = (next: number) => {
-      if (disabled || readOnly) return
-      if (!controlled) setUncontrolled(next)
+      if (disabled || readOnly) {
+        return
+      }
+      if (!controlled) {
+        setUncontrolled(next)
+      }
       onValueChange?.(next)
     }
 

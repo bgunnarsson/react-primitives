@@ -62,7 +62,8 @@ const styles = `
 `
 
 const Chevron = () => (
-  <svg className="sb-collapsible-chevron" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden>
+  <svg className="sb-collapsible-chevron" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+    <title>Chevron</title>
     <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 )

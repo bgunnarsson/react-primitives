@@ -26,7 +26,9 @@ export interface PhoneInputProps
 const onlyDigits = (s: string) => s.replace(/\D+/g, '')
 
 const findCountryFromValue = (value: string, countries: PhoneCountry[]): PhoneCountry | undefined => {
-  if (!value.startsWith('+')) return undefined
+  if (!value.startsWith('+')) {
+    return undefined
+  }
   const digits = value.slice(1)
   return [...countries].sort((a, b) => b.dialCode.length - a.dialCode.length).find((c) => digits.startsWith(c.dialCode))
 }
@@ -55,13 +57,15 @@ export const PhoneInput = React.forwardRef<HTMLInputElement, PhoneInputProps>(
     const controlled = valueProp !== undefined
 
     const initialCountry =
-      findCountryFromValue(controlled ? valueProp! : (defaultValue ?? ''), countries) ??
+      findCountryFromValue(controlled ? (valueProp as string) : (defaultValue ?? ''), countries) ??
       countries.find((c) => c.code === defaultCountry) ??
       countries[0]
 
     const initialDigits = (() => {
-      const v = controlled ? valueProp! : (defaultValue ?? '')
-      if (!v.startsWith('+') || !initialCountry) return ''
+      const v = controlled ? (valueProp as string) : (defaultValue ?? '')
+      if (!v.startsWith('+') || !initialCountry) {
+        return ''
+      }
       return v.slice(1 + initialCountry.dialCode.length)
     })()
 
@@ -69,11 +73,13 @@ export const PhoneInput = React.forwardRef<HTMLInputElement, PhoneInputProps>(
     const [nationalDigits, setNationalDigits] = React.useState(initialDigits)
 
     React.useEffect(() => {
-      if (!controlled) return
-      const next = findCountryFromValue(valueProp!, countries)
+      if (!controlled) {
+        return
+      }
+      const next = findCountryFromValue(valueProp as string, countries)
       if (next) {
         setCountry(next)
-        setNationalDigits(valueProp!.slice(1 + next.dialCode.length))
+        setNationalDigits(valueProp?.slice(1 + next.dialCode.length))
       } else if (!valueProp) {
         setNationalDigits('')
       }
@@ -87,7 +93,9 @@ export const PhoneInput = React.forwardRef<HTMLInputElement, PhoneInputProps>(
 
     const handleCountry = (e: React.ChangeEvent<HTMLSelectElement>) => {
       const next = countries.find((c) => c.code === e.target.value)
-      if (!next) return
+      if (!next) {
+        return
+      }
       setCountry(next)
       emit(next, nationalDigits)
     }

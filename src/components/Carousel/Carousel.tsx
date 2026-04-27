@@ -16,7 +16,9 @@ const CarouselContext = React.createContext<CarouselContextValue | null>(null)
 
 export function useCarousel() {
   const context = React.useContext(CarouselContext)
-  if (!context) throw new Error('useCarousel must be used within a Carousel')
+  if (!context) {
+    throw new Error('useCarousel must be used within a Carousel')
+  }
   return context
 }
 
@@ -31,13 +33,17 @@ export const Carousel = React.forwardRef<HTMLDivElement, CarouselProps>(
     const [canScrollNext, setCanScrollNext] = React.useState(false)
 
     const onSelect = React.useCallback((api: CarouselApi) => {
-      if (!api) return
+      if (!api) {
+        return
+      }
       setCanScrollPrev(api.canScrollPrev())
       setCanScrollNext(api.canScrollNext())
     }, [])
 
     React.useEffect(() => {
-      if (!api) return
+      if (!api) {
+        return
+      }
       onSelect(api)
       api.on('reInit', onSelect)
       api.on('select', onSelect)
@@ -84,6 +90,7 @@ CarouselContent.displayName = 'CarouselContent'
 export interface CarouselItemProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export const CarouselItem = React.forwardRef<HTMLDivElement, CarouselItemProps>(({ className, ...props }, ref) => (
+  // biome-ignore lint/a11y/useSemanticElements: ARIA role="group" with aria-roledescription="slide" is the WAI carousel pattern
   <div ref={ref} role="group" aria-roledescription="slide" className={className} {...props} />
 ))
 CarouselItem.displayName = 'CarouselItem'

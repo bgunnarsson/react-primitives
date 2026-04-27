@@ -15,7 +15,9 @@ const URL_PLACEHOLDER_BASE = 'http://_react_primitives_placeholder_.invalid'
 
 export const buildImageUrl: ImageUrlBuilder = (src, { width, height, quality, format }) => {
   const trimmed = src?.trim()
-  if (!trimmed) return ''
+  if (!trimmed) {
+    return ''
+  }
 
   const isAbsolute = /^[a-z][a-z0-9+.-]*:\/\//i.test(trimmed)
   let url: URL
@@ -27,8 +29,12 @@ export const buildImageUrl: ImageUrlBuilder = (src, { width, height, quality, fo
 
   url.searchParams.set('width', String(Math.round(width)))
   url.searchParams.set('height', String(Math.round(height)))
-  if (format) url.searchParams.set('format', format)
-  if (quality != null) url.searchParams.set('quality', String(quality))
+  if (format) {
+    url.searchParams.set('format', format)
+  }
+  if (quality != null) {
+    url.searchParams.set('quality', String(quality))
+  }
 
   return isAbsolute ? url.toString() : `${url.pathname}${url.search}${url.hash}`
 }

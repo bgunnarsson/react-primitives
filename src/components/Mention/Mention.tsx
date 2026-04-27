@@ -20,7 +20,9 @@ function getTriggerContext(el: MentionInputElement, trigger: string): TriggerCon
       }
       return null
     }
-    if (/\s/.test(c)) return null
+    if (/\s/.test(c)) {
+      return null
+    }
     i--
   }
   return null
@@ -92,7 +94,9 @@ export function Mention<T>({
   const open = ctx !== null && items.length > 0
 
   React.useEffect(() => {
-    if (activeIndex >= items.length) setActiveIndex(items.length === 0 ? 0 : items.length - 1)
+    if (activeIndex >= items.length) {
+      setActiveIndex(items.length === 0 ? 0 : items.length - 1)
+    }
   }, [items.length, activeIndex])
 
   React.useEffect(() => {
@@ -107,7 +111,9 @@ export function Mention<T>({
     }
     const next = getTriggerContext(el, trigger)
     setCtx(next)
-    if (next) setActiveIndex(0)
+    if (next) {
+      setActiveIndex(0)
+    }
   }, [trigger])
 
   const close = React.useCallback(() => setCtx(null), [])
@@ -115,7 +121,9 @@ export function Mention<T>({
   const selectItem = React.useCallback(
     (item: T) => {
       const el = inputRef.current
-      if (!el || !ctx) return
+      if (!el || !ctx) {
+        return
+      }
       const insertion = format(item) + (appendSpace ? ' ' : '')
       const next = value.slice(0, ctx.triggerIndex) + insertion + value.slice(ctx.endIndex)
       const cursor = ctx.triggerIndex + insertion.length
@@ -157,7 +165,9 @@ export function Mention<T>({
         setTimeout(() => setCtx(null), 0)
       },
       onKeyDown: (e) => {
-        if (!open) return
+        if (!open) {
+          return
+        }
         if (e.key === 'ArrowDown') {
           e.preventDefault()
           setActiveIndex((activeIndex + 1) % items.length)

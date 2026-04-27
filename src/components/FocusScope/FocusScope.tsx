@@ -37,10 +37,14 @@ export const FocusScope = React.forwardRef<HTMLDivElement, FocusScopeProps>(
     React.useImperativeHandle(ref, () => containerRef.current as HTMLDivElement, [])
 
     React.useEffect(() => {
-      if (typeof document === 'undefined') return
+      if (typeof document === 'undefined') {
+        return
+      }
       previouslyFocused.current = document.activeElement as HTMLElement | null
       const node = containerRef.current
-      if (!node) return
+      if (!node) {
+        return
+      }
 
       if (autoFocus) {
         const focusables = getFocusable(node)
@@ -63,10 +67,16 @@ export const FocusScope = React.forwardRef<HTMLDivElement, FocusScopeProps>(
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
       onKeyDown?.(e)
-      if (e.defaultPrevented) return
-      if (!trapped || e.key !== 'Tab') return
+      if (e.defaultPrevented) {
+        return
+      }
+      if (!trapped || e.key !== 'Tab') {
+        return
+      }
       const node = containerRef.current
-      if (!node) return
+      if (!node) {
+        return
+      }
       const focusables = getFocusable(node)
       if (focusables.length === 0) {
         e.preventDefault()
@@ -79,17 +89,22 @@ export const FocusScope = React.forwardRef<HTMLDivElement, FocusScopeProps>(
       if (e.shiftKey) {
         if (active === first || !node.contains(active)) {
           e.preventDefault()
-          if (loop) last.focus()
+          if (loop) {
+            last.focus()
+          }
         }
       } else {
         if (active === last) {
           e.preventDefault()
-          if (loop) first.focus()
+          if (loop) {
+            first.focus()
+          }
         }
       }
     }
 
     return (
+      // biome-ignore lint/a11y/noStaticElementInteractions: keyDown only intercepts Tab to trap focus among inner interactive elements
       <div ref={containerRef} onKeyDown={handleKeyDown} {...rest}>
         {children}
       </div>

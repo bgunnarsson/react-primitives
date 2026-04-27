@@ -1,4 +1,3 @@
-import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Footer } from './Footer'
 
@@ -28,10 +27,10 @@ export const Default: Story = {
     >
       <span>© 2026 Acme Inc.</span>
       <nav style={{ display: 'flex', gap: 24 }}>
-        <a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>
+        <a href="/privacy" style={{ color: 'inherit', textDecoration: 'none' }}>
           Privacy
         </a>
-        <a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>
+        <a href="/terms" style={{ color: 'inherit', textDecoration: 'none' }}>
           Terms
         </a>
       </nav>
