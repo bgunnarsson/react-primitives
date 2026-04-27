@@ -335,6 +335,21 @@ export type { ComboboxProps, ComboboxContentProps, ComboboxInputProps, ComboboxL
 export { DatePicker } from './components/DatePicker'
 export type { DatePickerProps } from './components/DatePicker'
 
+export { DateRangePicker } from './components/DateRangePicker'
+export type { DateRangePickerProps, DateRange } from './components/DateRangePicker'
+
+export { PhoneInput, DEFAULT_COUNTRIES } from './components/PhoneInput'
+export type { PhoneInputProps, PhoneCountry } from './components/PhoneInput'
+
+export { MaskedInput } from './components/MaskedInput'
+export type { MaskedInputProps } from './components/MaskedInput'
+
+export { CopyButton } from './components/CopyButton'
+export type { CopyButtonProps, CopyButtonRenderState } from './components/CopyButton'
+
+export { VirtualList } from './components/VirtualList'
+export type { VirtualListProps, VirtualListRenderProps, VirtualListItem } from './components/VirtualList'
+
 export { Grid, GridItem } from './components/Grid'
 export type { GridProps, GridItemProps } from './components/Grid'
 
@@ -477,9 +492,6 @@ export {
 
 export { Calendar } from './components/Calendar'
 export type { CalendarProps } from './components/Calendar'
-
-export { Kbd } from './components/Kbd'
-export type { KbdProps } from './components/Kbd'
 
 export { TagInput } from './components/TagInput'
 export type { TagInputProps } from './components/TagInput'

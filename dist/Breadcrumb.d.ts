@@ -17,7 +17,8 @@ interface BreadcrumbsPageProps extends React__default.HTMLAttributes<HTMLSpanEle
 }
 declare const BreadcrumbsPage: (props: BreadcrumbsPageProps) => react_jsx_runtime.JSX.Element;
 interface BreadcrumbsSeparatorProps extends React__default.HTMLAttributes<HTMLSpanElement> {
+    separator?: React__default.ReactNode;
 }
-declare const BreadcrumbsSeparator: ({ children, ...props }: BreadcrumbsSeparatorProps) => react_jsx_runtime.JSX.Element;
+declare const BreadcrumbsSeparator: ({ separator, children, ...props }: BreadcrumbsSeparatorProps) => react_jsx_runtime.JSX.Element;
 
 export { Breadcrumbs, BreadcrumbsItem, type BreadcrumbsItemProps, BreadcrumbsLink, type BreadcrumbsLinkProps, BreadcrumbsList, type BreadcrumbsListProps, BreadcrumbsPage, type BreadcrumbsPageProps, type BreadcrumbsProps, BreadcrumbsSeparator, type BreadcrumbsSeparatorProps };

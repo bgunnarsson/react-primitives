@@ -5,7 +5,7 @@
 
 
 
-var _chunk4ZRIEBLGcjs = require('./chunk-4ZRIEBLG.cjs');
+var _chunkP6II5IPScjs = require('./chunk-P6II5IPS.cjs');
 
 
 
@@ -13,4 +13,4 @@ var _chunk4ZRIEBLGcjs = require('./chunk-4ZRIEBLG.cjs');
 
 
 
-exports.Breadcrumbs = _chunk4ZRIEBLGcjs.Breadcrumbs; exports.BreadcrumbsItem = _chunk4ZRIEBLGcjs.BreadcrumbsItem; exports.BreadcrumbsLink = _chunk4ZRIEBLGcjs.BreadcrumbsLink; exports.BreadcrumbsList = _chunk4ZRIEBLGcjs.BreadcrumbsList; exports.BreadcrumbsPage = _chunk4ZRIEBLGcjs.BreadcrumbsPage; exports.BreadcrumbsSeparator = _chunk4ZRIEBLGcjs.BreadcrumbsSeparator;
+exports.Breadcrumbs = _chunkP6II5IPScjs.Breadcrumbs; exports.BreadcrumbsItem = _chunkP6II5IPScjs.BreadcrumbsItem; exports.BreadcrumbsLink = _chunkP6II5IPScjs.BreadcrumbsLink; exports.BreadcrumbsList = _chunkP6II5IPScjs.BreadcrumbsList; exports.BreadcrumbsPage = _chunkP6II5IPScjs.BreadcrumbsPage; exports.BreadcrumbsSeparator = _chunkP6II5IPScjs.BreadcrumbsSeparator;

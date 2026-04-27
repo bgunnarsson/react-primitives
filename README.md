@@ -78,7 +78,7 @@ pnpm build-storybook  # Build static Storybook
 
 ## Component Reference
 
-88 components across layout, form, navigation, overlay, media, and low-level utility categories.
+92 components across layout, form, navigation, overlay, media, and low-level utility categories.
 
 ### Layout & Content
 
@@ -101,6 +101,7 @@ pnpm build-storybook  # Build static Storybook
 | [Stat](src/components/Stat/README.md) | Metric display with label, value, and help text |
 | [Table](src/components/Table/README.md) | Semantic table with Header, Body, Footer, Row, Head, Cell, Caption |
 | [Text](src/components/Text/README.md) | Polymorphic text element (`p`, `span`, `h1`–`h6`) |
+| [VirtualList](src/components/VirtualList/README.md) | Windowed list for large datasets — fixed or variable item sizes, vertical or horizontal |
 
 ### Typography & Media
 
@@ -108,7 +109,6 @@ pnpm build-storybook  # Build static Storybook
 |---|---|
 | [Badge](src/components/Badge/README.md) | Inline label for status, counts, or categories |
 | [Icon](src/components/Icon/README.md) | SVG icon from sprite or external file |
-| [Kbd](src/components/Kbd/README.md) | Semantic `<kbd>` wrapper for keyboard shortcut hints |
 | [Lightbox](src/components/Lightbox/README.md) | Full-screen image viewer with navigation |
 | [Mark](src/components/Mark/README.md) | Highlighted text — direct wrap or query-based search highlighting |
 | [Picture](src/components/Picture/README.md) | Responsive `<picture>` with multiple sources |
@@ -127,15 +127,18 @@ pnpm build-storybook  # Build static Storybook
 | [ColorPicker](src/components/ColorPicker/README.md) | Hex, RGBA, and HSLA color pickers |
 | [Combobox](src/components/Combobox/README.md) | Searchable dropdown select |
 | [DatePicker](src/components/DatePicker/README.md) | Single date picker with calendar popover |
+| [DateRangePicker](src/components/DateRangePicker/README.md) | Two-date range picker with calendar popover |
 | [Editable](src/components/Editable/README.md) | Click-to-edit inline text with preview/input swap |
 | [FileInput](src/components/FileInput/README.md) | File picker with drag-and-drop support |
 | [Form](src/components/Form/README.md) | Context-based field wrapper (label, control, error message) |
 | [Input](src/components/Input/README.md) | Text input field |
 | [InputOTP](src/components/InputOTP/README.md) | One-time-password / verification-code input |
 | [Label](src/components/Label/README.md) | Form field label |
+| [MaskedInput](src/components/MaskedInput/README.md) | Pattern-masked input (credit card, SSN, custom formats) |
 | [Mention](src/components/Mention/README.md) | `@`-style autocomplete primitive (render-prop) for input/textarea |
 | [NumberInput](src/components/NumberInput/README.md) | Numeric input with increment/decrement buttons |
 | [PasswordInput](src/components/PasswordInput/README.md) | Password input with show/hide toggle |
+| [PhoneInput](src/components/PhoneInput/README.md) | International phone input with country selector, emits E.164 |
 | [RadioGroup](src/components/RadioGroup/README.md) | Radio button group |
 | [Rating](src/components/Rating/README.md) | Star / score rating input with keyboard and screen-reader support |
 | [SearchInput](src/components/SearchInput/README.md) | Search input with leading icon and clear button |
@@ -202,6 +205,7 @@ pnpm build-storybook  # Build static Storybook
 
 | Component | Description |
 |---|---|
+| [CopyButton](src/components/CopyButton/README.md) | Button that copies text to the clipboard with copied-state feedback |
 | [DirectionProvider](src/components/DirectionProvider/README.md) | Declares writing direction (`ltr` / `rtl`) for all child Radix primitives |
 | [FocusScope](src/components/FocusScope/README.md) | Standalone focus trap with auto-focus and focus restoration |
 | [Portal](src/components/Portal/README.md) | Renders children into a different part of the DOM tree |

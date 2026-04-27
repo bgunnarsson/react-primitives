@@ -24,6 +24,9 @@ import 'react-day-picker/style.css'
 | `onValueChange` | `(date: Date \| undefined) => void` | — | Called when the user selects or clears a date. |
 | `disabled` | `boolean` | `false` | Disables the trigger button. |
 | `placeholder` | `string` | `'Pick a date'` | Trigger label when no date is selected. |
+| `captionLayout` | `'dropdown' \| 'dropdown-months' \| 'dropdown-years' \| 'label'` | `'dropdown'` | Calendar header layout. `'dropdown'` shows month + year selects. |
+| `startMonth` | `Date` | 100 years ago | Earliest navigable month / lower bound of the year dropdown. |
+| `endMonth` | `Date` | 10 years ahead | Latest navigable month / upper bound of the year dropdown. |
 | `triggerClassName` | `string` | — | `className` applied to the trigger button. |
 | `contentClassName` | `string` | — | `className` applied to the popover content wrapper. |
 | `calendarClassName` | `string` | — | `className` applied to the `DayPicker` component. |

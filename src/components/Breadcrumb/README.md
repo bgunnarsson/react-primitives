@@ -45,7 +45,8 @@ Extends `React.HTMLAttributes<HTMLSpanElement>`. Renders `<span aria-current="pa
 
 | Prop | Type | Default | Description |
 |---|---|---|---|
-| `children` | `React.ReactNode` | `'•'` | The separator character or element to render. |
+| `separator` | `React.ReactNode` | `'•'` | Optional separator content. Accepts a string or any React node (e.g. an icon component). |
+| `children` | `React.ReactNode` | — | Takes precedence over `separator` when provided. |
 
 Extends `React.HTMLAttributes<HTMLSpanElement>`. Renders `<span aria-hidden="true">`.
 
@@ -100,4 +101,4 @@ Extends `React.HTMLAttributes<HTMLSpanElement>`. Renders `<span aria-hidden="tru
 
 - `BreadcrumbsSeparator` is `aria-hidden="true"` so screen readers skip it.
 - `BreadcrumbsPage` adds `aria-current="page"` — do not set it manually.
-- Pass `children` to `BreadcrumbsSeparator` to use a custom separator: `<BreadcrumbsSeparator>/</BreadcrumbsSeparator>`.
+- Override the default `•` via either `separator` or `children`: `<BreadcrumbsSeparator separator="/" />`, `<BreadcrumbsSeparator separator={<ChevronRight />} />`, or `<BreadcrumbsSeparator>/</BreadcrumbsSeparator>`.

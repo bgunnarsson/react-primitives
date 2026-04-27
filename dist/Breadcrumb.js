@@ -5,7 +5,7 @@ import {
   BreadcrumbsList,
   BreadcrumbsPage,
   BreadcrumbsSeparator
-} from "./chunk-SDAGGXNE.js";
+} from "./chunk-JPZCP7GX.js";
 export {
   Breadcrumbs,
   BreadcrumbsItem,

@@ -1,6 +1,6 @@
 {
 	"name": "@bgunnarsson/react-primitives",
-	"version": "0.1.12",
+	"version": "0.1.13",
 	"description": "Unstyled, accessible React component primitives built on Radix UI",
 	"type": "module",
 	"exports": {
@@ -93,6 +93,31 @@
 			"types": "./dist/DatePicker.d.ts",
 			"import": "./dist/DatePicker.js",
 			"require": "./dist/DatePicker.cjs"
+		},
+		"./components/DateRangePicker": {
+			"types": "./dist/DateRangePicker.d.ts",
+			"import": "./dist/DateRangePicker.js",
+			"require": "./dist/DateRangePicker.cjs"
+		},
+		"./components/PhoneInput": {
+			"types": "./dist/PhoneInput.d.ts",
+			"import": "./dist/PhoneInput.js",
+			"require": "./dist/PhoneInput.cjs"
+		},
+		"./components/MaskedInput": {
+			"types": "./dist/MaskedInput.d.ts",
+			"import": "./dist/MaskedInput.js",
+			"require": "./dist/MaskedInput.cjs"
+		},
+		"./components/CopyButton": {
+			"types": "./dist/CopyButton.d.ts",
+			"import": "./dist/CopyButton.js",
+			"require": "./dist/CopyButton.cjs"
+		},
+		"./components/VirtualList": {
+			"types": "./dist/VirtualList.d.ts",
+			"import": "./dist/VirtualList.js",
+			"require": "./dist/VirtualList.cjs"
 		},
 		"./components/Dialog": {
 			"types": "./dist/Dialog.d.ts",
@@ -338,11 +363,6 @@
 			"types": "./dist/InputOTP.d.ts",
 			"import": "./dist/InputOTP.js",
 			"require": "./dist/InputOTP.cjs"
-		},
-		"./components/Kbd": {
-			"types": "./dist/Kbd.d.ts",
-			"import": "./dist/Kbd.js",
-			"require": "./dist/Kbd.cjs"
 		},
 		"./components/Menubar": {
 			"types": "./dist/Menubar.d.ts",

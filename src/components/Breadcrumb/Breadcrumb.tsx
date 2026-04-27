@@ -30,12 +30,15 @@ export const BreadcrumbsPage = (props: BreadcrumbsPageProps) => (
 );
 
 export interface BreadcrumbsSeparatorProps
-	extends React.HTMLAttributes<HTMLSpanElement> {}
+	extends React.HTMLAttributes<HTMLSpanElement> {
+	separator?: React.ReactNode;
+}
 export const BreadcrumbsSeparator = ({
-	children = "•",
+	separator,
+	children,
 	...props
 }: BreadcrumbsSeparatorProps) => (
 	<span aria-hidden="true" {...props}>
-		{children}
+		{children ?? separator ?? "•"}
 	</span>
 );
