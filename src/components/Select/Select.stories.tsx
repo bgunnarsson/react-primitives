@@ -99,9 +99,15 @@ export const Default: Story = {
           <SelectValue placeholder="Select a fruit" />
         </SelectTrigger>
         <SelectContent className="sb-select-content">
-          <SelectItem value="apple" className="sb-select-item">Apple</SelectItem>
-          <SelectItem value="banana" className="sb-select-item">Banana</SelectItem>
-          <SelectItem value="cherry" className="sb-select-item">Cherry</SelectItem>
+          <SelectItem value="apple" className="sb-select-item">
+            Apple
+          </SelectItem>
+          <SelectItem value="banana" className="sb-select-item">
+            Banana
+          </SelectItem>
+          <SelectItem value="cherry" className="sb-select-item">
+            Cherry
+          </SelectItem>
         </SelectContent>
       </Select>
     </>
@@ -119,14 +125,22 @@ export const WithGroups: Story = {
         <SelectContent className="sb-select-content">
           <SelectGroup>
             <SelectLabel className="sb-select-label">Fruits</SelectLabel>
-            <SelectItem value="apple" className="sb-select-item">Apple</SelectItem>
-            <SelectItem value="banana" className="sb-select-item">Banana</SelectItem>
+            <SelectItem value="apple" className="sb-select-item">
+              Apple
+            </SelectItem>
+            <SelectItem value="banana" className="sb-select-item">
+              Banana
+            </SelectItem>
           </SelectGroup>
           <SelectSeparator className="sb-select-separator" />
           <SelectGroup>
             <SelectLabel className="sb-select-label">Vegetables</SelectLabel>
-            <SelectItem value="carrot" className="sb-select-item">Carrot</SelectItem>
-            <SelectItem value="potato" className="sb-select-item">Potato</SelectItem>
+            <SelectItem value="carrot" className="sb-select-item">
+              Carrot
+            </SelectItem>
+            <SelectItem value="potato" className="sb-select-item">
+              Potato
+            </SelectItem>
           </SelectGroup>
         </SelectContent>
       </Select>
@@ -143,9 +157,15 @@ export const WithDisabledItem: Story = {
           <SelectValue placeholder="Select an option" />
         </SelectTrigger>
         <SelectContent className="sb-select-content">
-          <SelectItem value="available" className="sb-select-item">Available</SelectItem>
-          <SelectItem value="unavailable" disabled className="sb-select-item">Unavailable</SelectItem>
-          <SelectItem value="coming-soon" disabled className="sb-select-item">Coming soon</SelectItem>
+          <SelectItem value="available" className="sb-select-item">
+            Available
+          </SelectItem>
+          <SelectItem value="unavailable" disabled className="sb-select-item">
+            Unavailable
+          </SelectItem>
+          <SelectItem value="coming-soon" disabled className="sb-select-item">
+            Coming soon
+          </SelectItem>
         </SelectContent>
       </Select>
     </>

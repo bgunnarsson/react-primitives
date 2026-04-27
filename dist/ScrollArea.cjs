@@ -1,6 +1,6 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true});
+'use strict'
+Object.defineProperty(exports, '__esModule', { value: true })
 
-var _chunkGLEMF4SXcjs = require('./chunk-GLEMF4SX.cjs');
+var _chunkGLEMF4SXcjs = require('./chunk-GLEMF4SX.cjs')
 
-
-exports.ScrollArea = _chunkGLEMF4SXcjs.ScrollArea;
+exports.ScrollArea = _chunkGLEMF4SXcjs.ScrollArea

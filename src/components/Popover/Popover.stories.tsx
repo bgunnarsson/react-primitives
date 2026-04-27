@@ -12,8 +12,13 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 const contentStyle: React.CSSProperties = {
-  background: 'white', border: '1px solid #e5e7eb', borderRadius: 8,
-  padding: 16, boxShadow: '0 4px 16px rgba(0,0,0,0.1)', fontSize: 14, minWidth: 200,
+  background: 'white',
+  border: '1px solid #e5e7eb',
+  borderRadius: 8,
+  padding: 16,
+  boxShadow: '0 4px 16px rgba(0,0,0,0.1)',
+  fontSize: 14,
+  minWidth: 200,
 }
 
 export const Default: Story = {

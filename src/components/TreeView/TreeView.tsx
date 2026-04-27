@@ -23,10 +23,11 @@ export interface TreeViewProps extends React.HTMLAttributes<HTMLUListElement> {
 }
 
 export const TreeView = React.forwardRef<HTMLUListElement, TreeViewProps>(
-  ({ defaultExpanded, expanded: expandedProp, onExpandedChange, selected, onSelectedChange, children, ...props }, ref) => {
-    const [uncontrolled, setUncontrolled] = React.useState<Set<string>>(
-      () => new Set(defaultExpanded ?? []),
-    )
+  (
+    { defaultExpanded, expanded: expandedProp, onExpandedChange, selected, onSelectedChange, children, ...props },
+    ref
+  ) => {
+    const [uncontrolled, setUncontrolled] = React.useState<Set<string>>(() => new Set(defaultExpanded ?? []))
     const controlled = expandedProp !== undefined
     const expanded = controlled ? new Set(expandedProp) : uncontrolled
 
@@ -52,7 +53,7 @@ export const TreeView = React.forwardRef<HTMLUListElement, TreeViewProps>(
         </ul>
       </TreeContext.Provider>
     )
-  },
+  }
 )
 TreeView.displayName = 'TreeView'
 
@@ -114,11 +115,9 @@ export const TreeItem = React.forwardRef<HTMLLIElement, TreeItemProps>(
         >
           {label}
         </div>
-        {hasChildren && isExpanded ? (
-          <ul role="group">{children}</ul>
-        ) : null}
+        {hasChildren && isExpanded ? <ul role="group">{children}</ul> : null}
       </li>
     )
-  },
+  }
 )
 TreeItem.displayName = 'TreeItem'

@@ -13,7 +13,13 @@ export const Status = React.forwardRef<HTMLSpanElement, StatusProps>(
     const visualLabel = label ?? (typeof value === 'string' ? value : undefined)
     const hasChildren = React.Children.count(children) > 0
     return (
-      <span ref={ref} role="status" data-status={value} aria-label={!showLabel && !hasChildren ? visualLabel : label} {...rest}>
+      <span
+        ref={ref}
+        role="status"
+        data-status={value}
+        aria-label={!showLabel && !hasChildren ? visualLabel : label}
+        {...rest}
+      >
         {hasChildren ? (
           children
         ) : (
@@ -24,7 +30,7 @@ export const Status = React.forwardRef<HTMLSpanElement, StatusProps>(
         )}
       </span>
     )
-  },
+  }
 )
 Status.displayName = 'Status'
 

@@ -6,7 +6,5 @@ figma.connect(DateRangePicker, 'FIGMA_COMPONENT_URL', {
     placeholder: figma.string('Placeholder'),
     disabled: figma.boolean('Disabled'),
   },
-  example: ({ placeholder, disabled }) => (
-    <DateRangePicker placeholder={placeholder} disabled={disabled} />
-  ),
+  example: ({ placeholder, disabled }) => <DateRangePicker placeholder={placeholder} disabled={disabled} />,
 })

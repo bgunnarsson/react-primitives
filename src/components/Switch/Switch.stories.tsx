@@ -38,7 +38,9 @@ export const Default: Story = {
       <style>{switchStyles}</style>
       <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
         <Switch id="switch-default" className="story-switch" {...args} />
-        <label htmlFor="switch-default" style={labelStyle}>Airplane mode</label>
+        <label htmlFor="switch-default" style={labelStyle}>
+          Airplane mode
+        </label>
       </div>
     </>
   ),
@@ -50,7 +52,9 @@ export const Checked: Story = {
       <style>{switchStyles}</style>
       <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
         <Switch id="switch-checked" className="story-switch" defaultChecked />
-        <label htmlFor="switch-checked" style={labelStyle}>Airplane mode</label>
+        <label htmlFor="switch-checked" style={labelStyle}>
+          Airplane mode
+        </label>
       </div>
     </>
   ),
@@ -63,11 +67,15 @@ export const Disabled: Story = {
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <Switch id="switch-disabled-off" className="story-switch" disabled />
-          <label htmlFor="switch-disabled-off" style={{ ...labelStyle, opacity: 0.5 }}>Disabled (off)</label>
+          <label htmlFor="switch-disabled-off" style={{ ...labelStyle, opacity: 0.5 }}>
+            Disabled (off)
+          </label>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <Switch id="switch-disabled-on" className="story-switch" disabled defaultChecked />
-          <label htmlFor="switch-disabled-on" style={{ ...labelStyle, opacity: 0.5 }}>Disabled (on)</label>
+          <label htmlFor="switch-disabled-on" style={{ ...labelStyle, opacity: 0.5 }}>
+            Disabled (on)
+          </label>
         </div>
       </div>
     </>
@@ -85,7 +93,9 @@ export const Group: Story = {
           { id: 'notif-sms', label: 'SMS alerts', defaultChecked: true },
         ].map(({ id, label, defaultChecked }) => (
           <div key={id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <label htmlFor={id} style={labelStyle}>{label}</label>
+            <label htmlFor={id} style={labelStyle}>
+              {label}
+            </label>
             <Switch id={id} className="story-switch" defaultChecked={defaultChecked} />
           </div>
         ))}

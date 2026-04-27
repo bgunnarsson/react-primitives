@@ -11,7 +11,16 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-const statStyle: React.CSSProperties = { display: 'flex', flexDirection: 'column', gap: 4, padding: '20px 24px', border: '1px solid #e5e7eb', borderRadius: 12, background: 'white', minWidth: 160 }
+const statStyle: React.CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 4,
+  padding: '20px 24px',
+  border: '1px solid #e5e7eb',
+  borderRadius: 12,
+  background: 'white',
+  minWidth: 160,
+}
 const labelStyle: React.CSSProperties = { margin: 0, fontSize: 13, color: '#6b7280', fontWeight: 500 }
 const valueStyle: React.CSSProperties = { margin: 0, fontSize: 28, fontWeight: 700, color: '#111827', lineHeight: 1.2 }
 const helpStyle: React.CSSProperties = { margin: 0, fontSize: 12, color: '#16a34a' }

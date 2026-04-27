@@ -8,7 +8,5 @@ figma.connect(Button, 'FIGMA_COMPONENT_URL', {
     children: figma.string('Label'),
     disabled: figma.boolean('Disabled'),
   },
-  example: ({ children, disabled }) => (
-    <Button disabled={disabled}>{children}</Button>
-  ),
+  example: ({ children, disabled }) => <Button disabled={disabled}>{children}</Button>,
 })

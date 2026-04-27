@@ -6,6 +6,4 @@ export interface TextProps extends React.HTMLAttributes<HTMLElement> {
   as?: TextElement
 }
 
-export const Text = ({ as: Tag = 'p', className, ...props }: TextProps) => (
-  <Tag className={className} {...props} />
-)
+export const Text = ({ as: Tag = 'p', className, ...props }: TextProps) => <Tag className={className} {...props} />

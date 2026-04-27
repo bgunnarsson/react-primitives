@@ -12,7 +12,13 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 const tableStyle: React.CSSProperties = { width: '100%', borderCollapse: 'collapse', fontSize: 14 }
-const headStyle: React.CSSProperties = { textAlign: 'left', padding: '8px 12px', borderBottom: '2px solid #e5e7eb', fontWeight: 600, color: '#374151' }
+const headStyle: React.CSSProperties = {
+  textAlign: 'left',
+  padding: '8px 12px',
+  borderBottom: '2px solid #e5e7eb',
+  fontWeight: 600,
+  color: '#374151',
+}
 const cellStyle: React.CSSProperties = { padding: '8px 12px', borderBottom: '1px solid #f3f4f6', color: '#111827' }
 const captionStyle: React.CSSProperties = { padding: '8px 0', fontSize: 12, color: '#9ca3af', textAlign: 'left' }
 

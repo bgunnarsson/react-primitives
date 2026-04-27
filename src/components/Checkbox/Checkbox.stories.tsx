@@ -31,7 +31,9 @@ function Row({ id, label, ...props }: React.ComponentProps<typeof Checkbox> & { 
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
       <Checkbox id={id} {...props} />
-      <label htmlFor={id} style={{ fontSize: 14, cursor: 'pointer' }}>{label}</label>
+      <label htmlFor={id} style={{ fontSize: 14, cursor: 'pointer' }}>
+        {label}
+      </label>
     </div>
   )
 }

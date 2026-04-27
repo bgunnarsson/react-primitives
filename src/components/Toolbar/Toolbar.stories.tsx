@@ -1,13 +1,6 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import {
-  Toolbar,
-  ToolbarButton,
-  ToolbarSeparator,
-  ToolbarToggleGroup,
-  ToolbarToggleItem,
-  ToolbarLink,
-} from './Toolbar'
+import { Toolbar, ToolbarButton, ToolbarSeparator, ToolbarToggleGroup, ToolbarToggleItem, ToolbarLink } from './Toolbar'
 
 const meta = {
   title: 'Primitives/Toolbar',
@@ -42,18 +35,32 @@ export const FormattingBar: Story = {
   render: () => (
     <Toolbar style={barStyle} aria-label="Formatting">
       <ToolbarToggleGroup type="multiple" aria-label="Text formatting">
-        <ToolbarToggleItem value="bold" style={toggleStyle}>B</ToolbarToggleItem>
-        <ToolbarToggleItem value="italic" style={{ ...toggleStyle, fontStyle: 'italic' }}>I</ToolbarToggleItem>
-        <ToolbarToggleItem value="underline" style={{ ...toggleStyle, textDecoration: 'underline' }}>U</ToolbarToggleItem>
+        <ToolbarToggleItem value="bold" style={toggleStyle}>
+          B
+        </ToolbarToggleItem>
+        <ToolbarToggleItem value="italic" style={{ ...toggleStyle, fontStyle: 'italic' }}>
+          I
+        </ToolbarToggleItem>
+        <ToolbarToggleItem value="underline" style={{ ...toggleStyle, textDecoration: 'underline' }}>
+          U
+        </ToolbarToggleItem>
       </ToolbarToggleGroup>
       <ToolbarSeparator style={sepStyle} />
       <ToolbarToggleGroup type="single" defaultValue="left" aria-label="Alignment">
-        <ToolbarToggleItem value="left" style={toggleStyle}>Left</ToolbarToggleItem>
-        <ToolbarToggleItem value="center" style={toggleStyle}>Center</ToolbarToggleItem>
-        <ToolbarToggleItem value="right" style={toggleStyle}>Right</ToolbarToggleItem>
+        <ToolbarToggleItem value="left" style={toggleStyle}>
+          Left
+        </ToolbarToggleItem>
+        <ToolbarToggleItem value="center" style={toggleStyle}>
+          Center
+        </ToolbarToggleItem>
+        <ToolbarToggleItem value="right" style={toggleStyle}>
+          Right
+        </ToolbarToggleItem>
       </ToolbarToggleGroup>
       <ToolbarSeparator style={sepStyle} />
-      <ToolbarLink href="#" style={{ ...btnStyle, color: '#3b82f6' }}>Help</ToolbarLink>
+      <ToolbarLink href="#" style={{ ...btnStyle, color: '#3b82f6' }}>
+        Help
+      </ToolbarLink>
       <ToolbarButton style={btnStyle}>Share</ToolbarButton>
     </Toolbar>
   ),

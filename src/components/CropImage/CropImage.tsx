@@ -1,11 +1,5 @@
 import React from 'react'
-import {
-  buildImageUrl,
-  buildSrcSet,
-  DEFAULT_DENSITIES,
-  type ImageFormat,
-  type ImageUrlBuilder,
-} from '../Image/Image'
+import { buildImageUrl, buildSrcSet, DEFAULT_DENSITIES, type ImageFormat, type ImageUrlBuilder } from '../Image/Image'
 
 export interface CropImageCrop {
   src: string
@@ -13,8 +7,7 @@ export interface CropImageCrop {
   height: number
 }
 
-export interface CropImageProps
-  extends Omit<React.HTMLAttributes<HTMLPictureElement>, 'children'> {
+export interface CropImageProps extends Omit<React.HTMLAttributes<HTMLPictureElement>, 'children'> {
   /** BEM block name. Generates `{identifier}__picture` and `{identifier}__image` classes. */
   identifier: string
   /** Optional modifier class(es) appended to the `<picture>` element. */
@@ -44,8 +37,7 @@ export interface CropImageProps
   buildUrl?: ImageUrlBuilder
 }
 
-const cx = (...parts: Array<string | undefined | false | null>) =>
-  parts.filter(Boolean).join(' ') || undefined
+const cx = (...parts: Array<string | undefined | false | null>) => parts.filter(Boolean).join(' ') || undefined
 
 export const CropImage = React.forwardRef<HTMLPictureElement, CropImageProps>(
   (
@@ -66,7 +58,7 @@ export const CropImage = React.forwardRef<HTMLPictureElement, CropImageProps>(
       className,
       ...rest
     },
-    ref,
+    ref
   ) => {
     const sortedDensities = Array.from(new Set(densities))
       .filter((d) => d > 0 && Number.isFinite(d))
@@ -88,19 +80,11 @@ export const CropImage = React.forwardRef<HTMLPictureElement, CropImageProps>(
       sortedDensities,
       quality,
       format,
-      buildUrl,
+      buildUrl
     )
 
     const desktopSrcSet = desktop
-      ? buildSrcSet(
-          desktop.src,
-          desktop.width,
-          desktop.height,
-          sortedDensities,
-          quality,
-          format,
-          buildUrl,
-        )
+      ? buildSrcSet(desktop.src, desktop.width, desktop.height, sortedDensities, quality, format, buildUrl)
       : null
 
     const fallbackCrop = desktop ?? mobile
@@ -108,11 +92,7 @@ export const CropImage = React.forwardRef<HTMLPictureElement, CropImageProps>(
     const fallbackSrcSet = desktopSrcSet ?? mobileSrcSet
 
     return (
-      <picture
-        ref={ref}
-        className={cx(`${identifier}__picture`, modifier, className)}
-        {...rest}
-      >
+      <picture ref={ref} className={cx(`${identifier}__picture`, modifier, className)} {...rest}>
         <source
           media={`(max-width: ${breakpoint}px)`}
           srcSet={mobileSrcSet}
@@ -141,6 +121,6 @@ export const CropImage = React.forwardRef<HTMLPictureElement, CropImageProps>(
         />
       </picture>
     )
-  },
+  }
 )
 CropImage.displayName = 'CropImage'

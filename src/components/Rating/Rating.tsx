@@ -29,7 +29,7 @@ export const Rating = React.forwardRef<HTMLDivElement, RatingProps>(
       renderItem,
       'aria-label': ariaLabel = 'Rating',
     },
-    ref,
+    ref
   ) => {
     const [uncontrolled, setUncontrolled] = React.useState(defaultValue)
     const [hover, setHover] = React.useState<number | null>(null)
@@ -75,7 +75,16 @@ export const Rating = React.forwardRef<HTMLDivElement, RatingProps>(
                 disabled={disabled}
                 readOnly={readOnly}
                 onChange={() => setValue(starValue)}
-                style={{ position: 'absolute', width: 1, height: 1, padding: 0, margin: -1, overflow: 'hidden', clip: 'rect(0,0,0,0)', border: 0 }}
+                style={{
+                  position: 'absolute',
+                  width: 1,
+                  height: 1,
+                  padding: 0,
+                  margin: -1,
+                  overflow: 'hidden',
+                  clip: 'rect(0,0,0,0)',
+                  border: 0,
+                }}
               />
               {renderItem ? renderItem({ index: i, filled, active }) : filled ? '★' : '☆'}
             </label>
@@ -83,6 +92,6 @@ export const Rating = React.forwardRef<HTMLDivElement, RatingProps>(
         })}
       </div>
     )
-  },
+  }
 )
 Rating.displayName = 'Rating'

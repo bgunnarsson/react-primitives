@@ -94,6 +94,6 @@ export const FocusScope = React.forwardRef<HTMLDivElement, FocusScopeProps>(
         {children}
       </div>
     )
-  },
+  }
 )
 FocusScope.displayName = 'FocusScope'

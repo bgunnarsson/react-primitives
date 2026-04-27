@@ -1,12 +1,6 @@
 import React, { useState } from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import {
-  InputOTP,
-  InputOTPGroup,
-  InputOTPSlot,
-  InputOTPSeparator,
-  REGEXP_ONLY_DIGITS,
-} from './InputOTP'
+import { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator, REGEXP_ONLY_DIGITS } from './InputOTP'
 
 const meta: Meta<typeof InputOTP> = {
   title: 'Primitives/InputOTP',

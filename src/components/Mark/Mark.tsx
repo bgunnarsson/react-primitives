@@ -39,7 +39,11 @@ export const Mark = React.forwardRef<HTMLElement, MarkProps>(
         </span>
       )
     }
-    return <mark ref={ref as React.Ref<HTMLElement>} {...rest}>{children}</mark>
-  },
+    return (
+      <mark ref={ref as React.Ref<HTMLElement>} {...rest}>
+        {children}
+      </mark>
+    )
+  }
 )
 Mark.displayName = 'Mark'

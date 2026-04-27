@@ -1,11 +1,6 @@
 import React from 'react'
 import { figma } from '@figma/code-connect'
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from './DropdownMenu'
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from './DropdownMenu'
 
 figma.connect(DropdownMenu, 'FIGMA_COMPONENT_URL', {
   props: {},

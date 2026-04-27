@@ -171,13 +171,7 @@ export const TimePicker = ({
           )}
         </PopoverContent>
       </Popover>
-      {name && (
-        <input
-          type="hidden"
-          name={name}
-          value={value ? `${pad(current.hours)}:${pad(current.minutes)}` : ''}
-        />
-      )}
+      {name && <input type="hidden" name={name} value={value ? `${pad(current.hours)}:${pad(current.minutes)}` : ''} />}
     </>
   )
 }

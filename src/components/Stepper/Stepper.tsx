@@ -14,11 +14,7 @@ export interface StepperProps extends React.HTMLAttributes<HTMLOListElement> {
 
 export const Stepper = ({ value, orientation = 'horizontal', ...props }: StepperProps) => (
   <StepperContext.Provider value={{ value, orientation }}>
-    <ol
-      data-orientation={orientation}
-      aria-label="Progress"
-      {...props}
-    />
+    <ol data-orientation={orientation} aria-label="Progress" {...props} />
   </StepperContext.Provider>
 )
 
@@ -35,8 +31,7 @@ export interface StepperItemProps extends React.HTMLAttributes<HTMLLIElement> {
 
 export const StepperItem = ({ step, ...props }: StepperItemProps) => {
   const { value } = React.useContext(StepperContext)
-  const state: 'active' | 'completed' | 'pending' =
-    step === value ? 'active' : step < value ? 'completed' : 'pending'
+  const state: 'active' | 'completed' | 'pending' = step === value ? 'active' : step < value ? 'completed' : 'pending'
 
   return (
     <StepperItemContext.Provider value={{ step, state }}>
@@ -62,6 +57,4 @@ export interface StepperDescriptionProps extends React.HTMLAttributes<HTMLParagr
 export const StepperDescription = (props: StepperDescriptionProps) => <p {...props} />
 
 export interface StepperSeparatorProps extends React.HTMLAttributes<HTMLDivElement> {}
-export const StepperSeparator = (props: StepperSeparatorProps) => (
-  <div aria-hidden="true" {...props} />
-)
+export const StepperSeparator = (props: StepperSeparatorProps) => <div aria-hidden="true" {...props} />

@@ -31,18 +31,30 @@ export const Default: Story = {
       {steps.map(({ step, title, description }, i) => (
         <React.Fragment key={step}>
           <StepperItem step={step} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <StepperIndicator style={{
-              width: 28, height: 28, borderRadius: '50%',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              background: '#e5e7eb', fontSize: 13, fontWeight: 600,
-            }} />
+            <StepperIndicator
+              style={{
+                width: 28,
+                height: 28,
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                background: '#e5e7eb',
+                fontSize: 13,
+                fontWeight: 600,
+              }}
+            />
             <div>
               <StepperTitle style={{ margin: 0, fontSize: 14, fontWeight: 600 }}>{title}</StepperTitle>
-              <StepperDescription style={{ margin: 0, fontSize: 12, color: '#6b7280' }}>{description}</StepperDescription>
+              <StepperDescription style={{ margin: 0, fontSize: 12, color: '#6b7280' }}>
+                {description}
+              </StepperDescription>
             </div>
           </StepperItem>
           {i < steps.length - 1 && (
-            <StepperSeparator style={{ flex: 1, height: 1, background: '#e5e7eb', margin: '0 8px', alignSelf: 'center' }} />
+            <StepperSeparator
+              style={{ flex: 1, height: 1, background: '#e5e7eb', margin: '0 8px', alignSelf: 'center' }}
+            />
           )}
         </React.Fragment>
       ))}
@@ -59,16 +71,38 @@ export const Interactive: Story = {
           {steps.map(({ step: s, title }, i) => (
             <React.Fragment key={s}>
               <StepperItem step={s} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <StepperIndicator style={{ width: 28, height: 28, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#e5e7eb', fontSize: 13, fontWeight: 600 }} />
+                <StepperIndicator
+                  style={{
+                    width: 28,
+                    height: 28,
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    background: '#e5e7eb',
+                    fontSize: 13,
+                    fontWeight: 600,
+                  }}
+                />
                 <StepperTitle style={{ margin: 0, fontSize: 14, fontWeight: 600 }}>{title}</StepperTitle>
               </StepperItem>
-              {i < steps.length - 1 && <StepperSeparator style={{ flex: 1, height: 1, background: '#e5e7eb', margin: '0 8px', alignSelf: 'center' }} />}
+              {i < steps.length - 1 && (
+                <StepperSeparator
+                  style={{ flex: 1, height: 1, background: '#e5e7eb', margin: '0 8px', alignSelf: 'center' }}
+                />
+              )}
             </React.Fragment>
           ))}
         </Stepper>
         <div style={{ display: 'flex', gap: 8 }}>
-          <button type="button" onClick={() => setStep((s) => Math.max(1, s - 1))} disabled={step === 1}>Back</button>
-          <button type="button" onClick={() => setStep((s) => Math.min(steps.length + 1, s + 1))} disabled={step > steps.length}>
+          <button type="button" onClick={() => setStep((s) => Math.max(1, s - 1))} disabled={step === 1}>
+            Back
+          </button>
+          <button
+            type="button"
+            onClick={() => setStep((s) => Math.min(steps.length + 1, s + 1))}
+            disabled={step > steps.length}
+          >
             {step > steps.length ? 'Done' : step === steps.length ? 'Finish' : 'Next'}
           </button>
         </div>

@@ -10,7 +10,7 @@ const componentEntries = readdirSync(componentsDir)
       entries[name] = `${componentsDir}/${name}/index.ts`
       return entries
     },
-    {} as Record<string, string>,
+    {} as Record<string, string>
   )
 
 export default defineConfig({

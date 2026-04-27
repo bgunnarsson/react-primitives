@@ -14,7 +14,14 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-const base: React.CSSProperties = { display: 'inline-flex', alignItems: 'center', padding: '2px 8px', borderRadius: 9999, fontSize: 12, fontWeight: 500 }
+const base: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  padding: '2px 8px',
+  borderRadius: 9999,
+  fontSize: 12,
+  fontWeight: 500,
+}
 
 export const Default: Story = {
   args: { children: 'Badge' },

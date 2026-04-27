@@ -36,7 +36,12 @@ const lineStyle: React.CSSProperties = {
 }
 
 const itemRow: React.CSSProperties = { display: 'flex', gap: 12, padding: '0 0 16px' }
-const indicatorCol: React.CSSProperties = { display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: 4 }
+const indicatorCol: React.CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  paddingTop: 4,
+}
 
 export const Vertical: Story = {
   render: () => (

@@ -14,9 +14,7 @@ export interface AlertDialogOverlayProps extends React.ComponentPropsWithoutRef<
 export const AlertDialogOverlay = React.forwardRef<
   React.ElementRef<typeof RadixAlertDialog.Overlay>,
   AlertDialogOverlayProps
->(({ className, ...props }, ref) => (
-  <RadixAlertDialog.Overlay ref={ref} className={className} {...props} />
-))
+>(({ className, ...props }, ref) => <RadixAlertDialog.Overlay ref={ref} className={className} {...props} />)
 AlertDialogOverlay.displayName = 'AlertDialogOverlay'
 
 export interface AlertDialogContentProps extends React.ComponentPropsWithoutRef<typeof RadixAlertDialog.Content> {

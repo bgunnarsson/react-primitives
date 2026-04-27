@@ -11,8 +11,8 @@ import {
   ContextMenuSub,
   ContextMenuSubContent,
   ContextMenuSubTrigger,
-  ContextMenuTrigger
-} from "./chunk-SYHBXF6Q.js";
+  ContextMenuTrigger,
+} from './chunk-SYHBXF6Q.js'
 export {
   ContextMenu,
   ContextMenuCheckboxItem,
@@ -26,5 +26,5 @@ export {
   ContextMenuSub,
   ContextMenuSubContent,
   ContextMenuSubTrigger,
-  ContextMenuTrigger
-};
+  ContextMenuTrigger,
+}

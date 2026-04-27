@@ -115,12 +115,16 @@ export const Default: Story = {
           >
             {hasFiles ? `${files.length} file${files.length > 1 ? 's' : ''} selected` : 'Click or drag files here'}
             {hasFiles && (
-              <span className="story-file-hint" style={{ marginTop: 0 }}>Drop to replace or click to change</span>
+              <span className="story-file-hint" style={{ marginTop: 0 }}>
+                Drop to replace or click to change
+              </span>
             )}
           </FileInput>
           {hasFiles && (
             <ul className="story-file-list">
-              {files.map((f) => <li key={f.name}>{f.name}</li>)}
+              {files.map((f) => (
+                <li key={f.name}>{f.name}</li>
+              ))}
             </ul>
           )}
         </div>
@@ -145,12 +149,16 @@ export const Multiple: Story = {
           >
             {hasFiles ? `${files.length} file${files.length > 1 ? 's' : ''} selected` : 'Click or drag files here'}
             {hasFiles && (
-              <span className="story-file-hint" style={{ marginTop: 0 }}>Drop to replace or click to change</span>
+              <span className="story-file-hint" style={{ marginTop: 0 }}>
+                Drop to replace or click to change
+              </span>
             )}
           </FileInput>
           {hasFiles && (
             <ul className="story-file-list">
-              {files.map((f) => <li key={f.name}>{f.name}</li>)}
+              {files.map((f) => (
+                <li key={f.name}>{f.name}</li>
+              ))}
             </ul>
           )}
         </div>

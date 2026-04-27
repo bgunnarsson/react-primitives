@@ -11,10 +11,7 @@ type PlaceholderKey = keyof typeof PLACEHOLDERS
 const isPlaceholder = (ch: string): ch is PlaceholderKey => ch in PLACEHOLDERS
 
 export interface MaskedInputProps
-  extends Omit<
-    React.InputHTMLAttributes<HTMLInputElement>,
-    'value' | 'defaultValue' | 'onChange'
-  > {
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'value' | 'defaultValue' | 'onChange'> {
   /** Mask string. `9` = digit, `a` = letter, `*` = alphanumeric, anything else = literal. */
   mask: string
   /** Controlled raw value (unmasked characters only). */
@@ -79,18 +76,8 @@ const extractRaw = (input: string, mask: string) => {
 
 export const MaskedInput = React.forwardRef<HTMLInputElement, MaskedInputProps>(
   (
-    {
-      mask,
-      value: valueProp,
-      defaultValue,
-      onValueChange,
-      maskChar,
-      className,
-      style,
-      disabled,
-      ...inputProps
-    },
-    ref,
+    { mask, value: valueProp, defaultValue, onValueChange, maskChar, className, style, disabled, ...inputProps },
+    ref
   ) => {
     const controlled = valueProp !== undefined
     const [uncontrolled, setUncontrolled] = React.useState(defaultValue ?? '')
@@ -129,6 +116,6 @@ export const MaskedInput = React.forwardRef<HTMLInputElement, MaskedInputProps>(
         {...inputProps}
       />
     )
-  },
+  }
 )
 MaskedInput.displayName = 'MaskedInput'

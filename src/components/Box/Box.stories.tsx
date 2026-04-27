@@ -13,9 +13,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   render: () => (
-    <Box style={{ padding: 16, background: '#f3f4f6', border: '1px dashed #d1d5db' }}>
-      A generic Box element.
-    </Box>
+    <Box style={{ padding: 16, background: '#f3f4f6', border: '1px dashed #d1d5db' }}>A generic Box element.</Box>
   ),
 }
 

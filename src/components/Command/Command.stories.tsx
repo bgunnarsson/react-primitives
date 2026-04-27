@@ -20,11 +20,37 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-const rootStyle: React.CSSProperties = { width: 420, maxWidth: '100%', borderRadius: 12, border: '1px solid #e5e7eb', background: 'white', overflow: 'hidden' }
-const inputStyle: React.CSSProperties = { width: '100%', border: 'none', borderBottom: '1px solid #f3f4f6', padding: 12, fontSize: 14, outline: 'none' }
+const rootStyle: React.CSSProperties = {
+  width: 420,
+  maxWidth: '100%',
+  borderRadius: 12,
+  border: '1px solid #e5e7eb',
+  background: 'white',
+  overflow: 'hidden',
+}
+const inputStyle: React.CSSProperties = {
+  width: '100%',
+  border: 'none',
+  borderBottom: '1px solid #f3f4f6',
+  padding: 12,
+  fontSize: 14,
+  outline: 'none',
+}
 const listStyle: React.CSSProperties = { maxHeight: 320, overflow: 'auto', padding: 4 }
-const itemStyle: React.CSSProperties = { padding: '8px 10px', borderRadius: 6, fontSize: 13, cursor: 'pointer', outline: 'none' }
-const groupLabelStyle: React.CSSProperties = { padding: '8px 10px 4px', fontSize: 11, fontWeight: 600, textTransform: 'uppercase', color: '#6b7280' }
+const itemStyle: React.CSSProperties = {
+  padding: '8px 10px',
+  borderRadius: 6,
+  fontSize: 13,
+  cursor: 'pointer',
+  outline: 'none',
+}
+const groupLabelStyle: React.CSSProperties = {
+  padding: '8px 10px 4px',
+  fontSize: 11,
+  fontWeight: 600,
+  textTransform: 'uppercase',
+  color: '#6b7280',
+}
 const emptyStyle: React.CSSProperties = { padding: 16, fontSize: 13, color: '#6b7280', textAlign: 'center' }
 
 export const Inline: Story = {
@@ -65,7 +91,13 @@ export const AsDialog: Story = {
       <>
         <button
           onClick={() => setOpen(true)}
-          style={{ padding: '8px 14px', border: '1px solid #e5e7eb', borderRadius: 6, background: 'white', cursor: 'pointer' }}
+          style={{
+            padding: '8px 14px',
+            border: '1px solid #e5e7eb',
+            borderRadius: 6,
+            background: 'white',
+            cursor: 'pointer',
+          }}
         >
           Open command palette (⌘K)
         </button>

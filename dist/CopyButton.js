@@ -1,6 +1,2 @@
-import {
-  CopyButton
-} from "./chunk-ARTLYOEB.js";
-export {
-  CopyButton
-};
+import { CopyButton } from './chunk-ARTLYOEB.js'
+export { CopyButton }

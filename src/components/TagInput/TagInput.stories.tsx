@@ -21,7 +21,14 @@ const rootStyle: React.CSSProperties = {
   background: 'white',
   minWidth: 320,
 }
-const inputStyle: React.CSSProperties = { flex: 1, minWidth: 120, border: 'none', outline: 'none', fontSize: 14, padding: 4 }
+const inputStyle: React.CSSProperties = {
+  flex: 1,
+  minWidth: 120,
+  border: 'none',
+  outline: 'none',
+  fontSize: 14,
+  padding: 4,
+}
 
 export const Default: Story = {
   render: () => {
@@ -52,7 +59,15 @@ export const Default: Story = {
                 type="button"
                 aria-label={`Remove ${tag}`}
                 onClick={remove}
-                style={{ border: 'none', background: 'transparent', cursor: 'pointer', color: '#3730a3', padding: '0 4px', fontSize: 14, lineHeight: 1 }}
+                style={{
+                  border: 'none',
+                  background: 'transparent',
+                  cursor: 'pointer',
+                  color: '#3730a3',
+                  padding: '0 4px',
+                  fontSize: 14,
+                  lineHeight: 1,
+                }}
               >
                 ×
               </button>
@@ -70,7 +85,14 @@ export const MaxTags: Story = {
     const [tags, setTags] = useState<string[]>([])
     return (
       <div>
-        <TagInput value={tags} onValueChange={setTags} maxTags={3} placeholder="Up to 3 tags" style={rootStyle} inputStyle={inputStyle} />
+        <TagInput
+          value={tags}
+          onValueChange={setTags}
+          maxTags={3}
+          placeholder="Up to 3 tags"
+          style={rootStyle}
+          inputStyle={inputStyle}
+        />
         <p style={{ marginTop: 8, fontSize: 12, color: '#6b7280' }}>{tags.length}/3</p>
       </div>
     )

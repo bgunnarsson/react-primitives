@@ -1,6 +1,2 @@
-import {
-  Mark
-} from "./chunk-GTJZDWWG.js";
-export {
-  Mark
-};
+import { Mark } from './chunk-GTJZDWWG.js'
+export { Mark }

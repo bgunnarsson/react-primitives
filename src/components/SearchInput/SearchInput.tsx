@@ -1,6 +1,7 @@
 import React from 'react'
 
-export interface SearchInputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'onChange' | 'value' | 'defaultValue'> {
+export interface SearchInputProps
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'onChange' | 'value' | 'defaultValue'> {
   value?: string
   defaultValue?: string
   onValueChange?: (value: string) => void
@@ -39,7 +40,7 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
       disabled,
       ...inputProps
     },
-    ref,
+    ref
   ) => {
     const [uncontrolled, setUncontrolled] = React.useState(defaultValue ?? '')
     const controlled = valueProp !== undefined
@@ -93,6 +94,6 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
         ) : null}
       </div>
     )
-  },
+  }
 )
 SearchInput.displayName = 'SearchInput'

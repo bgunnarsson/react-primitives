@@ -1,6 +1,2 @@
-import {
-  Textarea
-} from "./chunk-WILLDRPH.js";
-export {
-  Textarea
-};
+import { Textarea } from './chunk-WILLDRPH.js'
+export { Textarea }

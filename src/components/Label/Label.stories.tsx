@@ -41,7 +41,9 @@ export const Default: Story = {
     <>
       <style>{styles}</style>
       <div className="sb-field">
-        <Label className="sb-label" htmlFor="email">Email address</Label>
+        <Label className="sb-label" htmlFor="email">
+          Email address
+        </Label>
         <Input id="email" type="email" placeholder="you@example.com" className="sb-input" />
       </div>
     </>
@@ -54,7 +56,10 @@ export const Required: Story = {
       <style>{styles}</style>
       <div className="sb-field">
         <Label className="sb-label" htmlFor="fullname">
-          Full name<span className="sb-required" aria-hidden>*</span>
+          Full name
+          <span className="sb-required" aria-hidden>
+            *
+          </span>
         </Label>
         <Input id="fullname" required placeholder="Jane Doe" className="sb-input" />
       </div>

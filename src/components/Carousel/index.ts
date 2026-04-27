@@ -6,4 +6,11 @@ export {
   CarouselNext,
   useCarousel,
 } from './Carousel'
-export type { CarouselProps, CarouselContentProps, CarouselItemProps, CarouselPreviousProps, CarouselNextProps, CarouselApi } from './Carousel'
+export type {
+  CarouselProps,
+  CarouselContentProps,
+  CarouselItemProps,
+  CarouselPreviousProps,
+  CarouselNextProps,
+  CarouselApi,
+} from './Carousel'

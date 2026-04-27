@@ -15,8 +15,8 @@ import {
   RadioItem,
   Sub,
   SubTrigger,
-  SubContent
-} from "@radix-ui/react-menubar";
+  SubContent,
+} from '@radix-ui/react-menubar'
 
 export {
   Root,
@@ -34,5 +34,5 @@ export {
   RadioItem,
   Sub,
   SubTrigger,
-  SubContent
-};
+  SubContent,
+}

@@ -21,15 +21,13 @@ ContextMenuContent.displayName = 'ContextMenuContent'
 
 export interface ContextMenuItemProps extends React.ComponentPropsWithoutRef<typeof RadixContextMenu.Item> {}
 
-export const ContextMenuItem = React.forwardRef<
-  React.ElementRef<typeof RadixContextMenu.Item>,
-  ContextMenuItemProps
->(({ className, ...props }, ref) => (
-  <RadixContextMenu.Item ref={ref} className={className} {...props} />
-))
+export const ContextMenuItem = React.forwardRef<React.ElementRef<typeof RadixContextMenu.Item>, ContextMenuItemProps>(
+  ({ className, ...props }, ref) => <RadixContextMenu.Item ref={ref} className={className} {...props} />
+)
 ContextMenuItem.displayName = 'ContextMenuItem'
 
-export interface ContextMenuCheckboxItemProps extends React.ComponentPropsWithoutRef<typeof RadixContextMenu.CheckboxItem> {}
+export interface ContextMenuCheckboxItemProps
+  extends React.ComponentPropsWithoutRef<typeof RadixContextMenu.CheckboxItem> {}
 
 export const ContextMenuCheckboxItem = React.forwardRef<
   React.ElementRef<typeof RadixContextMenu.CheckboxItem>,
@@ -60,9 +58,7 @@ export interface ContextMenuLabelProps extends React.ComponentPropsWithoutRef<ty
 export const ContextMenuLabel = React.forwardRef<
   React.ElementRef<typeof RadixContextMenu.Label>,
   ContextMenuLabelProps
->(({ className, ...props }, ref) => (
-  <RadixContextMenu.Label ref={ref} className={className} {...props} />
-))
+>(({ className, ...props }, ref) => <RadixContextMenu.Label ref={ref} className={className} {...props} />)
 ContextMenuLabel.displayName = 'ContextMenuLabel'
 
 export interface ContextMenuSeparatorProps extends React.ComponentPropsWithoutRef<typeof RadixContextMenu.Separator> {}
@@ -70,12 +66,11 @@ export interface ContextMenuSeparatorProps extends React.ComponentPropsWithoutRe
 export const ContextMenuSeparator = React.forwardRef<
   React.ElementRef<typeof RadixContextMenu.Separator>,
   ContextMenuSeparatorProps
->(({ className, ...props }, ref) => (
-  <RadixContextMenu.Separator ref={ref} className={className} {...props} />
-))
+>(({ className, ...props }, ref) => <RadixContextMenu.Separator ref={ref} className={className} {...props} />)
 ContextMenuSeparator.displayName = 'ContextMenuSeparator'
 
-export interface ContextMenuSubTriggerProps extends React.ComponentPropsWithoutRef<typeof RadixContextMenu.SubTrigger> {}
+export interface ContextMenuSubTriggerProps
+  extends React.ComponentPropsWithoutRef<typeof RadixContextMenu.SubTrigger> {}
 
 export const ContextMenuSubTrigger = React.forwardRef<
   React.ElementRef<typeof RadixContextMenu.SubTrigger>,
@@ -87,7 +82,8 @@ export const ContextMenuSubTrigger = React.forwardRef<
 ))
 ContextMenuSubTrigger.displayName = 'ContextMenuSubTrigger'
 
-export interface ContextMenuSubContentProps extends React.ComponentPropsWithoutRef<typeof RadixContextMenu.SubContent> {}
+export interface ContextMenuSubContentProps
+  extends React.ComponentPropsWithoutRef<typeof RadixContextMenu.SubContent> {}
 
 export const ContextMenuSubContent = React.forwardRef<
   React.ElementRef<typeof RadixContextMenu.SubContent>,

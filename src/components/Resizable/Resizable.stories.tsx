@@ -50,11 +50,17 @@ const vertHandleStyle: React.CSSProperties = { height: 4, background: '#e5e7eb',
 export const VerticalThreePanel: Story = {
   render: () => (
     <ResizablePanelGroup orientation="vertical" style={vertGroupStyle}>
-      <ResizablePanel defaultSize={25} style={panelStyle}>Top</ResizablePanel>
+      <ResizablePanel defaultSize={25} style={panelStyle}>
+        Top
+      </ResizablePanel>
       <ResizableHandle style={vertHandleStyle} />
-      <ResizablePanel defaultSize={50} style={panelStyle}>Middle</ResizablePanel>
+      <ResizablePanel defaultSize={50} style={panelStyle}>
+        Middle
+      </ResizablePanel>
       <ResizableHandle style={vertHandleStyle} />
-      <ResizablePanel defaultSize={25} style={panelStyle}>Bottom</ResizablePanel>
+      <ResizablePanel defaultSize={25} style={panelStyle}>
+        Bottom
+      </ResizablePanel>
     </ResizablePanelGroup>
   ),
 }

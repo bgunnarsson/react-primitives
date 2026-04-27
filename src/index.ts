@@ -198,7 +198,6 @@ export {
 } from './components/AlertDialog'
 export type { AlertDialogOverlayProps, AlertDialogContentProps } from './components/AlertDialog'
 
-
 export { Toaster, toast } from './components/Toast'
 export type { ToasterProps, ToastT } from './components/Toast'
 
@@ -318,19 +317,59 @@ export type {
   PaginationEllipsisProps,
 } from './components/Pagination'
 
-export { Stepper, StepperItem, StepperIndicator, StepperTitle, StepperDescription, StepperSeparator } from './components/Stepper'
-export type { StepperProps, StepperItemProps, StepperIndicatorProps, StepperTitleProps, StepperDescriptionProps, StepperSeparatorProps } from './components/Stepper'
+export {
+  Stepper,
+  StepperItem,
+  StepperIndicator,
+  StepperTitle,
+  StepperDescription,
+  StepperSeparator,
+} from './components/Stepper'
+export type {
+  StepperProps,
+  StepperItemProps,
+  StepperIndicatorProps,
+  StepperTitleProps,
+  StepperDescriptionProps,
+  StepperSeparatorProps,
+} from './components/Stepper'
 
-
-export { EmptyState, EmptyStateIcon, EmptyStateTitle, EmptyStateDescription, EmptyStateAction } from './components/EmptyState'
-export type { EmptyStateProps, EmptyStateIconProps, EmptyStateTitleProps, EmptyStateDescriptionProps, EmptyStateActionProps } from './components/EmptyState'
+export {
+  EmptyState,
+  EmptyStateIcon,
+  EmptyStateTitle,
+  EmptyStateDescription,
+  EmptyStateAction,
+} from './components/EmptyState'
+export type {
+  EmptyStateProps,
+  EmptyStateIconProps,
+  EmptyStateTitleProps,
+  EmptyStateDescriptionProps,
+  EmptyStateActionProps,
+} from './components/EmptyState'
 
 export { Stat, StatLabel, StatValue, StatHelpText } from './components/Stat'
 export type { StatProps, StatLabelProps, StatValueProps, StatHelpTextProps } from './components/Stat'
 
-
-export { Combobox, ComboboxTrigger, ComboboxContent, ComboboxInput, ComboboxList, ComboboxItem, ComboboxEmpty, ComboboxCommand } from './components/Combobox'
-export type { ComboboxProps, ComboboxContentProps, ComboboxInputProps, ComboboxListProps, ComboboxItemProps, ComboboxEmptyProps } from './components/Combobox'
+export {
+  Combobox,
+  ComboboxTrigger,
+  ComboboxContent,
+  ComboboxInput,
+  ComboboxList,
+  ComboboxItem,
+  ComboboxEmpty,
+  ComboboxCommand,
+} from './components/Combobox'
+export type {
+  ComboboxProps,
+  ComboboxContentProps,
+  ComboboxInputProps,
+  ComboboxListProps,
+  ComboboxItemProps,
+  ComboboxEmptyProps,
+} from './components/Combobox'
 
 export { DatePicker } from './components/DatePicker'
 export type { DatePickerProps } from './components/DatePicker'

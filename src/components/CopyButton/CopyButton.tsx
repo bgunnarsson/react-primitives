@@ -56,7 +56,7 @@ export const CopyButton = React.forwardRef<HTMLButtonElement, CopyButtonProps>(
       'aria-label': ariaLabel,
       ...rest
     },
-    ref,
+    ref
   ) => {
     const [copied, setCopied] = React.useState(false)
     const [error, setError] = React.useState<Error | null>(null)
@@ -66,7 +66,7 @@ export const CopyButton = React.forwardRef<HTMLButtonElement, CopyButtonProps>(
       () => () => {
         if (timer.current) clearTimeout(timer.current)
       },
-      [],
+      []
     )
 
     const copy = React.useCallback(async () => {
@@ -104,11 +104,9 @@ export const CopyButton = React.forwardRef<HTMLButtonElement, CopyButtonProps>(
         onClick={handleClick}
         {...rest}
       >
-        {typeof children === 'function'
-          ? children(renderState)
-          : (children ?? (copied ? 'Copied' : 'Copy'))}
+        {typeof children === 'function' ? children(renderState) : (children ?? (copied ? 'Copied' : 'Copy'))}
       </button>
     )
-  },
+  }
 )
 CopyButton.displayName = 'CopyButton'

@@ -15,10 +15,7 @@ ToggleGroup.displayName = 'ToggleGroup'
 
 export interface ToggleGroupItemProps extends React.ComponentPropsWithoutRef<typeof RadixToggleGroup.Item> {}
 
-export const ToggleGroupItem = React.forwardRef<
-  React.ElementRef<typeof RadixToggleGroup.Item>,
-  ToggleGroupItemProps
->(({ className, ...props }, ref) => (
-  <RadixToggleGroup.Item ref={ref} className={className} {...props} />
-))
+export const ToggleGroupItem = React.forwardRef<React.ElementRef<typeof RadixToggleGroup.Item>, ToggleGroupItemProps>(
+  ({ className, ...props }, ref) => <RadixToggleGroup.Item ref={ref} className={className} {...props} />
+)
 ToggleGroupItem.displayName = 'ToggleGroupItem'

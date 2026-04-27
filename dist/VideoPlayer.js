@@ -1,6 +1,2 @@
-import {
-  VideoPlayer
-} from "./chunk-DVJHG3MU.js";
-export {
-  VideoPlayer
-};
+import { VideoPlayer } from './chunk-DVJHG3MU.js'
+export { VideoPlayer }

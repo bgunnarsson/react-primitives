@@ -9,7 +9,5 @@ figma.connect(Separator, 'FIGMA_COMPONENT_URL', {
       Vertical: 'vertical',
     }),
   },
-  example: ({ orientation }) => (
-    <Separator orientation={orientation} />
-  ),
+  example: ({ orientation }) => <Separator orientation={orientation} />,
 })

@@ -7,7 +7,5 @@ figma.connect(Checkbox, 'FIGMA_COMPONENT_URL', {
     checked: figma.boolean('Checked'),
     disabled: figma.boolean('Disabled'),
   },
-  example: ({ checked, disabled }) => (
-    <Checkbox defaultChecked={checked} disabled={disabled} />
-  ),
+  example: ({ checked, disabled }) => <Checkbox defaultChecked={checked} disabled={disabled} />,
 })

@@ -4,10 +4,7 @@ import { DEFAULT_COUNTRIES, type PhoneCountry } from './countries'
 export type { PhoneCountry }
 
 export interface PhoneInputProps
-  extends Omit<
-    React.InputHTMLAttributes<HTMLInputElement>,
-    'type' | 'value' | 'defaultValue' | 'onChange'
-  > {
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'value' | 'defaultValue' | 'onChange'> {
   /** Controlled E.164 value (e.g. `+15551234567`). */
   value?: string
   /** Uncontrolled initial E.164 value. */
@@ -28,15 +25,10 @@ export interface PhoneInputProps
 
 const onlyDigits = (s: string) => s.replace(/\D+/g, '')
 
-const findCountryFromValue = (
-  value: string,
-  countries: PhoneCountry[],
-): PhoneCountry | undefined => {
+const findCountryFromValue = (value: string, countries: PhoneCountry[]): PhoneCountry | undefined => {
   if (!value.startsWith('+')) return undefined
   const digits = value.slice(1)
-  return [...countries]
-    .sort((a, b) => b.dialCode.length - a.dialCode.length)
-    .find((c) => digits.startsWith(c.dialCode))
+  return [...countries].sort((a, b) => b.dialCode.length - a.dialCode.length).find((c) => digits.startsWith(c.dialCode))
 }
 
 export const PhoneInput = React.forwardRef<HTMLInputElement, PhoneInputProps>(
@@ -58,17 +50,17 @@ export const PhoneInput = React.forwardRef<HTMLInputElement, PhoneInputProps>(
       placeholder,
       ...inputProps
     },
-    ref,
+    ref
   ) => {
     const controlled = valueProp !== undefined
 
     const initialCountry =
-      findCountryFromValue(controlled ? valueProp! : defaultValue ?? '', countries) ??
+      findCountryFromValue(controlled ? valueProp! : (defaultValue ?? ''), countries) ??
       countries.find((c) => c.code === defaultCountry) ??
       countries[0]
 
     const initialDigits = (() => {
-      const v = controlled ? valueProp! : defaultValue ?? ''
+      const v = controlled ? valueProp! : (defaultValue ?? '')
       if (!v.startsWith('+') || !initialCountry) return ''
       return v.slice(1 + initialCountry.dialCode.length)
     })()
@@ -87,8 +79,7 @@ export const PhoneInput = React.forwardRef<HTMLInputElement, PhoneInputProps>(
       }
     }, [valueProp, controlled, countries])
 
-    const buildE164 = (c: PhoneCountry, digits: string) =>
-      digits ? `+${c.dialCode}${digits}` : ''
+    const buildE164 = (c: PhoneCountry, digits: string) => (digits ? `+${c.dialCode}${digits}` : '')
 
     const emit = (c: PhoneCountry, digits: string) => {
       onValueChange?.(buildE164(c, digits), c)
@@ -107,9 +98,7 @@ export const PhoneInput = React.forwardRef<HTMLInputElement, PhoneInputProps>(
       emit(country, digits)
     }
 
-    const display = formatNational
-      ? formatNational(nationalDigits, country)
-      : nationalDigits
+    const display = formatNational ? formatNational(nationalDigits, country) : nationalDigits
 
     return (
       <div data-disabled={disabled || undefined} className={className} style={style}>
@@ -142,6 +131,6 @@ export const PhoneInput = React.forwardRef<HTMLInputElement, PhoneInputProps>(
         />
       </div>
     )
-  },
+  }
 )
 PhoneInput.displayName = 'PhoneInput'

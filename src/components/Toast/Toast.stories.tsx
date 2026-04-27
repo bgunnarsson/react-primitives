@@ -49,7 +49,9 @@ export const Default: Story = {
     <>
       <style>{styles}</style>
       <Toaster richColors />
-      <button className="sb-toast-trigger" onClick={() => toast('Event has been created.')}>Default</button>
+      <button className="sb-toast-trigger" onClick={() => toast('Event has been created.')}>
+        Default
+      </button>
     </>
   ),
 }
@@ -74,7 +76,10 @@ export const Success: Story = {
     <>
       <style>{styles}</style>
       <Toaster richColors />
-      <button className="sb-toast-trigger sb-toast-trigger--success" onClick={() => toast.success('Changes saved successfully.')}>
+      <button
+        className="sb-toast-trigger sb-toast-trigger--success"
+        onClick={() => toast.success('Changes saved successfully.')}
+      >
         Success
       </button>
     </>
@@ -86,7 +91,10 @@ export const Error: Story = {
     <>
       <style>{styles}</style>
       <Toaster richColors />
-      <button className="sb-toast-trigger sb-toast-trigger--danger" onClick={() => toast.error('Something went wrong.')}>
+      <button
+        className="sb-toast-trigger sb-toast-trigger--danger"
+        onClick={() => toast.error('Something went wrong.')}
+      >
         Error
       </button>
     </>
@@ -98,7 +106,10 @@ export const Warning: Story = {
     <>
       <style>{styles}</style>
       <Toaster richColors />
-      <button className="sb-toast-trigger sb-toast-trigger--warning" onClick={() => toast.warning('Your session is about to expire.')}>
+      <button
+        className="sb-toast-trigger sb-toast-trigger--warning"
+        onClick={() => toast.warning('Your session is about to expire.')}
+      >
         Warning
       </button>
     </>
@@ -111,10 +122,27 @@ export const Gallery: Story = {
       <style>{styles}</style>
       <Toaster richColors />
       <div className="sb-toast-row">
-        <button className="sb-toast-trigger" onClick={() => toast('Event has been created.')}>Default</button>
-        <button className="sb-toast-trigger sb-toast-trigger--success" onClick={() => toast.success('Changes saved successfully.')}>Success</button>
-        <button className="sb-toast-trigger sb-toast-trigger--danger" onClick={() => toast.error('Something went wrong.')}>Error</button>
-        <button className="sb-toast-trigger sb-toast-trigger--warning" onClick={() => toast.warning('Your session is about to expire.')}>Warning</button>
+        <button className="sb-toast-trigger" onClick={() => toast('Event has been created.')}>
+          Default
+        </button>
+        <button
+          className="sb-toast-trigger sb-toast-trigger--success"
+          onClick={() => toast.success('Changes saved successfully.')}
+        >
+          Success
+        </button>
+        <button
+          className="sb-toast-trigger sb-toast-trigger--danger"
+          onClick={() => toast.error('Something went wrong.')}
+        >
+          Error
+        </button>
+        <button
+          className="sb-toast-trigger sb-toast-trigger--warning"
+          onClick={() => toast.warning('Your session is about to expire.')}
+        >
+          Warning
+        </button>
       </div>
     </>
   ),

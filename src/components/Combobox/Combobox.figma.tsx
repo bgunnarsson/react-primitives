@@ -1,12 +1,5 @@
 import { figma } from '@figma/code-connect'
-import {
-  Combobox,
-  ComboboxTrigger,
-  ComboboxContent,
-  ComboboxInput,
-  ComboboxList,
-  ComboboxItem,
-} from './Combobox'
+import { Combobox, ComboboxTrigger, ComboboxContent, ComboboxInput, ComboboxList, ComboboxItem } from './Combobox'
 
 figma.connect(Combobox, 'FIGMA_COMPONENT_URL', {
   props: {

@@ -14,11 +14,9 @@ type Story = StoryObj<typeof meta>
 const triggerClassName =
   'inline-flex min-w-[140px] items-center justify-between rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-900 shadow-sm hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:cursor-not-allowed disabled:opacity-50'
 
-const contentClassName =
-  'flex gap-1 rounded-md border border-gray-200 bg-white p-1 shadow-lg'
+const contentClassName = 'flex gap-1 rounded-md border border-gray-200 bg-white p-1 shadow-lg'
 
-const columnClassName =
-  'flex h-56 w-16 flex-col gap-1 overflow-y-auto scroll-smooth px-1 py-1 [scrollbar-width:thin]'
+const columnClassName = 'flex h-56 w-16 flex-col gap-1 overflow-y-auto scroll-smooth px-1 py-1 [scrollbar-width:thin]'
 
 const itemClassName =
   'flex h-8 shrink-0 items-center justify-center rounded-sm px-2 text-sm text-gray-700 hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500'

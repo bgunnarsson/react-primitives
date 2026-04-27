@@ -7,7 +7,5 @@ figma.connect(Toggle, 'FIGMA_COMPONENT_URL', {
     pressed: figma.boolean('Pressed'),
     children: figma.string('Label'),
   },
-  example: ({ pressed, children }) => (
-    <Toggle defaultPressed={pressed}>{children}</Toggle>
-  ),
+  example: ({ pressed, children }) => <Toggle defaultPressed={pressed}>{children}</Toggle>,
 })

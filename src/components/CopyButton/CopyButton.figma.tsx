@@ -7,6 +7,8 @@ figma.connect(CopyButton, 'FIGMA_COMPONENT_URL', {
     disabled: figma.boolean('Disabled'),
   },
   example: ({ children, disabled }) => (
-    <CopyButton value="" disabled={disabled}>{children}</CopyButton>
+    <CopyButton value="" disabled={disabled}>
+      {children}
+    </CopyButton>
   ),
 })

@@ -22,7 +22,12 @@ const wrapStyle: React.CSSProperties = {
 }
 const inputStyle: React.CSSProperties = { border: 'none', outline: 'none', flex: 1, padding: 4 }
 const iconStyle: React.CSSProperties = { color: '#6b7280' }
-const clearStyle: React.CSSProperties = { border: 'none', background: 'transparent', cursor: 'pointer', color: '#6b7280' }
+const clearStyle: React.CSSProperties = {
+  border: 'none',
+  background: 'transparent',
+  cursor: 'pointer',
+  color: '#6b7280',
+}
 
 export const Default: Story = {
   render: () => (

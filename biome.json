@@ -11,31 +11,24 @@
   "files": {
     "includes": [
       "**",
-      "src/app/src",
-      "app/src",
-      "Vettvangur.Frontend/src",
-      "!**/Vettvangur.Site",
-      "!**/Vettvangur.Core",
       "!**/node_modules",
       "!**/.vscode",
+      "!**/.git",
+      "!**/dist",
+      "!**/storybook-static",
       "!**/docs",
-      "!**/src/scripts/libs",
+      "!**/public",
       "!**/src/__tests__",
       "!**/src/tests",
       "!**/src/assets",
+      "!**/src/styles",
       "!**/tsconfig.json",
       "!biome.json",
       "!**/biome.json",
-      "!**/esbuild.config.mjs",
       "!**/README.md",
-      "!**/pnpm-lock.yaml",
-      "!**/localhost-key.pem",
-      "!**/localhost.pem",
-      "!**/.gitignore",
       "!**/readme",
-      "!**/src/scripts/utility/validation",
-      "!**/public",
-      "!**/src/styles"
+      "!**/pnpm-lock.yaml",
+      "!**/.gitignore"
     ]
   },
   "linter": {

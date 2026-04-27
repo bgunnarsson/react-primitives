@@ -81,7 +81,9 @@ export const Steps: Story = {
         <Slider className="story-slider" value={value} onValueChange={setValue} min={1} max={5} step={1} />
         <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 6 }}>
           {labels.map((l) => (
-            <span key={l} style={{ fontSize: 11, color: '#9ca3af' }}>{l}</span>
+            <span key={l} style={{ fontSize: 11, color: '#9ca3af' }}>
+              {l}
+            </span>
           ))}
         </div>
       </SliderRow>

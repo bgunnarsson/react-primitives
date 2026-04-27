@@ -24,12 +24,7 @@ export const FileTree: Story = {
   render: () => {
     const [selected, setSelected] = useState<string>()
     return (
-      <TreeView
-        defaultExpanded={['src']}
-        selected={selected}
-        onSelectedChange={setSelected}
-        style={rootStyle}
-      >
+      <TreeView defaultExpanded={['src']} selected={selected} onSelectedChange={setSelected} style={rootStyle}>
         <style>{`
           [role="treeitem"] > [role="group"] { list-style: none; padding-left: 16px; margin: 0; }
           [role="treeitem"] [data-selected] { background: #dbeafe; color: #1e40af; }

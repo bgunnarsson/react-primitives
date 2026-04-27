@@ -33,11 +33,15 @@ export const Default: Story = {
 export const WithSpanning: Story = {
   render: () => (
     <Grid style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 12 }}>
-      <GridItem style={{ gridColumn: 'span 2 / span 2' }}><Box>Span 2</Box></GridItem>
+      <GridItem style={{ gridColumn: 'span 2 / span 2' }}>
+        <Box>Span 2</Box>
+      </GridItem>
       <Box>3</Box>
       <Box>4</Box>
       <Box>5</Box>
-      <GridItem style={{ gridColumn: 'span 3 / span 3' }}><Box>Span 3</Box></GridItem>
+      <GridItem style={{ gridColumn: 'span 3 / span 3' }}>
+        <Box>Span 3</Box>
+      </GridItem>
     </Grid>
   ),
 }

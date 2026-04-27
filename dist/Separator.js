@@ -1,6 +1,2 @@
-import {
-  Separator
-} from "./chunk-KXKLKMLR.js";
-export {
-  Separator
-};
+import { Separator } from './chunk-KXKLKMLR.js'
+export { Separator }

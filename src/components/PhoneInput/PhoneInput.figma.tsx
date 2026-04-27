@@ -6,7 +6,5 @@ figma.connect(PhoneInput, 'FIGMA_COMPONENT_URL', {
     placeholder: figma.string('Placeholder'),
     disabled: figma.boolean('Disabled'),
   },
-  example: ({ placeholder, disabled }) => (
-    <PhoneInput placeholder={placeholder} disabled={disabled} />
-  ),
+  example: ({ placeholder, disabled }) => <PhoneInput placeholder={placeholder} disabled={disabled} />,
 })

@@ -42,22 +42,16 @@ export const buildSrcSet = (
   densities: readonly number[],
   quality: number | undefined,
   format: ImageFormat | undefined,
-  buildUrl: ImageUrlBuilder,
+  buildUrl: ImageUrlBuilder
 ): string =>
   Array.from(new Set(densities))
     .filter((d) => d > 0 && Number.isFinite(d))
     .sort((a, b) => a - b)
-    .map(
-      (d) =>
-        `${buildUrl(src, { width: width * d, height: height * d, quality, format })} ${d}x`,
-    )
+    .map((d) => `${buildUrl(src, { width: width * d, height: height * d, quality, format })} ${d}x`)
     .join(', ')
 
 export interface ImageProps
-  extends Omit<
-    React.ImgHTMLAttributes<HTMLImageElement>,
-    'src' | 'srcSet' | 'width' | 'height'
-  > {
+  extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'src' | 'srcSet' | 'width' | 'height'> {
   src: string
   alt: string
   width: number
@@ -89,7 +83,7 @@ export const Image = React.forwardRef<HTMLImageElement, ImageProps>(
       fetchPriority,
       ...rest
     },
-    ref,
+    ref
   ) => {
     const sortedDensities = Array.from(new Set(densities))
       .filter((d) => d > 0 && Number.isFinite(d))
@@ -103,9 +97,10 @@ export const Image = React.forwardRef<HTMLImageElement, ImageProps>(
       format,
     })
 
-    const srcSet = sortedDensities.length > 1
-      ? buildSrcSet(src, width, height, sortedDensities, quality, format, buildUrl)
-      : undefined
+    const srcSet =
+      sortedDensities.length > 1
+        ? buildSrcSet(src, width, height, sortedDensities, quality, format, buildUrl)
+        : undefined
 
     return (
       <img
@@ -121,6 +116,6 @@ export const Image = React.forwardRef<HTMLImageElement, ImageProps>(
         {...rest}
       />
     )
-  },
+  }
 )
 Image.displayName = 'Image'

@@ -100,9 +100,18 @@ export const Sizes: Story = {
     <>
       <style>{progressStyles}</style>
       <div className="sb-stack">
-        <div className="sb-row"><span className="sb-label">Thin</span><Progress value={45} className="sb-progress sb-progress--thin" /></div>
-        <div className="sb-row"><span className="sb-label">Default</span><Progress value={45} className="sb-progress" /></div>
-        <div className="sb-row"><span className="sb-label">Thick</span><Progress value={45} className="sb-progress sb-progress--thick" /></div>
+        <div className="sb-row">
+          <span className="sb-label">Thin</span>
+          <Progress value={45} className="sb-progress sb-progress--thin" />
+        </div>
+        <div className="sb-row">
+          <span className="sb-label">Default</span>
+          <Progress value={45} className="sb-progress" />
+        </div>
+        <div className="sb-row">
+          <span className="sb-label">Thick</span>
+          <Progress value={45} className="sb-progress sb-progress--thick" />
+        </div>
       </div>
     </>
   ),
@@ -114,11 +123,26 @@ export const Colors: Story = {
     <>
       <style>{progressStyles}</style>
       <div className="sb-stack">
-        <div className="sb-row"><span className="sb-label">Default</span><Progress value={70} className="sb-progress" /></div>
-        <div className="sb-row"><span className="sb-label">Success</span><Progress value={70} className="sb-progress sb-progress--success" /></div>
-        <div className="sb-row"><span className="sb-label">Warning</span><Progress value={70} className="sb-progress sb-progress--warning" /></div>
-        <div className="sb-row"><span className="sb-label">Danger</span><Progress value={70} className="sb-progress sb-progress--danger" /></div>
-        <div className="sb-row"><span className="sb-label">Gradient</span><Progress value={70} className="sb-progress sb-progress--gradient" /></div>
+        <div className="sb-row">
+          <span className="sb-label">Default</span>
+          <Progress value={70} className="sb-progress" />
+        </div>
+        <div className="sb-row">
+          <span className="sb-label">Success</span>
+          <Progress value={70} className="sb-progress sb-progress--success" />
+        </div>
+        <div className="sb-row">
+          <span className="sb-label">Warning</span>
+          <Progress value={70} className="sb-progress sb-progress--warning" />
+        </div>
+        <div className="sb-row">
+          <span className="sb-label">Danger</span>
+          <Progress value={70} className="sb-progress sb-progress--danger" />
+        </div>
+        <div className="sb-row">
+          <span className="sb-label">Gradient</span>
+          <Progress value={70} className="sb-progress sb-progress--gradient" />
+        </div>
       </div>
     </>
   ),

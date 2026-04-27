@@ -9,7 +9,5 @@ figma.connect(Stack, 'FIGMA_COMPONENT_URL', {
     }),
     children: figma.string('Content'),
   },
-  example: ({ direction, children }) => (
-    <Stack direction={direction as 'row' | 'column'}>{children}</Stack>
-  ),
+  example: ({ direction, children }) => <Stack direction={direction as 'row' | 'column'}>{children}</Stack>,
 })

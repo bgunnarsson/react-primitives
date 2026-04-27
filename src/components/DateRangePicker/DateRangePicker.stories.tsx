@@ -38,12 +38,7 @@ export const Default: Story = {
             box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.06);
           }
         `}</style>
-        <DateRangePicker
-          {...args}
-          value={range}
-          onValueChange={setRange}
-          contentClassName={STORY_POPOVER_CLASS}
-        />
+        <DateRangePicker {...args} value={range} onValueChange={setRange} contentClassName={STORY_POPOVER_CLASS} />
         {range?.from && (
           <p style={{ marginTop: 8, fontSize: 14 }}>
             {range.from.toDateString()}

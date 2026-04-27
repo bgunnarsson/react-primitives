@@ -1,6 +1,2 @@
-import {
-  Badge
-} from "./chunk-S5637OFB.js";
-export {
-  Badge
-};
+import { Badge } from './chunk-S5637OFB.js'
+export { Badge }

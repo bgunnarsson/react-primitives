@@ -7,8 +7,8 @@ import {
   AlertDialogOverlay,
   AlertDialogPortal,
   AlertDialogTitle,
-  AlertDialogTrigger
-} from "./chunk-6VE7HN3D.js";
+  AlertDialogTrigger,
+} from './chunk-6VE7HN3D.js'
 export {
   AlertDialog,
   AlertDialogAction,
@@ -18,5 +18,5 @@ export {
   AlertDialogOverlay,
   AlertDialogPortal,
   AlertDialogTitle,
-  AlertDialogTrigger
-};
+  AlertDialogTrigger,
+}

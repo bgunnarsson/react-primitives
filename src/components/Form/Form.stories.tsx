@@ -17,7 +17,15 @@ type Story = StoryObj<typeof meta>
 
 const fieldStyle: React.CSSProperties = { display: 'flex', flexDirection: 'column', gap: 4, width: 320 }
 const labelStyle: React.CSSProperties = { fontSize: 13, fontWeight: 500, color: '#374151' }
-const inputStyle: React.CSSProperties = { padding: '8px 12px', fontSize: 14, borderRadius: 6, border: '1px solid #d1d5db', outline: 'none', background: 'white', color: '#111827' }
+const inputStyle: React.CSSProperties = {
+  padding: '8px 12px',
+  fontSize: 14,
+  borderRadius: 6,
+  border: '1px solid #d1d5db',
+  outline: 'none',
+  background: 'white',
+  color: '#111827',
+}
 const inputErrorStyle: React.CSSProperties = { ...inputStyle, borderColor: '#ef4444' }
 const messageStyle: React.CSSProperties = { fontSize: 12, color: '#ef4444', margin: 0 }
 

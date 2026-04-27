@@ -28,7 +28,10 @@ export const Vertical: Story = {
   render: () => (
     <div style={{ display: 'flex', alignItems: 'center', gap: 12, height: 32 }}>
       <span style={{ fontSize: 14 }}>Left</span>
-      <Separator orientation="vertical" style={{ width: 1, height: '100%', background: '#e5e7eb', border: 'none', margin: 0 }} />
+      <Separator
+        orientation="vertical"
+        style={{ width: 1, height: '100%', background: '#e5e7eb', border: 'none', margin: 0 }}
+      />
       <span style={{ fontSize: 14 }}>Right</span>
     </div>
   ),

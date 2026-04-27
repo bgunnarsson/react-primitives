@@ -7,7 +7,5 @@ figma.connect(Link, 'FIGMA_COMPONENT_URL', {
     children: figma.string('Label'),
     href: figma.string('URL'),
   },
-  example: ({ children, href }) => (
-    <Link href={href}>{children}</Link>
-  ),
+  example: ({ children, href }) => <Link href={href}>{children}</Link>,
 })

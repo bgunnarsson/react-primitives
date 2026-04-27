@@ -1,10 +1,32 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { newObj[key] = obj[key]; } } } newObj.default = obj; return newObj; } } function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }// src/components/VisuallyHidden/VisuallyHidden.tsx
-var _react = require('react'); var _react2 = _interopRequireDefault(_react);
-var _reactvisuallyhidden = require('@radix-ui/react-visually-hidden'); var RadixVisuallyHidden = _interopRequireWildcard(_reactvisuallyhidden);
-var _jsxruntime = require('react/jsx-runtime');
-var VisuallyHidden = _react2.default.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ _jsxruntime.jsx.call(void 0, RadixVisuallyHidden.Root, { ref, className, ...props }));
-VisuallyHidden.displayName = "VisuallyHidden";
+'use strict'
+Object.defineProperty(exports, '__esModule', { value: true })
+function _interopRequireWildcard(obj) {
+  if (obj && obj.__esModule) {
+    return obj
+  } else {
+    var newObj = {}
+    if (obj != null) {
+      for (var key in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, key)) {
+          newObj[key] = obj[key]
+        }
+      }
+    }
+    newObj.default = obj
+    return newObj
+  }
+}
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj }
+} // src/components/VisuallyHidden/VisuallyHidden.tsx
+var _react = require('react')
+var _react2 = _interopRequireDefault(_react)
+var _reactvisuallyhidden = require('@radix-ui/react-visually-hidden')
+var RadixVisuallyHidden = _interopRequireWildcard(_reactvisuallyhidden)
+var _jsxruntime = require('react/jsx-runtime')
+var VisuallyHidden = _react2.default.forwardRef(({ className, ...props }, ref) =>
+  /* @__PURE__ */ _jsxruntime.jsx.call(void 0, RadixVisuallyHidden.Root, { ref, className, ...props })
+)
+VisuallyHidden.displayName = 'VisuallyHidden'
 
-
-
-exports.VisuallyHidden = VisuallyHidden;
+exports.VisuallyHidden = VisuallyHidden

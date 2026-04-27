@@ -10,7 +10,5 @@ figma.connect(Spinner, 'FIGMA_COMPONENT_URL', {
       Large: 32,
     }),
   },
-  example: ({ size }) => (
-    <Spinner size={size} />
-  ),
+  example: ({ size }) => <Spinner size={size} />,
 })

@@ -5,8 +5,8 @@ import {
   PaginationItem,
   PaginationLink,
   PaginationNext,
-  PaginationPrevious
-} from "./chunk-TGUA7LNJ.js";
+  PaginationPrevious,
+} from './chunk-TGUA7LNJ.js'
 export {
   Pagination,
   PaginationContent,
@@ -14,5 +14,5 @@ export {
   PaginationItem,
   PaginationLink,
   PaginationNext,
-  PaginationPrevious
-};
+  PaginationPrevious,
+}

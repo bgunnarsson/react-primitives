@@ -73,10 +73,26 @@ export const Default: Story = {
       <style>{styles}</style>
       <Nav className="sb-nav" aria-label="Primary">
         <NavList className="sb-nav-list">
-          <NavItem className="sb-nav-item"><Link href="#" className="sb-nav-link sb-nav-link--active" aria-current="page">Home</Link></NavItem>
-          <NavItem className="sb-nav-item"><Link href="#" className="sb-nav-link">About</Link></NavItem>
-          <NavItem className="sb-nav-item"><Link href="#" className="sb-nav-link">Pricing</Link></NavItem>
-          <NavItem className="sb-nav-item"><Link href="#" className="sb-nav-link">Contact</Link></NavItem>
+          <NavItem className="sb-nav-item">
+            <Link href="#" className="sb-nav-link sb-nav-link--active" aria-current="page">
+              Home
+            </Link>
+          </NavItem>
+          <NavItem className="sb-nav-item">
+            <Link href="#" className="sb-nav-link">
+              About
+            </Link>
+          </NavItem>
+          <NavItem className="sb-nav-item">
+            <Link href="#" className="sb-nav-link">
+              Pricing
+            </Link>
+          </NavItem>
+          <NavItem className="sb-nav-item">
+            <Link href="#" className="sb-nav-link">
+              Contact
+            </Link>
+          </NavItem>
         </NavList>
       </Nav>
     </>
@@ -89,11 +105,31 @@ export const Vertical: Story = {
       <style>{styles}</style>
       <Nav className="sb-vnav" aria-label="Settings">
         <NavList className="sb-vnav-list">
-          <NavItem><Link href="#" className="sb-vnav-link">General</Link></NavItem>
-          <NavItem><Link href="#" className="sb-vnav-link">Profile</Link></NavItem>
-          <NavItem><Link href="#" className="sb-vnav-link">Notifications</Link></NavItem>
-          <NavItem><Link href="#" className="sb-vnav-link">Billing</Link></NavItem>
-          <NavItem><Link href="#" className="sb-vnav-link">Integrations</Link></NavItem>
+          <NavItem>
+            <Link href="#" className="sb-vnav-link">
+              General
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link href="#" className="sb-vnav-link">
+              Profile
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link href="#" className="sb-vnav-link">
+              Notifications
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link href="#" className="sb-vnav-link">
+              Billing
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link href="#" className="sb-vnav-link">
+              Integrations
+            </Link>
+          </NavItem>
         </NavList>
       </Nav>
     </>

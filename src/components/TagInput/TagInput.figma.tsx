@@ -5,7 +5,5 @@ figma.connect(TagInput, 'FIGMA_COMPONENT_URL', {
   props: {
     placeholder: figma.string('Placeholder'),
   },
-  example: ({ placeholder }) => (
-    <TagInput placeholder={placeholder} value={[]} onValueChange={() => {}} />
-  ),
+  example: ({ placeholder }) => <TagInput placeholder={placeholder} value={[]} onValueChange={() => {}} />,
 })

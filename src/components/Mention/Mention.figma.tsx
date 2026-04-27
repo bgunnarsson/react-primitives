@@ -6,12 +6,7 @@ figma.connect(Mention, 'FIGMA_COMPONENT_URL', {
     placeholder: figma.string('Placeholder'),
   },
   example: ({ placeholder }) => (
-    <Mention<string>
-      value=""
-      onValueChange={() => {}}
-      items={[]}
-      format={(item) => item}
-    >
+    <Mention<string> value="" onValueChange={() => {}} items={[]} format={(item) => item}>
       {({ getInputProps }) => <input {...getInputProps()} placeholder={placeholder} />}
     </Mention>
   ),

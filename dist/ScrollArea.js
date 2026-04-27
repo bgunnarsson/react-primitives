@@ -1,6 +1,2 @@
-import {
-  ScrollArea
-} from "./chunk-JGHTHU6H.js";
-export {
-  ScrollArea
-};
+import { ScrollArea } from './chunk-JGHTHU6H.js'
+export { ScrollArea }

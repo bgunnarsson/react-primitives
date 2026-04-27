@@ -6,7 +6,5 @@ figma.connect(Progress, 'FIGMA_COMPONENT_URL', {
   props: {
     value: figma.string('Value'),
   },
-  example: ({ value }) => (
-    <Progress value={Number(value)} />
-  ),
+  example: ({ value }) => <Progress value={Number(value)} />,
 })

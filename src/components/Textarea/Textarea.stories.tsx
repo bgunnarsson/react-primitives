@@ -53,7 +53,9 @@ export const Default: Story = {
 export const WithLabel: Story = {
   render: () => (
     <div style={{ width: 360, display: 'flex', flexDirection: 'column' }}>
-      <Label htmlFor="textarea-label" style={labelStyle}>Message</Label>
+      <Label htmlFor="textarea-label" style={labelStyle}>
+        Message
+      </Label>
       <Textarea id="textarea-label" style={textareaStyle} placeholder="Write your message here..." rows={4} />
     </div>
   ),

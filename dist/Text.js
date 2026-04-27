@@ -1,6 +1,2 @@
-import {
-  Text
-} from "./chunk-VKIIUMNW.js";
-export {
-  Text
-};
+import { Text } from './chunk-VKIIUMNW.js'
+export { Text }

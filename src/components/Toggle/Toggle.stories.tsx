@@ -64,8 +64,10 @@ export const Toolbar: Story = {
     <>
       <style>{toggleStyles}</style>
       <div style={{ display: 'flex', gap: 4 }}>
-        {(['Bold', 'Italic', 'Underline']).map((label) => (
-          <Toggle key={label} className="story-toggle">{label}</Toggle>
+        {['Bold', 'Italic', 'Underline'].map((label) => (
+          <Toggle key={label} className="story-toggle">
+            {label}
+          </Toggle>
         ))}
       </div>
     </>

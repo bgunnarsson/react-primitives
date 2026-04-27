@@ -14,8 +14,8 @@ import {
   Sub,
   SubContent,
   SubTrigger,
-  Trigger
-} from "./chunk-NOCIYCJ7.js";
+  Trigger,
+} from './chunk-NOCIYCJ7.js'
 export {
   Root as Menubar,
   CheckboxItem as MenubarCheckboxItem,
@@ -32,5 +32,5 @@ export {
   Sub as MenubarSub,
   SubContent as MenubarSubContent,
   SubTrigger as MenubarSubTrigger,
-  Trigger as MenubarTrigger
-};
+  Trigger as MenubarTrigger,
+}

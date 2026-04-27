@@ -30,9 +30,7 @@ export const Default: Story = {
     <>
       <style>{styles}</style>
       <CropImage {...args} />
-      <p className="sb-caption">
-        Resize the viewport across the breakpoint to see the source switch.
-      </p>
+      <p className="sb-caption">Resize the viewport across the breakpoint to see the source switch.</p>
     </>
   ),
   args: {

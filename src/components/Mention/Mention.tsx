@@ -130,7 +130,7 @@ export function Mention<T>({
         }
       })
     },
-    [ctx, value, format, appendSpace, onValueChange, onSelect],
+    [ctx, value, format, appendSpace, onValueChange, onSelect]
   )
 
   const setRef = React.useCallback((node: MentionInputElement | null) => {

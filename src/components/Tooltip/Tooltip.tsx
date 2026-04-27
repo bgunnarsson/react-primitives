@@ -7,9 +7,7 @@ export interface TooltipProps extends React.ComponentPropsWithoutRef<typeof Radi
 
 export const Tooltip = ({ delayDuration = 200, children, ...props }: TooltipProps) => (
   <RadixTooltip.Provider delayDuration={delayDuration}>
-    <RadixTooltip.Root {...props}>
-      {children}
-    </RadixTooltip.Root>
+    <RadixTooltip.Root {...props}>{children}</RadixTooltip.Root>
   </RadixTooltip.Provider>
 )
 

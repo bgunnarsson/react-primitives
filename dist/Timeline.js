@@ -6,8 +6,8 @@ import {
   TimelineIndicator,
   TimelineItem,
   TimelineTime,
-  TimelineTitle
-} from "./chunk-5G57RL7X.js";
+  TimelineTitle,
+} from './chunk-5G57RL7X.js'
 export {
   Timeline,
   TimelineConnector,
@@ -16,5 +16,5 @@ export {
   TimelineIndicator,
   TimelineItem,
   TimelineTime,
-  TimelineTitle
-};
+  TimelineTitle,
+}

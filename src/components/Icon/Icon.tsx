@@ -19,25 +19,11 @@ export const Icon = ({
   ...props
 }: IconProps) => {
   if (mode === 'external') {
-    return (
-      <img
-        src={`/icons/${name}.svg`}
-        aria-hidden="true"
-        width={size}
-        height={size}
-        className={className}
-      />
-    )
+    return <img src={`/icons/${name}.svg`} aria-hidden="true" width={size} height={size} className={className} />
   }
 
   return (
-    <svg
-      width={size}
-      height={size}
-      aria-hidden="true"
-      className={className}
-      {...props}
-    >
+    <svg width={size} height={size} aria-hidden="true" className={className} {...props}>
       <use href={`${spriteHref}#${name}`} />
     </svg>
   )

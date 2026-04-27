@@ -31,7 +31,7 @@ export const PasswordInput = React.forwardRef<HTMLInputElement, PasswordInputPro
       disabled,
       ...inputProps
     },
-    ref,
+    ref
   ) => {
     const [uncontrolled, setUncontrolled] = React.useState(defaultVisible)
     const controlled = visibleProp !== undefined
@@ -70,6 +70,6 @@ export const PasswordInput = React.forwardRef<HTMLInputElement, PasswordInputPro
         </button>
       </div>
     )
-  },
+  }
 )
 PasswordInput.displayName = 'PasswordInput'

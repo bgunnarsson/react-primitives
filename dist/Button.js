@@ -1,6 +1,2 @@
-import {
-  Button
-} from "./chunk-JZVKPZRQ.js";
-export {
-  Button
-};
+import { Button } from './chunk-JZVKPZRQ.js'
+export { Button }

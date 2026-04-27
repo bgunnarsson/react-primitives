@@ -52,7 +52,9 @@ export const Default: Story = {
 export const WithLabel: Story = {
   render: (args) => (
     <div style={{ width: 320, display: 'flex', flexDirection: 'column' }}>
-      <Label htmlFor="input-with-label" style={labelStyle}>Email address</Label>
+      <Label htmlFor="input-with-label" style={labelStyle}>
+        Email address
+      </Label>
       <Input id="input-with-label" type="email" placeholder="you@example.com" style={inputStyle} {...args} />
     </div>
   ),
@@ -61,7 +63,12 @@ export const WithLabel: Story = {
 export const Disabled: Story = {
   render: (args) => (
     <div style={{ width: 320 }}>
-      <Input style={{ ...inputStyle, opacity: 0.5, cursor: 'not-allowed', background: '#f9fafb' }} placeholder="Disabled input" disabled {...args} />
+      <Input
+        style={{ ...inputStyle, opacity: 0.5, cursor: 'not-allowed', background: '#f9fafb' }}
+        placeholder="Disabled input"
+        disabled
+        {...args}
+      />
     </div>
   ),
 }

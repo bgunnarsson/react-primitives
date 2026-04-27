@@ -83,11 +83,9 @@ CarouselContent.displayName = 'CarouselContent'
 
 export interface CarouselItemProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export const CarouselItem = React.forwardRef<HTMLDivElement, CarouselItemProps>(
-  ({ className, ...props }, ref) => (
-    <div ref={ref} role="group" aria-roledescription="slide" className={className} {...props} />
-  )
-)
+export const CarouselItem = React.forwardRef<HTMLDivElement, CarouselItemProps>(({ className, ...props }, ref) => (
+  <div ref={ref} role="group" aria-roledescription="slide" className={className} {...props} />
+))
 CarouselItem.displayName = 'CarouselItem'
 
 export interface CarouselPreviousProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}

@@ -15,7 +15,17 @@ export const IntoBody: Story = {
     <div style={{ padding: 24, border: '1px dashed #9ca3af', position: 'relative' }}>
       <p style={{ margin: 0 }}>This text lives inside the story root.</p>
       <Portal>
-        <div style={{ position: 'fixed', bottom: 16, right: 16, padding: 12, background: '#111827', color: 'white', borderRadius: 8 }}>
+        <div
+          style={{
+            position: 'fixed',
+            bottom: 16,
+            right: 16,
+            padding: 12,
+            background: '#111827',
+            color: 'white',
+            borderRadius: 8,
+          }}
+        >
           Rendered into document.body via Portal
         </div>
       </Portal>

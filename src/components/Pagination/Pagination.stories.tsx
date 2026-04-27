@@ -1,6 +1,14 @@
 import React, { useState } from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationPrevious, PaginationNext, PaginationEllipsis } from './Pagination'
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationPrevious,
+  PaginationNext,
+  PaginationEllipsis,
+} from './Pagination'
 
 const meta = {
   title: 'Primitives/Pagination',
@@ -18,11 +26,16 @@ export const Default: Story = {
 
     return (
       <Pagination>
-        <PaginationContent style={{ display: 'flex', alignItems: 'center', gap: 4, listStyle: 'none', padding: 0, margin: 0 }}>
+        <PaginationContent
+          style={{ display: 'flex', alignItems: 'center', gap: 4, listStyle: 'none', padding: 0, margin: 0 }}
+        >
           <PaginationItem>
             <PaginationPrevious
               href="#"
-              onClick={(e) => { e.preventDefault(); setPage((p) => Math.max(1, p - 1)) }}
+              onClick={(e) => {
+                e.preventDefault()
+                setPage((p) => Math.max(1, p - 1))
+              }}
               style={{ padding: '4px 8px' }}
             >
               ‹ Prev
@@ -39,7 +52,10 @@ export const Default: Story = {
                 <PaginationLink
                   href="#"
                   isActive={p === page}
-                  onClick={(e) => { e.preventDefault(); setPage(p) }}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    setPage(p)
+                  }}
                   style={{ padding: '4px 8px', fontWeight: p === page ? 'bold' : undefined }}
                 >
                   {p}
@@ -51,7 +67,10 @@ export const Default: Story = {
           <PaginationItem>
             <PaginationNext
               href="#"
-              onClick={(e) => { e.preventDefault(); setPage((p) => Math.min(total, p + 1)) }}
+              onClick={(e) => {
+                e.preventDefault()
+                setPage((p) => Math.min(total, p + 1))
+              }}
               style={{ padding: '4px 8px' }}
             >
               Next ›

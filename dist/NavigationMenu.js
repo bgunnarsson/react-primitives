@@ -1,14 +1,4 @@
-import {
-  Content,
-  Indicator,
-  Item,
-  Link,
-  List,
-  Root,
-  Sub,
-  Trigger,
-  Viewport
-} from "./chunk-2N2RAQC3.js";
+import { Content, Indicator, Item, Link, List, Root, Sub, Trigger, Viewport } from './chunk-2N2RAQC3.js'
 export {
   Root as NavigationMenu,
   Content as NavigationMenuContent,
@@ -18,5 +8,5 @@ export {
   List as NavigationMenuList,
   Sub as NavigationMenuSub,
   Trigger as NavigationMenuTrigger,
-  Viewport as NavigationMenuViewport
-};
+  Viewport as NavigationMenuViewport,
+}

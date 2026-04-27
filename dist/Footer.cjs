@@ -1,6 +1,6 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true});
+'use strict'
+Object.defineProperty(exports, '__esModule', { value: true })
 
-var _chunkYRZYMHEIcjs = require('./chunk-YRZYMHEI.cjs');
+var _chunkYRZYMHEIcjs = require('./chunk-YRZYMHEI.cjs')
 
-
-exports.Footer = _chunkYRZYMHEIcjs.Footer;
+exports.Footer = _chunkYRZYMHEIcjs.Footer

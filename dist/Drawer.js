@@ -7,8 +7,8 @@ import {
   DrawerOverlay,
   DrawerPortal,
   DrawerTitle,
-  DrawerTrigger
-} from "./chunk-J24IQFTE.js";
+  DrawerTrigger,
+} from './chunk-J24IQFTE.js'
 export {
   Drawer,
   DrawerClose,
@@ -18,5 +18,5 @@ export {
   DrawerOverlay,
   DrawerPortal,
   DrawerTitle,
-  DrawerTrigger
-};
+  DrawerTrigger,
+}

@@ -27,13 +27,25 @@ export const Default: Story = {
       <style>{tabStyles}</style>
       <Tabs defaultValue="account" style={{ width: 400 }}>
         <TabsList className="story-tabs-list">
-          <TabsTrigger value="account" className="story-tabs-trigger">Account</TabsTrigger>
-          <TabsTrigger value="password" className="story-tabs-trigger">Password</TabsTrigger>
-          <TabsTrigger value="settings" className="story-tabs-trigger">Settings</TabsTrigger>
+          <TabsTrigger value="account" className="story-tabs-trigger">
+            Account
+          </TabsTrigger>
+          <TabsTrigger value="password" className="story-tabs-trigger">
+            Password
+          </TabsTrigger>
+          <TabsTrigger value="settings" className="story-tabs-trigger">
+            Settings
+          </TabsTrigger>
         </TabsList>
-        <TabsContent value="account" className="story-tabs-content">Account settings content.</TabsContent>
-        <TabsContent value="password" className="story-tabs-content">Change your password here.</TabsContent>
-        <TabsContent value="settings" className="story-tabs-content">Manage your settings.</TabsContent>
+        <TabsContent value="account" className="story-tabs-content">
+          Account settings content.
+        </TabsContent>
+        <TabsContent value="password" className="story-tabs-content">
+          Change your password here.
+        </TabsContent>
+        <TabsContent value="settings" className="story-tabs-content">
+          Manage your settings.
+        </TabsContent>
       </Tabs>
     </>
   ),

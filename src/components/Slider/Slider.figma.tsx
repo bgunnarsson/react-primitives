@@ -6,7 +6,5 @@ figma.connect(Slider, 'FIGMA_COMPONENT_URL', {
     min: figma.string('Min'),
     max: figma.string('Max'),
   },
-  example: ({ min, max }) => (
-    <Slider min={Number(min) || 0} max={Number(max) || 100} defaultValue={[50]} />
-  ),
+  example: ({ min, max }) => <Slider min={Number(min) || 0} max={Number(max) || 100} defaultValue={[50]} />,
 })

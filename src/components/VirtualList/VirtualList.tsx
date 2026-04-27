@@ -13,8 +13,7 @@ export interface VirtualListRenderProps<T> {
   style: React.CSSProperties
 }
 
-export interface VirtualListProps<T>
-  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> {
+export interface VirtualListProps<T> extends Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> {
   items: readonly T[]
   /** Pixel height of each row. Pass a function for variable heights. */
   itemSize: number | ((index: number) => number)
@@ -64,7 +63,7 @@ function VirtualListInner<T>(
     onScroll,
     ...rest
   }: VirtualListProps<T>,
-  ref: React.Ref<HTMLDivElement>,
+  ref: React.Ref<HTMLDivElement>
 ) {
   const innerRef = React.useRef<HTMLDivElement>(null)
   React.useImperativeHandle(ref, () => innerRef.current!, [])
@@ -85,7 +84,7 @@ function VirtualListInner<T>(
 
   const { offsets, total, fixed } = React.useMemo(
     () => computeOffsets(items.length, itemSize),
-    [items.length, itemSize],
+    [items.length, itemSize]
   )
 
   const startIndex = (() => {
@@ -117,7 +116,7 @@ function VirtualListInner<T>(
     visible.push(
       <React.Fragment key={getItemKey ? getItemKey(items[i], i) : i}>
         {children({ item: items[i], index: i, style: itemStyle })}
-      </React.Fragment>,
+      </React.Fragment>
     )
   }
 
@@ -140,5 +139,5 @@ function VirtualListInner<T>(
 }
 
 export const VirtualList = React.forwardRef(VirtualListInner) as <T>(
-  props: VirtualListProps<T> & { ref?: React.Ref<HTMLDivElement> },
+  props: VirtualListProps<T> & { ref?: React.Ref<HTMLDivElement> }
 ) => React.ReactElement

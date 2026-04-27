@@ -1,6 +1,2 @@
-import {
-  Spinner
-} from "./chunk-4TDWCHFG.js";
-export {
-  Spinner
-};
+import { Spinner } from './chunk-4TDWCHFG.js'
+export { Spinner }

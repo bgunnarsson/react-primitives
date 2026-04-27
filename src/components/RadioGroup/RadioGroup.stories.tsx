@@ -37,7 +37,9 @@ export const Default: Story = {
         {['option-1', 'option-2', 'option-3'].map((val, i) => (
           <div key={val} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <RadioGroupItem value={val} id={`rg-${val}`} />
-            <Label htmlFor={`rg-${val}`} style={{ fontSize: 14, cursor: 'pointer' }}>Option {i + 1}</Label>
+            <Label htmlFor={`rg-${val}`} style={{ fontSize: 14, cursor: 'pointer' }}>
+              Option {i + 1}
+            </Label>
           </div>
         ))}
       </RadioGroup>

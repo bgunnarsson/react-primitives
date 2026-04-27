@@ -7,5 +7,7 @@ figma.connect(Lightbox, 'FIGMA_COMPONENT_URL', {
     open: figma.boolean('Open'),
   },
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  example: ({ open }) => <Lightbox open={open} close={() => {}} slides={[{ src: '/image.jpg', alt: 'Image' }]} {...({} as any)} />,
+  example: ({ open }) => (
+    <Lightbox open={open} close={() => {}} slides={[{ src: '/image.jpg', alt: 'Image' }]} {...({} as any)} />
+  ),
 })

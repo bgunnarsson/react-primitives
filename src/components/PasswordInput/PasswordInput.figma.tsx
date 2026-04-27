@@ -6,7 +6,5 @@ figma.connect(PasswordInput, 'FIGMA_COMPONENT_URL', {
     placeholder: figma.string('Placeholder'),
     disabled: figma.boolean('Disabled'),
   },
-  example: ({ placeholder, disabled }) => (
-    <PasswordInput placeholder={placeholder} disabled={disabled} />
-  ),
+  example: ({ placeholder, disabled }) => <PasswordInput placeholder={placeholder} disabled={disabled} />,
 })

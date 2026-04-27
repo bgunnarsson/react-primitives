@@ -26,7 +26,9 @@ export const Default: Story = {
       <style>{scrollAreaStyles}</style>
       <ScrollArea style={{ height: 200, width: 300, border: '1px solid #e5e7eb', borderRadius: 8, padding: '0 8px' }}>
         {Array.from({ length: 20 }, (_, i) => (
-          <div key={i} style={{ padding: '8px 0', borderBottom: '1px solid #f3f4f6', fontSize: 14 }}>Item {i + 1}</div>
+          <div key={i} style={{ padding: '8px 0', borderBottom: '1px solid #f3f4f6', fontSize: 14 }}>
+            Item {i + 1}
+          </div>
         ))}
       </ScrollArea>
     </>

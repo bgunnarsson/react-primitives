@@ -96,7 +96,17 @@ export const IconButton: Story = {
       ].map(({ label, icon }) => (
         <Tooltip key={label}>
           <TooltipTrigger asChild>
-            <button style={{ width: 34, height: 34, borderRadius: 6, border: '1px solid #e5e7eb', background: 'white', cursor: 'pointer', fontSize: 15 }}>
+            <button
+              style={{
+                width: 34,
+                height: 34,
+                borderRadius: 6,
+                border: '1px solid #e5e7eb',
+                background: 'white',
+                cursor: 'pointer',
+                fontSize: 15,
+              }}
+            >
               {icon}
             </button>
           </TooltipTrigger>

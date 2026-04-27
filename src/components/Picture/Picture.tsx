@@ -32,13 +32,6 @@ export const Picture = ({
     {sources.map((source, i) => (
       <source key={i} {...source} />
     ))}
-    <img
-      src={src}
-      alt={alt}
-      loading={loading}
-      width={width}
-      height={height}
-      className={imgClassName}
-    />
+    <img src={src} alt={alt} loading={loading} width={width} height={height} className={imgClassName} />
   </picture>
 )

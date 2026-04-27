@@ -11,7 +11,11 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-const MyButton = ({ children, asChild, ...props }: { children: React.ReactNode; asChild?: boolean } & React.ComponentPropsWithoutRef<'button'>) => {
+const MyButton = ({
+  children,
+  asChild,
+  ...props
+}: { children: React.ReactNode; asChild?: boolean } & React.ComponentPropsWithoutRef<'button'>) => {
   const Comp: React.ElementType = asChild ? Slot : 'button'
   return <Comp {...props}>{children}</Comp>
 }

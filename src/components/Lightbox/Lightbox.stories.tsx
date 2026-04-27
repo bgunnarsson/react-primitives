@@ -62,12 +62,7 @@ export const Default: Story = {
           Open lightbox
         </button>
         {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-        <Lightbox
-          open={open}
-          close={() => setOpen(false)}
-          slides={slides}
-          {...({} as any)}
-        />
+        <Lightbox open={open} close={() => setOpen(false)} slides={slides} {...({} as any)} />
       </>
     )
   },
@@ -85,13 +80,7 @@ export const FromThumbnails: Story = {
           ))}
         </div>
         {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-        <Lightbox
-          open={index >= 0}
-          index={index}
-          close={() => setIndex(-1)}
-          slides={slides}
-          {...({} as any)}
-        />
+        <Lightbox open={index >= 0} index={index} close={() => setIndex(-1)} slides={slides} {...({} as any)} />
       </>
     )
   },

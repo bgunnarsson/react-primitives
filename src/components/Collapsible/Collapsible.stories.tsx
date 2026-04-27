@@ -80,8 +80,8 @@ export const Default: Story = {
         </CollapsibleTrigger>
         <CollapsibleContent className="sb-collapsible-content">
           <p>
-            New primitives shipped this week: Calendar, Combobox, and TimePicker. Each
-            component accepts a <code>className</code> prop so you can style them however you like.
+            New primitives shipped this week: Calendar, Combobox, and TimePicker. Each component accepts a{' '}
+            <code>className</code> prop so you can style them however you like.
           </p>
         </CollapsibleContent>
       </Collapsible>

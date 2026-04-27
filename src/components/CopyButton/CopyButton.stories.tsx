@@ -27,9 +27,7 @@ export const Default: Story = {
 
 export const RenderProp: Story = {
   render: (args) => (
-    <CopyButton {...args}>
-      {({ copied }) => (copied ? '✓ Copied to clipboard' : '⧉ Copy command')}
-    </CopyButton>
+    <CopyButton {...args}>{({ copied }) => (copied ? '✓ Copied to clipboard' : '⧉ Copy command')}</CopyButton>
   ),
 }
 

@@ -21,7 +21,7 @@ export const Timeline = React.forwardRef<HTMLOListElement, TimelineProps>(
     <TimelineContext.Provider value={{ orientation }}>
       <ol ref={ref} data-orientation={orientation} {...props} />
     </TimelineContext.Provider>
-  ),
+  )
 )
 Timeline.displayName = 'Timeline'
 
@@ -37,7 +37,7 @@ export const TimelineItem = React.forwardRef<HTMLLIElement, TimelineItemProps>(
         <li ref={ref} data-state={state} data-orientation={orientation} {...props} />
       </TimelineItemContext.Provider>
     )
-  },
+  }
 )
 TimelineItem.displayName = 'TimelineItem'
 
@@ -65,12 +65,10 @@ TimelineContent.displayName = 'TimelineContent'
 export interface TimelineTitleProps extends React.HTMLAttributes<HTMLParagraphElement> {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'
 }
-export const TimelineTitle = React.forwardRef<HTMLElement, TimelineTitleProps>(
-  ({ as: Tag = 'p', ...props }, ref) => {
-    const Component = Tag as React.ElementType
-    return <Component ref={ref} {...props} />
-  },
-)
+export const TimelineTitle = React.forwardRef<HTMLElement, TimelineTitleProps>(({ as: Tag = 'p', ...props }, ref) => {
+  const Component = Tag as React.ElementType
+  return <Component ref={ref} {...props} />
+})
 TimelineTitle.displayName = 'TimelineTitle'
 
 export interface TimelineDescriptionProps extends React.HTMLAttributes<HTMLParagraphElement> {}

@@ -27,31 +27,27 @@ export const FormField = ({ id: idProp, error, children, className, ...props }: 
 
 export interface FormLabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {}
 
-export const FormLabel = React.forwardRef<HTMLLabelElement, FormLabelProps>(
-  ({ className, ...props }, ref) => {
-    const { id } = React.useContext(FormFieldContext)
-    return <label ref={ref} htmlFor={id} className={className} {...props} />
-  }
-)
+export const FormLabel = React.forwardRef<HTMLLabelElement, FormLabelProps>(({ className, ...props }, ref) => {
+  const { id } = React.useContext(FormFieldContext)
+  return <label ref={ref} htmlFor={id} className={className} {...props} />
+})
 FormLabel.displayName = 'FormLabel'
 
 export interface FormControlProps extends React.HTMLAttributes<HTMLElement> {}
 
 /** Slot wrapper — renders its child and injects `id`, `aria-invalid`, `aria-describedby` from FormField context */
-export const FormControl = React.forwardRef<HTMLElement, FormControlProps>(
-  ({ ...props }, ref) => {
-    const { id, error } = React.useContext(FormFieldContext)
-    return (
-      <Slot
-        ref={ref}
-        id={id}
-        aria-invalid={error ? true : undefined}
-        aria-describedby={error ? `${id}-message` : undefined}
-        {...props}
-      />
-    )
-  }
-)
+export const FormControl = React.forwardRef<HTMLElement, FormControlProps>(({ ...props }, ref) => {
+  const { id, error } = React.useContext(FormFieldContext)
+  return (
+    <Slot
+      ref={ref}
+      id={id}
+      aria-invalid={error ? true : undefined}
+      aria-describedby={error ? `${id}-message` : undefined}
+      {...props}
+    />
+  )
+})
 FormControl.displayName = 'FormControl'
 
 export interface FormMessageProps extends React.HTMLAttributes<HTMLParagraphElement> {}

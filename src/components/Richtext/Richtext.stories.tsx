@@ -60,8 +60,7 @@ export const Default: Story = {
     </>
   ),
   args: {
-    html:
-      '<p>This is <strong>rich text</strong> content from a CMS. It can contain <a href="#">links</a>, <em>emphasis</em>, and inline <code>code</code>.</p><ul><li>List item one</li><li>List item two</li></ul>',
+    html: '<p>This is <strong>rich text</strong> content from a CMS. It can contain <a href="#">links</a>, <em>emphasis</em>, and inline <code>code</code>.</p><ul><li>List item one</li><li>List item two</li></ul>',
   },
 }
 

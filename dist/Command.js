@@ -9,8 +9,8 @@ import {
   CommandLoading,
   CommandSeparator,
   defaultFilter,
-  useCommandState
-} from "./chunk-OZOJE7V7.js";
+  useCommandState,
+} from './chunk-OZOJE7V7.js'
 export {
   Command,
   CommandDialog,
@@ -22,5 +22,5 @@ export {
   CommandLoading,
   CommandSeparator,
   defaultFilter as commandDefaultFilter,
-  useCommandState
-};
+  useCommandState,
+}

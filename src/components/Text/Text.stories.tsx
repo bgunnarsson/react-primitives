@@ -74,11 +74,21 @@ export const Scale: Story = {
     <>
       <style>{styles}</style>
       <div className="sb-stack">
-        <Text as="h1" className="sb-text sb-text--h1">Display heading</Text>
-        <Text as="h2" className="sb-text sb-text--h2">Section heading</Text>
-        <Text as="h3" className="sb-text sb-text--h3">Subsection heading</Text>
-        <Text as="p"  className="sb-text sb-text--p">Body paragraph. Primitives ship unstyled so you bring the typographic scale.</Text>
-        <Text as="span" className="sb-text sb-text--span sb-text--muted">Small muted caption</Text>
+        <Text as="h1" className="sb-text sb-text--h1">
+          Display heading
+        </Text>
+        <Text as="h2" className="sb-text sb-text--h2">
+          Section heading
+        </Text>
+        <Text as="h3" className="sb-text sb-text--h3">
+          Subsection heading
+        </Text>
+        <Text as="p" className="sb-text sb-text--p">
+          Body paragraph. Primitives ship unstyled so you bring the typographic scale.
+        </Text>
+        <Text as="span" className="sb-text sb-text--span sb-text--muted">
+          Small muted caption
+        </Text>
       </div>
     </>
   ),

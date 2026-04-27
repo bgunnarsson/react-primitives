@@ -17,14 +17,10 @@ export const PaginationLink = ({ isActive, ...props }: PaginationLinkProps) => (
 )
 
 export interface PaginationPreviousProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {}
-export const PaginationPrevious = (props: PaginationPreviousProps) => (
-  <a aria-label="Go to previous page" {...props} />
-)
+export const PaginationPrevious = (props: PaginationPreviousProps) => <a aria-label="Go to previous page" {...props} />
 
 export interface PaginationNextProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {}
-export const PaginationNext = (props: PaginationNextProps) => (
-  <a aria-label="Go to next page" {...props} />
-)
+export const PaginationNext = (props: PaginationNextProps) => <a aria-label="Go to next page" {...props} />
 
 export interface PaginationEllipsisProps extends React.HTMLAttributes<HTMLSpanElement> {}
 export const PaginationEllipsis = (props: PaginationEllipsisProps) => (

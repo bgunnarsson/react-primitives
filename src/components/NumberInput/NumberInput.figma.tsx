@@ -6,7 +6,5 @@ figma.connect(NumberInput, 'FIGMA_COMPONENT_URL', {
     placeholder: figma.string('Placeholder'),
     disabled: figma.boolean('Disabled'),
   },
-  example: ({ placeholder, disabled }) => (
-    <NumberInput placeholder={placeholder} disabled={disabled} />
-  ),
+  example: ({ placeholder, disabled }) => <NumberInput placeholder={placeholder} disabled={disabled} />,
 })

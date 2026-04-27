@@ -59,7 +59,7 @@ export const Editable = React.forwardRef<HTMLDivElement, EditableProps>(
       onKeyDown,
       ...rest
     },
-    ref,
+    ref
   ) => {
     const [uncontrolledValue, setUncontrolledValue] = React.useState(defaultValue)
     const valueControlled = valueProp !== undefined
@@ -152,7 +152,7 @@ export const Editable = React.forwardRef<HTMLDivElement, EditableProps>(
         />
       </EditableContext.Provider>
     )
-  },
+  }
 )
 Editable.displayName = 'Editable'
 
@@ -186,11 +186,12 @@ export const EditablePreview = React.forwardRef<HTMLSpanElement, EditablePreview
         {children ?? display}
       </span>
     )
-  },
+  }
 )
 EditablePreview.displayName = 'EditablePreview'
 
-export interface EditableInputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'value' | 'defaultValue' | 'onChange'> {}
+export interface EditableInputProps
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'value' | 'defaultValue' | 'onChange'> {}
 
 export const EditableInput = React.forwardRef<HTMLInputElement, EditableInputProps>((props, ref) => {
   const { draft, setDraft, editing, submit, cancel, inputRef, disabled, placeholder, submitOnBlur } = useEditable()
@@ -220,7 +221,8 @@ export const EditableInput = React.forwardRef<HTMLInputElement, EditableInputPro
 })
 EditableInput.displayName = 'EditableInput'
 
-export interface EditableTextareaProps extends Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, 'value' | 'defaultValue' | 'onChange'> {}
+export interface EditableTextareaProps
+  extends Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, 'value' | 'defaultValue' | 'onChange'> {}
 
 export const EditableTextarea = React.forwardRef<HTMLTextAreaElement, EditableTextareaProps>((props, ref) => {
   const { draft, setDraft, editing, submit, cancel, inputRef, disabled, placeholder, submitOnBlur } = useEditable()
@@ -250,7 +252,12 @@ export const EditableTextarea = React.forwardRef<HTMLTextAreaElement, EditableTe
 EditableTextarea.displayName = 'EditableTextarea'
 
 export interface EditableControlsProps {
-  children: (api: { editing: boolean; startEdit: () => void; submit: () => void; cancel: () => void }) => React.ReactNode
+  children: (api: {
+    editing: boolean
+    startEdit: () => void
+    submit: () => void
+    cancel: () => void
+  }) => React.ReactNode
 }
 
 export const EditableControls = ({ children }: EditableControlsProps) => {

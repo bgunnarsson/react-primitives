@@ -25,9 +25,15 @@ export const Single: Story = {
     <>
       <style>{styles}</style>
       <ToggleGroup type="single" defaultValue="center" className="story-tg">
-        <ToggleGroupItem value="left" className="story-tg-item">Left</ToggleGroupItem>
-        <ToggleGroupItem value="center" className="story-tg-item">Center</ToggleGroupItem>
-        <ToggleGroupItem value="right" className="story-tg-item">Right</ToggleGroupItem>
+        <ToggleGroupItem value="left" className="story-tg-item">
+          Left
+        </ToggleGroupItem>
+        <ToggleGroupItem value="center" className="story-tg-item">
+          Center
+        </ToggleGroupItem>
+        <ToggleGroupItem value="right" className="story-tg-item">
+          Right
+        </ToggleGroupItem>
       </ToggleGroup>
     </>
   ),
@@ -38,9 +44,15 @@ export const Multiple: Story = {
     <>
       <style>{styles}</style>
       <ToggleGroup type="multiple" className="story-tg">
-        <ToggleGroupItem value="bold" className="story-tg-item">Bold</ToggleGroupItem>
-        <ToggleGroupItem value="italic" className="story-tg-item">Italic</ToggleGroupItem>
-        <ToggleGroupItem value="underline" className="story-tg-item">Underline</ToggleGroupItem>
+        <ToggleGroupItem value="bold" className="story-tg-item">
+          Bold
+        </ToggleGroupItem>
+        <ToggleGroupItem value="italic" className="story-tg-item">
+          Italic
+        </ToggleGroupItem>
+        <ToggleGroupItem value="underline" className="story-tg-item">
+          Underline
+        </ToggleGroupItem>
       </ToggleGroup>
     </>
   ),

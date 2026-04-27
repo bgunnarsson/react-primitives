@@ -60,8 +60,16 @@ const triggerStyle: React.CSSProperties = {
 
 const items = [
   { value: 'item-1', trigger: 'Is it accessible?', content: 'Yes. It adheres to the WAI-ARIA design pattern.' },
-  { value: 'item-2', trigger: 'Is it styled?', content: 'No. It is unstyled by default, styled via className in your project.' },
-  { value: 'item-3', trigger: 'Is it animated?', content: "Yes. It uses Radix's built-in height CSS variable for smooth open/close animation." },
+  {
+    value: 'item-2',
+    trigger: 'Is it styled?',
+    content: 'No. It is unstyled by default, styled via className in your project.',
+  },
+  {
+    value: 'item-3',
+    trigger: 'Is it animated?',
+    content: "Yes. It uses Radix's built-in height CSS variable for smooth open/close animation.",
+  },
 ]
 
 export const Default: Story = {
@@ -81,7 +89,9 @@ export const Default: Story = {
           >
             <AccordionTrigger style={triggerStyle}>
               {item.trigger}
-              <span style={{ fontSize: 12, color: '#6b7280', transition: 'transform 0.2s', display: 'inline-block' }}>▾</span>
+              <span style={{ fontSize: 12, color: '#6b7280', transition: 'transform 0.2s', display: 'inline-block' }}>
+                ▾
+              </span>
             </AccordionTrigger>
             <AccordionContent>
               <div style={{ padding: '0 16px 14px', fontSize: 14, color: '#6b7280', lineHeight: 1.6 }}>

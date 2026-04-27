@@ -31,9 +31,7 @@ export const FiveStar: Story = {
 }
 
 export const ReadOnly: Story = {
-  render: () => (
-    <Rating value={4} readOnly style={rowStyle} aria-label="Average rating" />
-  ),
+  render: () => <Rating value={4} readOnly style={rowStyle} aria-label="Average rating" />,
 }
 
 export const TenStar: Story = {

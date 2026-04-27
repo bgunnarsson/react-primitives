@@ -1,6 +1,18 @@
 import React from 'react'
 
-type StackElement = 'div' | 'section' | 'article' | 'aside' | 'main' | 'header' | 'footer' | 'nav' | 'ul' | 'ol' | 'li' | 'span'
+type StackElement =
+  | 'div'
+  | 'section'
+  | 'article'
+  | 'aside'
+  | 'main'
+  | 'header'
+  | 'footer'
+  | 'nav'
+  | 'ul'
+  | 'ol'
+  | 'li'
+  | 'span'
 
 type Direction = 'row' | 'row-reverse' | 'column' | 'column-reverse'
 type Align = 'start' | 'center' | 'end' | 'stretch' | 'baseline'
@@ -47,7 +59,7 @@ export const Stack = React.forwardRef<HTMLElement, StackProps>(
     }
     const Component = Tag as React.ElementType
     return <Component ref={ref} data-direction={direction} style={composed} {...props} />
-  },
+  }
 )
 Stack.displayName = 'Stack'
 

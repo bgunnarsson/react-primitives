@@ -134,14 +134,22 @@ const StoryFrame = ({ children }: { children: React.ReactNode }) => (
 const CheckIndicator = () => (
   <span className="sb-dd-indicator" aria-hidden>
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-      <path d="M2.5 6.5L5 9l4.5-5.5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M2.5 6.5L5 9l4.5-5.5"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   </span>
 )
 
 const DotIndicator = () => (
   <span className="sb-dd-indicator" aria-hidden>
-    <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="currentColor" /></svg>
+    <svg width="6" height="6" viewBox="0 0 6 6">
+      <circle cx="3" cy="3" r="3" fill="currentColor" />
+    </svg>
   </span>
 )
 
@@ -240,8 +248,12 @@ export const WithSubmenu: Story = {
       <DropdownMenu>
         <DropdownMenuTrigger className="sb-dd-trigger">File</DropdownMenuTrigger>
         <DropdownMenuContent className="sb-dd-content" sideOffset={6}>
-          <DropdownMenuItem className="sb-dd-item">New Tab <span className="sb-dd-shortcut">⌘T</span></DropdownMenuItem>
-          <DropdownMenuItem className="sb-dd-item">New Window <span className="sb-dd-shortcut">⌘N</span></DropdownMenuItem>
+          <DropdownMenuItem className="sb-dd-item">
+            New Tab <span className="sb-dd-shortcut">⌘T</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem className="sb-dd-item">
+            New Window <span className="sb-dd-shortcut">⌘N</span>
+          </DropdownMenuItem>
           <DropdownMenuSeparator className="sb-dd-separator" />
           <DropdownMenuSub>
             <DropdownMenuSubTrigger className="sb-dd-item sb-dd-sub-trigger">Share</DropdownMenuSubTrigger>
@@ -250,10 +262,14 @@ export const WithSubmenu: Story = {
               <DropdownMenuItem className="sb-dd-item">Copy link</DropdownMenuItem>
               <DropdownMenuItem className="sb-dd-item">Messages</DropdownMenuItem>
               <DropdownMenuSeparator className="sb-dd-separator" />
-              <DropdownMenuItem className="sb-dd-item" disabled>AirDrop (offline)</DropdownMenuItem>
+              <DropdownMenuItem className="sb-dd-item" disabled>
+                AirDrop (offline)
+              </DropdownMenuItem>
             </DropdownMenuSubContent>
           </DropdownMenuSub>
-          <DropdownMenuItem className="sb-dd-item">Print <span className="sb-dd-shortcut">⌘P</span></DropdownMenuItem>
+          <DropdownMenuItem className="sb-dd-item">
+            Print <span className="sb-dd-shortcut">⌘P</span>
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </StoryFrame>

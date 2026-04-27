@@ -10,19 +10,21 @@ export const AccordionItem = React.forwardRef<React.ElementRef<typeof RadixAccor
 AccordionItem.displayName = 'AccordionItem'
 
 export interface AccordionTriggerProps extends React.ComponentPropsWithoutRef<typeof RadixAccordion.Trigger> {}
-export const AccordionTrigger = React.forwardRef<React.ElementRef<typeof RadixAccordion.Trigger>, AccordionTriggerProps>(
-  ({ children, ...props }, ref) => (
-    <RadixAccordion.Header>
-      <RadixAccordion.Trigger ref={ref} {...props}>
-        {children}
-      </RadixAccordion.Trigger>
-    </RadixAccordion.Header>
-  )
-)
+export const AccordionTrigger = React.forwardRef<
+  React.ElementRef<typeof RadixAccordion.Trigger>,
+  AccordionTriggerProps
+>(({ children, ...props }, ref) => (
+  <RadixAccordion.Header>
+    <RadixAccordion.Trigger ref={ref} {...props}>
+      {children}
+    </RadixAccordion.Trigger>
+  </RadixAccordion.Header>
+))
 AccordionTrigger.displayName = 'AccordionTrigger'
 
 export interface AccordionContentProps extends React.ComponentPropsWithoutRef<typeof RadixAccordion.Content> {}
-export const AccordionContent = React.forwardRef<React.ElementRef<typeof RadixAccordion.Content>, AccordionContentProps>(
-  (props, ref) => <RadixAccordion.Content ref={ref} {...props} />
-)
+export const AccordionContent = React.forwardRef<
+  React.ElementRef<typeof RadixAccordion.Content>,
+  AccordionContentProps
+>((props, ref) => <RadixAccordion.Content ref={ref} {...props} />)
 AccordionContent.displayName = 'AccordionContent'

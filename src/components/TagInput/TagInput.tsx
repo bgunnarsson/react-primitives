@@ -32,7 +32,7 @@ export const TagInput = React.forwardRef<HTMLDivElement, TagInputProps>(
       style,
       ...rest
     },
-    ref,
+    ref
   ) => {
     const [uncontrolled, setUncontrolled] = React.useState<string[]>(defaultValue ?? [])
     const controlled = valueProp !== undefined
@@ -120,6 +120,6 @@ export const TagInput = React.forwardRef<HTMLDivElement, TagInputProps>(
         />
       </div>
     )
-  },
+  }
 )
 TagInput.displayName = 'TagInput'

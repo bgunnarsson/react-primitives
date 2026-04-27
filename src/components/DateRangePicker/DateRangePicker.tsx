@@ -33,8 +33,7 @@ const DEFAULT_END_MONTH = new Date(now.getFullYear() + 10, 11)
 
 const defaultFormat = (range: DateRange | undefined, placeholder: string) => {
   if (!range?.from) return placeholder
-  const fmt = (d: Date) =>
-    d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })
+  const fmt = (d: Date) => d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })
   if (!range.to) return fmt(range.from)
   return `${fmt(range.from)} – ${fmt(range.to)}`
 }
@@ -62,9 +61,7 @@ export const DateRangePicker = ({
     setOpen(next)
   }
 
-  const label = formatRange
-    ? formatRange(value)
-    : defaultFormat(value, placeholder)
+  const label = formatRange ? formatRange(value) : defaultFormat(value, placeholder)
 
   return (
     <Popover open={open} onOpenChange={handleOpenChange}>

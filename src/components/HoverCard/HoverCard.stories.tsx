@@ -21,7 +21,17 @@ export const Default: Story = {
       <HoverCardTrigger style={{ textDecoration: 'underline', cursor: 'pointer', fontSize: 14 }}>
         Hover over me
       </HoverCardTrigger>
-      <HoverCardContent style={{ background: 'white', border: '1px solid #e5e7eb', borderRadius: 8, padding: 16, boxShadow: '0 4px 16px rgba(0,0,0,0.1)', fontSize: 14, minWidth: 220 }}>
+      <HoverCardContent
+        style={{
+          background: 'white',
+          border: '1px solid #e5e7eb',
+          borderRadius: 8,
+          padding: 16,
+          boxShadow: '0 4px 16px rgba(0,0,0,0.1)',
+          fontSize: 14,
+          minWidth: 220,
+        }}
+      >
         <p style={{ margin: 0 }}>Preview content appears here on hover.</p>
       </HoverCardContent>
     </HoverCard>

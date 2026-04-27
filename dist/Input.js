@@ -1,6 +1,2 @@
-import {
-  Input
-} from "./chunk-UR2FIMS2.js";
-export {
-  Input
-};
+import { Input } from './chunk-UR2FIMS2.js'
+export { Input }

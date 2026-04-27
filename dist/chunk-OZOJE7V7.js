@@ -10,8 +10,8 @@ import {
   CommandLoading,
   CommandSeparator,
   defaultFilter,
-  useCommandState
-} from "cmdk";
+  useCommandState,
+} from 'cmdk'
 
 export {
   Command,
@@ -24,5 +24,5 @@ export {
   CommandLoading,
   CommandSeparator,
   defaultFilter,
-  useCommandState
-};
+  useCommandState,
+}

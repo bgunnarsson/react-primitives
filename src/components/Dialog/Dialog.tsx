@@ -10,12 +10,9 @@ export const DialogDescription = RadixDialog.Description
 
 export interface DialogOverlayProps extends React.ComponentPropsWithoutRef<typeof RadixDialog.Overlay> {}
 
-export const DialogOverlay = React.forwardRef<
-  React.ElementRef<typeof RadixDialog.Overlay>,
-  DialogOverlayProps
->(({ className, ...props }, ref) => (
-  <RadixDialog.Overlay ref={ref} className={className} {...props} />
-))
+export const DialogOverlay = React.forwardRef<React.ElementRef<typeof RadixDialog.Overlay>, DialogOverlayProps>(
+  ({ className, ...props }, ref) => <RadixDialog.Overlay ref={ref} className={className} {...props} />
+)
 DialogOverlay.displayName = 'DialogOverlay'
 
 export interface DialogContentProps extends React.ComponentPropsWithoutRef<typeof RadixDialog.Content> {
@@ -23,15 +20,14 @@ export interface DialogContentProps extends React.ComponentPropsWithoutRef<typeo
   overlayStyle?: React.CSSProperties
 }
 
-export const DialogContent = React.forwardRef<
-  React.ElementRef<typeof RadixDialog.Content>,
-  DialogContentProps
->(({ className, overlayClassName, overlayStyle, children, ...props }, ref) => (
-  <DialogPortal>
-    <DialogOverlay className={overlayClassName} style={overlayStyle} />
-    <RadixDialog.Content ref={ref} className={className} {...props}>
-      {children}
-    </RadixDialog.Content>
-  </DialogPortal>
-))
+export const DialogContent = React.forwardRef<React.ElementRef<typeof RadixDialog.Content>, DialogContentProps>(
+  ({ className, overlayClassName, overlayStyle, children, ...props }, ref) => (
+    <DialogPortal>
+      <DialogOverlay className={overlayClassName} style={overlayStyle} />
+      <RadixDialog.Content ref={ref} className={className} {...props}>
+        {children}
+      </RadixDialog.Content>
+    </DialogPortal>
+  )
+)
 DialogContent.displayName = 'DialogContent'

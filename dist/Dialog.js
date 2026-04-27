@@ -6,8 +6,8 @@ import {
   DialogOverlay,
   DialogPortal,
   DialogTitle,
-  DialogTrigger
-} from "./chunk-WPH7CYQC.js";
+  DialogTrigger,
+} from './chunk-WPH7CYQC.js'
 export {
   Dialog,
   DialogClose,
@@ -16,5 +16,5 @@ export {
   DialogOverlay,
   DialogPortal,
   DialogTitle,
-  DialogTrigger
-};
+  DialogTrigger,
+}
