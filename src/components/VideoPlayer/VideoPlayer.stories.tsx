@@ -17,12 +17,21 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
+const fillVideo = `.sb-video > video { width: 100%; display: block; }`
+
 export const Default: Story = {
   args: {
     src: 'https://www.w3schools.com/html/mov_bbb.mp4',
     controls: true,
-    style: { maxWidth: 480 },
   },
+  render: args => (
+    <>
+      <style>{fillVideo}</style>
+      <div className="sb-video" style={{ maxWidth: 480 }}>
+        <VideoPlayer {...args} />
+      </div>
+    </>
+  ),
 }
 
 export const WithPoster: Story = {
@@ -30,6 +39,13 @@ export const WithPoster: Story = {
     src: 'https://www.w3schools.com/html/mov_bbb.mp4',
     poster: 'https://placehold.co/480x270',
     controls: true,
-    style: { maxWidth: 480 },
   },
+  render: args => (
+    <>
+      <style>{fillVideo}</style>
+      <div className="sb-video" style={{ maxWidth: 480 }}>
+        <VideoPlayer {...args} />
+      </div>
+    </>
+  ),
 }

@@ -20,12 +20,21 @@ type Story = StoryObj<typeof meta>
 const SAMPLE_SRC =
   'https://upload.wikimedia.org/wikipedia/commons/4/4b/SOR-Bach-Air_Sample.ogg'
 
+const fillAudio = `.sb-audio > audio { width: 100%; display: block; }`
+
 export const Default: Story = {
   args: {
     src: SAMPLE_SRC,
     controls: true,
-    style: { width: 400 },
   },
+  render: args => (
+    <>
+      <style>{fillAudio}</style>
+      <div className="sb-audio" style={{ width: 400 }}>
+        <AudioPlayer {...args} />
+      </div>
+    </>
+  ),
 }
 
 export const Looping: Story = {
@@ -33,14 +42,28 @@ export const Looping: Story = {
     src: SAMPLE_SRC,
     controls: true,
     loop: true,
-    style: { width: 400 },
   },
+  render: args => (
+    <>
+      <style>{fillAudio}</style>
+      <div className="sb-audio" style={{ width: 400 }}>
+        <AudioPlayer {...args} />
+      </div>
+    </>
+  ),
 }
 
 export const NoControls: Story = {
   args: {
     src: SAMPLE_SRC,
     controls: false,
-    style: { width: 400 },
   },
+  render: args => (
+    <>
+      <style>{fillAudio}</style>
+      <div className="sb-audio" style={{ width: 400 }}>
+        <AudioPlayer {...args} />
+      </div>
+    </>
+  ),
 }

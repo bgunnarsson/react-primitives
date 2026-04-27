@@ -22,7 +22,7 @@ export const getVimeoEmbedUrl = (urlOrId: string) => {
 const DEFAULT_ALLOW =
   'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
 
-export interface EmbedProps extends Omit<React.IframeHTMLAttributes<HTMLIFrameElement>, 'title'> {
+export interface EmbedProps extends Omit<React.IframeHTMLAttributes<HTMLIFrameElement>, 'title' | 'style'> {
   /** Embed URL. Use `getYouTubeEmbedUrl` / `getVimeoEmbedUrl` to convert raw share URLs. */
   src: string
   /** Required for accessibility — announced by screen readers. */

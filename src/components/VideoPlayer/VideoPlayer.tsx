@@ -1,6 +1,6 @@
 import React from 'react'
 
-export interface VideoPlayerProps extends React.VideoHTMLAttributes<HTMLVideoElement> {
+export interface VideoPlayerProps extends Omit<React.VideoHTMLAttributes<HTMLVideoElement>, 'style'> {
   src: string
   poster?: string
 }

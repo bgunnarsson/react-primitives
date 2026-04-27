@@ -1,6 +1,6 @@
 import React from 'react'
 
-export interface AudioPlayerProps extends React.AudioHTMLAttributes<HTMLAudioElement> {
+export interface AudioPlayerProps extends Omit<React.AudioHTMLAttributes<HTMLAudioElement>, 'style'> {
   src: string
 }
 
