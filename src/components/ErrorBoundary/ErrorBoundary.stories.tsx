@@ -15,7 +15,7 @@ const Bomb = ({ explode }: { explode: boolean }) => {
   if (explode) {
     throw new Error('Boom — descendant threw during render.')
   }
-  return <p style={{ color: 'green' }}>All good — no error.</p>
+  return <p>Wrapped content.</p>
 }
 
 export const StaticFallback: Story = {
@@ -77,10 +77,3 @@ export const ResetKeys: Story = {
   },
 }
 
-export const NoError: Story = {
-  render: () => (
-    <ErrorBoundary fallback={<p>Something went wrong.</p>}>
-      <Bomb explode={false} />
-    </ErrorBoundary>
-  ),
-}
