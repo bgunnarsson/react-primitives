@@ -78,7 +78,7 @@ pnpm build-storybook  # Build static Storybook
 
 ## Component Reference
 
-92 components across layout, form, navigation, overlay, media, and low-level utility categories.
+95 components across layout, form, navigation, overlay, media, and low-level utility categories.
 
 ### Layout & Content
 
@@ -107,8 +107,12 @@ pnpm build-storybook  # Build static Storybook
 
 | Component | Description |
 |---|---|
+| [AudioPlayer](src/components/AudioPlayer/README.md) | HTML5 audio wrapper |
 | [Badge](src/components/Badge/README.md) | Inline label for status, counts, or categories |
+| [Embed](src/components/Embed/README.md) | Iframe wrapper with safe defaults plus YouTube / Vimeo URL helpers |
 | [Icon](src/components/Icon/README.md) | SVG icon from sprite or external file |
+| [Image](src/components/Image/README.md) | DPR-aware responsive `<img>` (`1x`/`2x`/`3x` srcset) for image-resizing backends |
+| [CropImage](src/components/CropImage/README.md) | Responsive `<picture>` with separate mobile / desktop crops, each DPR-aware |
 | [Lightbox](src/components/Lightbox/README.md) | Full-screen image viewer with navigation |
 | [Mark](src/components/Mark/README.md) | Highlighted text — direct wrap or query-based search highlighting |
 | [Picture](src/components/Picture/README.md) | Responsive `<picture>` with multiple sources |
@@ -124,7 +128,6 @@ pnpm build-storybook  # Build static Storybook
 | [Calendar](src/components/Calendar/README.md) | Inline calendar for single, range, or multiple date selection |
 | [Checkbox](src/components/Checkbox/README.md) | Accessible checkbox with built-in indicator |
 | [CheckboxGroup](src/components/CheckboxGroup/README.md) | Controlled group of labelled checkboxes |
-| [ColorPicker](src/components/ColorPicker/README.md) | Hex, RGBA, and HSLA color pickers |
 | [Combobox](src/components/Combobox/README.md) | Searchable dropdown select |
 | [DatePicker](src/components/DatePicker/README.md) | Single date picker with calendar popover |
 | [DateRangePicker](src/components/DateRangePicker/README.md) | Two-date range picker with calendar popover |
@@ -197,7 +200,6 @@ pnpm build-storybook  # Build static Storybook
 |---|---|
 | [Alert](src/components/Alert/README.md) | Status message with title and description |
 | [Avatar](src/components/Avatar/README.md) | Profile image with text fallback |
-| [Banner](src/components/Banner/README.md) | Persistent dismissable site-wide notification |
 | [Status](src/components/Status/README.md) | Live state indicator (online/busy/away/etc.) with optional label |
 | [Timeline](src/components/Timeline/README.md) | Chronological event list (`<ol>`) with indicators, connectors, and time |
 
@@ -207,6 +209,7 @@ pnpm build-storybook  # Build static Storybook
 |---|---|
 | [CopyButton](src/components/CopyButton/README.md) | Button that copies text to the clipboard with copied-state feedback |
 | [DirectionProvider](src/components/DirectionProvider/README.md) | Declares writing direction (`ltr` / `rtl`) for all child Radix primitives |
+| [ErrorBoundary](src/components/ErrorBoundary/README.md) | Catches descendant render errors and renders a fallback (with `resetKeys` and render-prop fallback) |
 | [FocusScope](src/components/FocusScope/README.md) | Standalone focus trap with auto-focus and focus restoration |
 | [Portal](src/components/Portal/README.md) | Renders children into a different part of the DOM tree |
 | [Slot](src/components/Slot/README.md) | Composition primitive for implementing an `asChild` prop |

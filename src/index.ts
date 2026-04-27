@@ -603,3 +603,16 @@ export type { StatusProps, StatusIndicatorProps, StatusLabelProps } from './comp
 
 export { FocusScope } from './components/FocusScope'
 export type { FocusScopeProps } from './components/FocusScope'
+
+export { AudioPlayer } from './components/AudioPlayer'
+export type { AudioPlayerProps } from './components/AudioPlayer'
+
+export { Embed, getYouTubeEmbedUrl, getVimeoEmbedUrl } from './components/Embed'
+export type { EmbedProps } from './components/Embed'
+
+export { ErrorBoundary } from './components/ErrorBoundary'
+export type {
+  ErrorBoundaryProps,
+  ErrorBoundaryFallback,
+  ErrorBoundaryFallbackProps,
+} from './components/ErrorBoundary'
