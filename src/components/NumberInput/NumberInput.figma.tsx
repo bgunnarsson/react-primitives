@@ -1,12 +1,12 @@
 import { figma } from '@figma/code-connect'
-import { Input } from './Input'
+import { NumberInput } from './NumberInput'
 
-figma.connect(Input, 'FIGMA_COMPONENT_URL', {
+figma.connect(NumberInput, 'FIGMA_COMPONENT_URL', {
   props: {
     placeholder: figma.string('Placeholder'),
     disabled: figma.boolean('Disabled'),
   },
   example: ({ placeholder, disabled }) => (
-    <Input placeholder={placeholder} disabled={disabled} />
+    <NumberInput placeholder={placeholder} disabled={disabled} />
   ),
 })

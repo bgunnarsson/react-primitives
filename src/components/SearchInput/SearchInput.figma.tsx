@@ -1,12 +1,12 @@
 import { figma } from '@figma/code-connect'
-import { Input } from './Input'
+import { SearchInput } from './SearchInput'
 
-figma.connect(Input, 'FIGMA_COMPONENT_URL', {
+figma.connect(SearchInput, 'FIGMA_COMPONENT_URL', {
   props: {
     placeholder: figma.string('Placeholder'),
     disabled: figma.boolean('Disabled'),
   },
   example: ({ placeholder, disabled }) => (
-    <Input placeholder={placeholder} disabled={disabled} />
+    <SearchInput placeholder={placeholder} disabled={disabled} />
   ),
 })

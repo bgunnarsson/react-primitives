@@ -34,8 +34,14 @@ export type { TextareaProps } from './components/Textarea'
 export { Card, CardContent } from './components/Card'
 export type { CardProps, CardContentProps } from './components/Card'
 
-export { Alert, AlertTitle, AlertDescription } from './components/Alert'
-export type { AlertProps, AlertTitleProps, AlertDescriptionProps } from './components/Alert'
+export { Alert, AlertTitle, AlertDescription, AlertIcon, AlertActions } from './components/Alert'
+export type {
+  AlertProps,
+  AlertTitleProps,
+  AlertDescriptionProps,
+  AlertIconProps,
+  AlertActionsProps,
+} from './components/Alert'
 
 export { Skeleton } from './components/Skeleton'
 export type { SkeletonProps } from './components/Skeleton'
@@ -484,21 +490,6 @@ export type { TreeViewProps, TreeItemProps } from './components/TreeView'
 export { Rating } from './components/Rating'
 export type { RatingProps } from './components/Rating'
 
-export {
-  ColorPicker,
-  ColorPickerWithAlpha,
-  ColorPickerRgba,
-  ColorPickerHsla,
-  ColorPickerInput,
-} from './components/ColorPicker'
-export type {
-  ColorPickerProps,
-  ColorPickerWithAlphaProps,
-  ColorPickerRgbaProps,
-  ColorPickerHslaProps,
-  ColorPickerInputProps,
-} from './components/ColorPicker'
-
 export { TimePicker } from './components/TimePicker'
 export type { TimePickerProps, TimeValue } from './components/TimePicker'
 
@@ -558,23 +549,6 @@ export type { MarkProps } from './components/Mark'
 
 export { Status, StatusIndicator, StatusLabel } from './components/Status'
 export type { StatusProps, StatusIndicatorProps, StatusLabelProps } from './components/Status'
-
-export {
-  Banner,
-  BannerIcon,
-  BannerTitle,
-  BannerDescription,
-  BannerActions,
-  BannerClose,
-} from './components/Banner'
-export type {
-  BannerProps,
-  BannerIconProps,
-  BannerTitleProps,
-  BannerDescriptionProps,
-  BannerActionsProps,
-  BannerCloseProps,
-} from './components/Banner'
 
 export { FocusScope } from './components/FocusScope'
 export type { FocusScopeProps } from './components/FocusScope'
