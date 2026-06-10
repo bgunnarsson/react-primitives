@@ -1,4 +1,7 @@
 // src/components/Slot/Slot.tsx
-import { Slot, Slottable } from '@radix-ui/react-slot'
+import { Slot, Slottable } from "@radix-ui/react-slot";
 
-export { Slot, Slottable }
+export {
+  Slot,
+  Slottable
+};

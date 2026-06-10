@@ -1,6 +1,6 @@
-'use strict'
-Object.defineProperty(exports, '__esModule', { value: true })
+"use strict";Object.defineProperty(exports, "__esModule", {value: true});
 
-var _chunkYWOU7DRZcjs = require('./chunk-YWOU7DRZ.cjs')
+var _chunkCUXKB6PNcjs = require('./chunk-CUXKB6PN.cjs');
 
-exports.FocusScope = _chunkYWOU7DRZcjs.FocusScope
+
+exports.FocusScope = _chunkCUXKB6PNcjs.FocusScope;

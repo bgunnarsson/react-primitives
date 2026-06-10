@@ -1,7 +1,7 @@
-import * as react_jsx_runtime from 'react/jsx-runtime'
-import React__default from 'react'
+import React__default from 'react';
 
-interface FooterProps extends React__default.HTMLAttributes<HTMLElement> {}
-declare const Footer: (props: FooterProps) => react_jsx_runtime.JSX.Element
+interface FooterProps extends React__default.HTMLAttributes<HTMLElement> {
+}
+declare const Footer: React__default.ForwardRefExoticComponent<FooterProps & React__default.RefAttributes<HTMLElement>>;
 
-export { Footer, type FooterProps }
+export { Footer, type FooterProps };

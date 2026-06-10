@@ -1,11 +1,13 @@
-import * as react_jsx_runtime from 'react/jsx-runtime'
-import React__default from 'react'
+import React__default from 'react';
 
-interface NavProps extends React__default.HTMLAttributes<HTMLElement> {}
-declare const Nav: ({ className, ...props }: NavProps) => react_jsx_runtime.JSX.Element
-interface NavListProps extends React__default.HTMLAttributes<HTMLUListElement> {}
-declare const NavList: ({ className, ...props }: NavListProps) => react_jsx_runtime.JSX.Element
-interface NavItemProps extends React__default.HTMLAttributes<HTMLLIElement> {}
-declare const NavItem: ({ className, ...props }: NavItemProps) => react_jsx_runtime.JSX.Element
+interface NavProps extends React__default.HTMLAttributes<HTMLElement> {
+}
+declare const Nav: React__default.ForwardRefExoticComponent<NavProps & React__default.RefAttributes<HTMLElement>>;
+interface NavListProps extends React__default.HTMLAttributes<HTMLUListElement> {
+}
+declare const NavList: React__default.ForwardRefExoticComponent<NavListProps & React__default.RefAttributes<HTMLUListElement>>;
+interface NavItemProps extends React__default.HTMLAttributes<HTMLLIElement> {
+}
+declare const NavItem: React__default.ForwardRefExoticComponent<NavItemProps & React__default.RefAttributes<HTMLLIElement>>;
 
-export { Nav, NavItem, type NavItemProps, NavList, type NavListProps, type NavProps }
+export { Nav, NavItem, type NavItemProps, NavList, type NavListProps, type NavProps };

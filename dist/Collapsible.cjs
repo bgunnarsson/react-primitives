@@ -1,8 +1,10 @@
-'use strict'
-Object.defineProperty(exports, '__esModule', { value: true })
+"use strict";Object.defineProperty(exports, "__esModule", {value: true});
 
-var _chunkNLAWXLU2cjs = require('./chunk-NLAWXLU2.cjs')
 
-exports.Collapsible = _chunkNLAWXLU2cjs.Collapsible
-exports.CollapsibleContent = _chunkNLAWXLU2cjs.CollapsibleContent
-exports.CollapsibleTrigger = _chunkNLAWXLU2cjs.CollapsibleTrigger
+
+var _chunkLYUCLKKBcjs = require('./chunk-LYUCLKKB.cjs');
+
+
+
+
+exports.Collapsible = _chunkLYUCLKKBcjs.Collapsible; exports.CollapsibleContent = _chunkLYUCLKKBcjs.CollapsibleContent; exports.CollapsibleTrigger = _chunkLYUCLKKBcjs.CollapsibleTrigger;

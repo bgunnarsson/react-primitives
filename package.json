@@ -506,7 +506,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "tsup",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=8192\" tsup",
     "dev": "storybook dev -p 6006",
     "biome:lint": "biome check .",
     "biome:format": "biome format . --write",

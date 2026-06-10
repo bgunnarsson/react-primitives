@@ -1,7 +1,7 @@
-import * as react_jsx_runtime from 'react/jsx-runtime'
-import React__default from 'react'
+import React__default from 'react';
 
-interface BadgeProps extends React__default.HTMLAttributes<HTMLSpanElement> {}
-declare const Badge: (props: BadgeProps) => react_jsx_runtime.JSX.Element
+interface BadgeProps extends React__default.HTMLAttributes<HTMLSpanElement> {
+}
+declare const Badge: React__default.ForwardRefExoticComponent<BadgeProps & React__default.RefAttributes<HTMLSpanElement>>;
 
-export { Badge, type BadgeProps }
+export { Badge, type BadgeProps };

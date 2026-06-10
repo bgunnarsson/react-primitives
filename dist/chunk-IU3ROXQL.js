@@ -1,4 +1,7 @@
 // src/components/Toast/Toast.tsx
-import { Toaster, toast } from 'sonner'
+import { Toaster, toast } from "sonner";
 
-export { Toaster, toast }
+export {
+  Toaster,
+  toast
+};

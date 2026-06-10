@@ -1,2 +1,6 @@
-import { Footer } from './chunk-FDSU6LJU.js'
-export { Footer }
+import {
+  Footer
+} from "./chunk-F4JK7YYW.js";
+export {
+  Footer
+};

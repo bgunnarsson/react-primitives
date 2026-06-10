@@ -1,6 +1,6 @@
-'use strict'
-Object.defineProperty(exports, '__esModule', { value: true })
+"use strict";Object.defineProperty(exports, "__esModule", {value: true});
 
-var _chunkC4ZQ67NWcjs = require('./chunk-C4ZQ67NW.cjs')
+var _chunkRWKSAAI2cjs = require('./chunk-RWKSAAI2.cjs');
 
-exports.Label = _chunkC4ZQ67NWcjs.Label
+
+exports.Label = _chunkRWKSAAI2cjs.Label;

@@ -1,9 +1,10 @@
-import * as react_jsx_runtime from 'react/jsx-runtime'
-import React__default from 'react'
+import React__default from 'react';
 
-interface GridProps extends React__default.HTMLAttributes<HTMLDivElement> {}
-declare const Grid: (props: GridProps) => react_jsx_runtime.JSX.Element
-interface GridItemProps extends React__default.HTMLAttributes<HTMLDivElement> {}
-declare const GridItem: (props: GridItemProps) => react_jsx_runtime.JSX.Element
+interface GridProps extends React__default.HTMLAttributes<HTMLDivElement> {
+}
+declare const Grid: React__default.ForwardRefExoticComponent<GridProps & React__default.RefAttributes<HTMLDivElement>>;
+interface GridItemProps extends React__default.HTMLAttributes<HTMLDivElement> {
+}
+declare const GridItem: React__default.ForwardRefExoticComponent<GridItemProps & React__default.RefAttributes<HTMLDivElement>>;
 
-export { Grid, GridItem, type GridItemProps, type GridProps }
+export { Grid, GridItem, type GridItemProps, type GridProps };

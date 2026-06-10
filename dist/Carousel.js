@@ -4,6 +4,13 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-  useCarousel,
-} from './chunk-ZRQCZMY7.js'
-export { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, useCarousel }
+  useCarousel
+} from "./chunk-FBZAR3WW.js";
+export {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  useCarousel
+};

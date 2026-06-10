@@ -1,6 +1,6 @@
-'use strict'
-Object.defineProperty(exports, '__esModule', { value: true })
+"use strict";Object.defineProperty(exports, "__esModule", {value: true});
 
-var _chunkKBKZ5SEScjs = require('./chunk-KBKZ5SES.cjs')
+var _chunkCJG2YFYZcjs = require('./chunk-CJG2YFYZ.cjs');
 
-exports.Mention = _chunkKBKZ5SEScjs.Mention
+
+exports.Mention = _chunkCJG2YFYZcjs.Mention;

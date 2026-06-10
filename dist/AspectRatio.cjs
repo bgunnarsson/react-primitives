@@ -1,6 +1,6 @@
-'use strict'
-Object.defineProperty(exports, '__esModule', { value: true })
+"use strict";Object.defineProperty(exports, "__esModule", {value: true});
 
-var _chunkTNDCDQJHcjs = require('./chunk-TNDCDQJH.cjs')
+var _chunkCD2WCCCRcjs = require('./chunk-CD2WCCCR.cjs');
 
-exports.AspectRatio = _chunkTNDCDQJHcjs.AspectRatio
+
+exports.AspectRatio = _chunkCD2WCCCRcjs.AspectRatio;

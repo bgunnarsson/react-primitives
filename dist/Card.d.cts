@@ -1,9 +1,10 @@
-import * as react_jsx_runtime from 'react/jsx-runtime'
-import React__default from 'react'
+import React__default from 'react';
 
-interface CardProps extends React__default.HTMLAttributes<HTMLDivElement> {}
-declare const Card: (props: CardProps) => react_jsx_runtime.JSX.Element
-interface CardContentProps extends React__default.HTMLAttributes<HTMLDivElement> {}
-declare const CardContent: (props: CardContentProps) => react_jsx_runtime.JSX.Element
+interface CardProps extends React__default.HTMLAttributes<HTMLDivElement> {
+}
+declare const Card: React__default.ForwardRefExoticComponent<CardProps & React__default.RefAttributes<HTMLDivElement>>;
+interface CardContentProps extends React__default.HTMLAttributes<HTMLDivElement> {
+}
+declare const CardContent: React__default.ForwardRefExoticComponent<CardContentProps & React__default.RefAttributes<HTMLDivElement>>;
 
-export { Card, CardContent, type CardContentProps, type CardProps }
+export { Card, CardContent, type CardContentProps, type CardProps };

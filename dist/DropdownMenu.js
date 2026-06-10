@@ -11,8 +11,8 @@ import {
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-} from './chunk-62VU7OOO.js'
+  DropdownMenuTrigger
+} from "./chunk-OTPG6D5F.js";
 export {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -26,5 +26,5 @@ export {
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-}
+  DropdownMenuTrigger
+};
