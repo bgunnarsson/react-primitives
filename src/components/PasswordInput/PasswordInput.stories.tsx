@@ -11,14 +11,24 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
+const styles = (
+  <style>{`
+    .password-input-story-input { border: 0; outline: 0; padding: 8px 12px; }
+    .password-input-story-toggle { border: 0; background: #f9fafb; padding: 0 12px; cursor: pointer; }
+  `}</style>
+)
+
 export const Default: Story = {
   render: () => (
-    <PasswordInput
-      placeholder="Enter password"
-      style={{ display: 'inline-flex', border: '1px solid #d1d5db', borderRadius: 6, overflow: 'hidden' }}
-      inputStyle={{ border: 'none', outline: 'none', padding: '8px 12px' }}
-      toggleStyle={{ border: 'none', background: '#f9fafb', padding: '0 12px', cursor: 'pointer' }}
-    />
+    <>
+      {styles}
+      <PasswordInput
+        placeholder="Enter password"
+        style={{ display: 'inline-flex', border: '1px solid #d1d5db', borderRadius: 6, overflow: 'hidden' }}
+        inputClassName="password-input-story-input"
+        toggleClassName="password-input-story-toggle"
+      />
+    </>
   ),
 }
 
@@ -26,26 +36,32 @@ export const Controlled: Story = {
   render: () => {
     const [visible, setVisible] = React.useState(false)
     return (
-      <PasswordInput
-        visible={visible}
-        onVisibilityChange={setVisible}
-        defaultValue="hunter2"
-        style={{ display: 'inline-flex', border: '1px solid #d1d5db', borderRadius: 6, overflow: 'hidden' }}
-        inputStyle={{ border: 'none', outline: 'none', padding: '8px 12px' }}
-        toggleStyle={{ border: 'none', background: '#f9fafb', padding: '0 12px', cursor: 'pointer' }}
-      />
+      <>
+        {styles}
+        <PasswordInput
+          visible={visible}
+          onVisibilityChange={setVisible}
+          defaultValue="hunter2"
+          style={{ display: 'inline-flex', border: '1px solid #d1d5db', borderRadius: 6, overflow: 'hidden' }}
+          inputClassName="password-input-story-input"
+          toggleClassName="password-input-story-toggle"
+        />
+      </>
     )
   },
 }
 
 export const CustomToggle: Story = {
   render: () => (
-    <PasswordInput
-      placeholder="Enter password"
-      toggleLabel={(v) => (v ? '🙈' : '👁')}
-      style={{ display: 'inline-flex', border: '1px solid #d1d5db', borderRadius: 6, overflow: 'hidden' }}
-      inputStyle={{ border: 'none', outline: 'none', padding: '8px 12px' }}
-      toggleStyle={{ border: 'none', background: '#f9fafb', padding: '0 12px', cursor: 'pointer' }}
-    />
+    <>
+      {styles}
+      <PasswordInput
+        placeholder="Enter password"
+        toggleLabel={(v) => (v ? '🙈' : '👁')}
+        style={{ display: 'inline-flex', border: '1px solid #d1d5db', borderRadius: 6, overflow: 'hidden' }}
+        inputClassName="password-input-story-input"
+        toggleClassName="password-input-story-toggle"
+      />
+    </>
   ),
 }

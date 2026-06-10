@@ -7,9 +7,7 @@ export interface PasswordInputProps extends Omit<React.InputHTMLAttributes<HTMLI
   toggleLabel?: (visible: boolean) => React.ReactNode
   toggleAriaLabel?: (visible: boolean) => string
   inputClassName?: string
-  inputStyle?: React.CSSProperties
   toggleClassName?: string
-  toggleStyle?: React.CSSProperties
   className?: string
   style?: React.CSSProperties
 }
@@ -23,9 +21,7 @@ export const PasswordInput = React.forwardRef<HTMLInputElement, PasswordInputPro
       toggleLabel,
       toggleAriaLabel,
       inputClassName,
-      inputStyle,
       toggleClassName,
-      toggleStyle,
       className,
       style,
       disabled,
@@ -54,7 +50,6 @@ export const PasswordInput = React.forwardRef<HTMLInputElement, PasswordInputPro
           type={visible ? 'text' : 'password'}
           disabled={disabled}
           className={inputClassName}
-          style={inputStyle}
           {...inputProps}
         />
         <button
@@ -64,9 +59,7 @@ export const PasswordInput = React.forwardRef<HTMLInputElement, PasswordInputPro
           data-state={visible ? 'visible' : 'hidden'}
           onClick={() => setVisible(!visible)}
           disabled={disabled}
-          tabIndex={-1}
           className={toggleClassName}
-          style={toggleStyle}
         >
           {label}
         </button>

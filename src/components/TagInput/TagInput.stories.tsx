@@ -22,26 +22,21 @@ const rootStyle: React.CSSProperties = {
   background: 'white',
   minWidth: 320,
 }
-const inputStyle: React.CSSProperties = {
-  flex: 1,
-  minWidth: 120,
-  border: 'none',
-  outline: 'none',
-  fontSize: 14,
-  padding: 4,
-}
+
+const styles = <style>{`.tag-input-story-input { flex: 1; min-width: 120px; border: 0; outline: 0; font-size: 14px; padding: 4px; }`}</style>
 
 export const Default: Story = {
   render: () => {
     const [tags, setTags] = useState<string[]>(['react', 'typescript'])
     return (
       <div>
+        {styles}
         <TagInput
           value={tags}
           onValueChange={setTags}
           placeholder="Add tags (Enter or comma)"
           style={rootStyle}
-          inputStyle={inputStyle}
+          inputClassName="tag-input-story-input"
           renderTag={(tag, _i, remove) => (
             <span
               style={{
@@ -86,13 +81,14 @@ export const MaxTags: Story = {
     const [tags, setTags] = useState<string[]>([])
     return (
       <div>
+        {styles}
         <TagInput
           value={tags}
           onValueChange={setTags}
           maxTags={3}
           placeholder="Up to 3 tags"
           style={rootStyle}
-          inputStyle={inputStyle}
+          inputClassName="tag-input-story-input"
         />
         <p style={{ marginTop: 8, fontSize: 12, color: '#6b7280' }}>{tags.length}/3</p>
       </div>

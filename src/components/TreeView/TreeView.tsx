@@ -69,11 +69,10 @@ export interface TreeItemProps extends Omit<React.LiHTMLAttributes<HTMLLIElement
   label: React.ReactNode
   disabled?: boolean
   labelClassName?: string
-  labelStyle?: React.CSSProperties
 }
 
 export const TreeItem = React.forwardRef<HTMLLIElement, TreeItemProps>(
-  ({ id, label, disabled, children, labelClassName, labelStyle, className, style, ...props }, ref) => {
+  ({ id, label, disabled, children, labelClassName, className, style, ...props }, ref) => {
     const ctx = useTreeContext()
     const hasChildren = React.Children.count(children) > 0
     const isExpanded = ctx.expanded.has(id)
@@ -115,7 +114,6 @@ export const TreeItem = React.forwardRef<HTMLLIElement, TreeItemProps>(
           role="button"
           tabIndex={disabled ? -1 : 0}
           className={labelClassName}
-          style={labelStyle}
           data-selected={isSelected ? '' : undefined}
           data-expanded={isExpanded ? '' : undefined}
           data-has-children={hasChildren ? '' : undefined}

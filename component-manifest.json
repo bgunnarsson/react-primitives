@@ -1,0 +1,839 @@
+{
+  "components": [
+    {
+      "name": "Button",
+      "category": "Form",
+      "section": "Buttons",
+      "kind": "atom",
+      "variantAxes": {
+        "variant": ["primary", "secondary", "outline", "ghost", "destructive"],
+        "size": ["sm", "md", "lg"],
+        "state": ["default", "hover", "focus", "disabled"]
+      },
+      "render": {
+        "layout": "horizontal",
+        "padding": { "sm": [8, 12], "md": [10, 16], "lg": [14, 20] },
+        "gap": 8,
+        "radius": "Radius/6",
+        "borderWidth": "Border/1",
+        "align": "center",
+        "fill": {
+          "primary":     { "default": "Primary/Blue",   "hover": "Primary/Blue Hover", "focus": "Primary/Blue",   "disabled": "Disabled/Default" },
+          "secondary":   { "default": "Background/Default", "hover": "Disabled/Default", "focus": "Background/Default", "disabled": "Disabled/Default" },
+          "outline":     { "default": "TRANSPARENT",     "hover": "Disabled/Default",   "focus": "TRANSPARENT",     "disabled": "TRANSPARENT" },
+          "ghost":       { "default": "TRANSPARENT",     "hover": "Disabled/Default",   "focus": "TRANSPARENT",     "disabled": "TRANSPARENT" },
+          "destructive": { "default": "Error/Default",   "hover": "Error/Default",      "focus": "Error/Default",   "disabled": "Disabled/Default" }
+        },
+        "stroke": {
+          "secondary": { "default": "Border/Default",  "hover": "Border/Default",  "focus": "Border/Default",  "disabled": "Disabled/Border" },
+          "outline":   { "default": "Outline/Default", "hover": "Outline/Default", "focus": "Outline/Default", "disabled": "Disabled/Border" }
+        },
+        "opacity": { "disabled": 0.6 },
+        "children": [
+          {
+            "type": "shape",
+            "name": "Leading Icon",
+            "shape": "ellipse",
+            "width": 14,
+            "height": 14,
+            "fill": {
+              "primary":     "Text/White",
+              "secondary":   "Text/Headline",
+              "outline":     "Outline/Default",
+              "ghost":       "Outline/Default",
+              "destructive": "Text/White"
+            },
+            "visibleProp": "Show Leading Icon",
+            "visibleDefault": false
+          },
+          {
+            "type": "text",
+            "name": "Label",
+            "text": "Button",
+            "textStyle": "Button",
+            "color": {
+              "primary":     "Text/White",
+              "secondary":   "Text/Headline",
+              "outline":     "Outline/Default",
+              "ghost":       "Outline/Default",
+              "destructive": "Text/White"
+            },
+            "textProp": "Label"
+          },
+          {
+            "type": "shape",
+            "name": "Trailing Icon",
+            "shape": "ellipse",
+            "width": 14,
+            "height": 14,
+            "fill": {
+              "primary":     "Text/White",
+              "secondary":   "Text/Headline",
+              "outline":     "Outline/Default",
+              "ghost":       "Outline/Default",
+              "destructive": "Text/White"
+            },
+            "visibleProp": "Show Trailing Icon",
+            "visibleDefault": false
+          }
+        ]
+      },
+      "codeConnectProps": {
+        "Label":    { "type": "string",  "mapsTo": "children", "default": "Button" },
+        "Disabled": { "type": "boolean", "mapsTo": "disabled", "default": false }
+      }
+    },
+    {
+      "name": "Input",
+      "category": "Form",
+      "section": "Inputs",
+      "kind": "atom",
+      "variantAxes": {
+        "size": ["sm", "md", "lg"],
+        "state": ["default", "focus", "disabled", "error"]
+      },
+      "render": {
+        "layout": "horizontal",
+        "width": 320,
+        "padding": { "sm": [8, 12], "md": [10, 14], "lg": [12, 16] },
+        "gap": 8,
+        "radius": "Radius/6",
+        "borderWidth": "Border/1",
+        "align": "left",
+        "fill": "Background/Default",
+        "stroke": {
+          "default":  "Border/Default",
+          "focus":    "Outline/Default",
+          "disabled": "Disabled/Border",
+          "error":    "Error/Border"
+        },
+        "opacity": { "disabled": 0.7 },
+        "children": [
+          {
+            "type": "shape",
+            "name": "Leading Icon",
+            "shape": "ellipse",
+            "width": 14,
+            "height": 14,
+            "fill": "Text/Light",
+            "visibleProp": "Show Leading Icon",
+            "visibleDefault": false
+          },
+          {
+            "type": "text",
+            "name": "Placeholder",
+            "text": "Placeholder",
+            "textStyle": "Body 4",
+            "color": {
+              "default":  "Text/Light",
+              "focus":    "Text/Headline",
+              "disabled": "Disabled/Text",
+              "error":    "Text/Headline"
+            },
+            "fillH": true,
+            "textProp": "Placeholder"
+          },
+          {
+            "type": "shape",
+            "name": "Clear",
+            "shape": "ellipse",
+            "width": 12,
+            "height": 12,
+            "fill": "Text/Light",
+            "visibleProp": "Show Clear Button",
+            "visibleDefault": false
+          }
+        ]
+      },
+      "codeConnectProps": {
+        "Placeholder": { "type": "string",  "mapsTo": "placeholder", "default": "Placeholder" },
+        "Disabled":    { "type": "boolean", "mapsTo": "disabled",    "default": false }
+      }
+    },
+    {
+      "name": "Badge",
+      "category": "Display",
+      "section": "Badges",
+      "kind": "atom",
+      "variantAxes": {
+        "tone": ["default", "info", "success", "warning", "error"]
+      },
+      "render": {
+        "layout": "horizontal",
+        "padding": [4, 10],
+        "gap": 6,
+        "radius": "Radius/Round",
+        "borderWidth": "Border/1",
+        "align": "center",
+        "fill": {
+          "default": "Disabled/Default",
+          "info":    "Info/Background",
+          "success": "Success/Background",
+          "warning": "Warning/Background",
+          "error":   "Error/Background"
+        },
+        "stroke": {
+          "default": "Border/Default",
+          "info":    "Info/Border",
+          "success": "Success/Border",
+          "warning": "Warning/Border",
+          "error":   "Error/Border"
+        },
+        "children": [
+          {
+            "type": "shape",
+            "name": "Dot",
+            "shape": "ellipse",
+            "width": 6,
+            "height": 6,
+            "fill": {
+              "default": "Text/Body",
+              "info":    "Info/Default",
+              "success": "Success/Default",
+              "warning": "Warning/Default",
+              "error":   "Error/Default"
+            },
+            "visibleProp": "Show Dot",
+            "visibleDefault": false
+          },
+          {
+            "type": "text",
+            "name": "Label",
+            "text": "Badge",
+            "textStyle": "Body 5",
+            "color": {
+              "default": "Text/Body",
+              "info":    "Info/Text",
+              "success": "Success/Text",
+              "warning": "Warning/Text",
+              "error":   "Error/Text"
+            },
+            "textProp": "Label"
+          }
+        ]
+      },
+      "codeConnectProps": {
+        "Label": { "type": "string", "mapsTo": "children", "default": "Badge" }
+      }
+    },
+    {
+      "name": "Switch",
+      "category": "Form",
+      "section": "Toggles",
+      "kind": "atom",
+      "variantAxes": {
+        "state": ["off", "on", "disabled"]
+      },
+      "render": {
+        "layout": "horizontal",
+        "width": 44,
+        "height": 24,
+        "padding": [3, 3],
+        "radius": "Radius/Round",
+        "borderWidth": "Border/0",
+        "align": {
+          "off":      "left",
+          "on":       "right",
+          "disabled": "left"
+        },
+        "fill": {
+          "off":      "Border/Default",
+          "on":       "Primary/Blue",
+          "disabled": "Disabled/Default"
+        },
+        "opacity": { "disabled": 0.6 },
+        "children": [
+          {
+            "type": "shape",
+            "name": "Thumb",
+            "shape": "ellipse",
+            "width": 18,
+            "height": 18,
+            "fill": "Background/Default"
+          }
+        ]
+      },
+      "codeConnectProps": {
+        "Disabled": { "type": "boolean", "mapsTo": "disabled", "default": false }
+      }
+    },
+    {
+      "name": "Checkbox",
+      "category": "Form",
+      "section": "Toggles",
+      "kind": "atom",
+      "variantAxes": {
+        "state": ["unchecked", "checked", "disabled"]
+      },
+      "render": {
+        "layout": "horizontal",
+        "width": 18,
+        "height": 18,
+        "padding": [0, 0],
+        "radius": "Radius/4",
+        "borderWidth": "Border/2",
+        "align": "center",
+        "fill": {
+          "unchecked": "Background/Default",
+          "checked":   "Primary/Blue",
+          "disabled":  "Disabled/Default"
+        },
+        "stroke": {
+          "unchecked": "Border/Default",
+          "checked":   "Primary/Blue",
+          "disabled":  "Disabled/Border"
+        },
+        "opacity": { "disabled": 0.6 },
+        "children": [
+          {
+            "type": "text",
+            "name": "Check",
+            "text": "✓",
+            "textStyle": "Body 4",
+            "color": {
+              "unchecked": "TRANSPARENT",
+              "checked":   "Text/White",
+              "disabled":  "TRANSPARENT"
+            },
+            "visibleWhen": { "state": "checked" }
+          }
+        ]
+      },
+      "codeConnectProps": {
+        "Disabled": { "type": "boolean", "mapsTo": "disabled", "default": false }
+      }
+    },
+    {
+      "name": "ArticleCard",
+      "category": "Layout & Content",
+      "section": "Cards",
+      "page": "Card",
+      "kind": "atom",
+      "render": {
+        "layout": "vertical",
+        "width": 320,
+        "padding": [0, 0],
+        "gap": 0,
+        "radius": "Radius/12",
+        "borderWidth": "Border/1",
+        "align": "left",
+        "fill": "Background/Default",
+        "stroke": "Border/Default",
+        "children": [
+          {
+            "type": "frame",
+            "name": "Image",
+            "layout": "horizontal",
+            "height": 160,
+            "fill": "Disabled/Default",
+            "fillH": true,
+            "children": []
+          },
+          {
+            "type": "frame",
+            "name": "Content",
+            "layout": "vertical",
+            "padding": [16, 20],
+            "gap": 8,
+            "fill": "TRANSPARENT",
+            "fillH": true,
+            "align": "left",
+            "children": [
+              {
+                "type": "text",
+                "name": "Eyebrow",
+                "text": "TECHNOLOGY",
+                "textStyle": "Body 5",
+                "color": "Text/Light",
+                "textProp": "Eyebrow"
+              },
+              {
+                "type": "text",
+                "name": "Title",
+                "text": "How to build great UI primitives",
+                "textStyle": "Headline 5",
+                "color": "Text/Headline",
+                "fillH": true,
+                "wrap": true,
+                "textProp": "Title"
+              },
+              {
+                "type": "text",
+                "name": "Description",
+                "text": "A short intro to the article content that gives the reader a sense of what to expect.",
+                "textStyle": "Body 4",
+                "color": "Text/Body",
+                "fillH": true,
+                "wrap": true,
+                "textProp": "Description"
+              },
+              {
+                "type": "text",
+                "name": "Date",
+                "text": "March 22, 2026",
+                "textStyle": "Body 5",
+                "color": "Text/Light",
+                "textProp": "Date"
+              }
+            ]
+          }
+        ]
+      },
+      "codeConnectProps": {
+        "Title": { "type": "string", "mapsTo": "children", "default": "How to build great UI primitives" }
+      }
+    },
+    {
+      "name": "UserCard",
+      "category": "Layout & Content",
+      "section": "Cards",
+      "page": "Card",
+      "kind": "atom",
+      "render": {
+        "layout": "vertical",
+        "width": 260,
+        "padding": [24, 24],
+        "gap": 12,
+        "radius": "Radius/12",
+        "borderWidth": "Border/1",
+        "align": "center",
+        "fill": "Background/Default",
+        "stroke": "Border/Default",
+        "children": [
+          {
+            "type": "frame",
+            "name": "Avatar",
+            "layout": "horizontal",
+            "width": 72,
+            "height": 72,
+            "padding": [0, 0],
+            "radius": "Radius/Round",
+            "align": "center",
+            "fill": "Primary/Blue",
+            "children": [
+              {
+                "type": "text",
+                "name": "Initials",
+                "text": "JD",
+                "textStyle": "Headline 4",
+                "color": "Text/White",
+                "textProp": "Initials"
+              }
+            ]
+          },
+          {
+            "type": "frame",
+            "name": "Content",
+            "layout": "vertical",
+            "gap": 4,
+            "align": "center",
+            "fill": "TRANSPARENT",
+            "children": [
+              {
+                "type": "text",
+                "name": "Name",
+                "text": "Jane Doe",
+                "textStyle": "Body 2",
+                "color": "Text/Headline",
+                "textAlign": "center",
+                "textProp": "Name"
+              },
+              {
+                "type": "text",
+                "name": "Role",
+                "text": "Senior Designer",
+                "textStyle": "Body 4",
+                "color": "Text/Body",
+                "textAlign": "center",
+                "textProp": "Role"
+              },
+              {
+                "type": "text",
+                "name": "Email",
+                "text": "jane@example.com",
+                "textStyle": "Body 5",
+                "color": "Text/Light",
+                "textAlign": "center",
+                "textProp": "Email"
+              }
+            ]
+          }
+        ]
+      },
+      "codeConnectProps": {
+        "Name": { "type": "string", "mapsTo": "children", "default": "Jane Doe" }
+      }
+    },
+    {
+      "name": "ProductCard",
+      "category": "Layout & Content",
+      "section": "Cards",
+      "page": "Card",
+      "kind": "atom",
+      "render": {
+        "layout": "vertical",
+        "width": 280,
+        "padding": [0, 0],
+        "gap": 0,
+        "radius": "Radius/12",
+        "borderWidth": "Border/1",
+        "align": "left",
+        "fill": "Background/Default",
+        "stroke": "Border/Default",
+        "children": [
+          {
+            "type": "frame",
+            "name": "Image",
+            "layout": "horizontal",
+            "height": 200,
+            "fill": "Disabled/Default",
+            "fillH": true,
+            "align": "center",
+            "children": [
+              {
+                "type": "text",
+                "name": "Placeholder",
+                "text": "Product image",
+                "textStyle": "Body 4",
+                "color": "Text/Light"
+              }
+            ]
+          },
+          {
+            "type": "frame",
+            "name": "Content",
+            "layout": "vertical",
+            "padding": [14, 16],
+            "gap": 6,
+            "fill": "TRANSPARENT",
+            "fillH": true,
+            "align": "left",
+            "children": [
+              {
+                "type": "text",
+                "name": "Name",
+                "text": "Running Shoes Pro",
+                "textStyle": "Body 2",
+                "color": "Text/Headline",
+                "textProp": "Name"
+              },
+              {
+                "type": "text",
+                "name": "Description",
+                "text": "Lightweight and durable",
+                "textStyle": "Body 4",
+                "color": "Text/Body",
+                "textProp": "Description"
+              },
+              {
+                "type": "frame",
+                "name": "Footer",
+                "layout": "horizontal",
+                "fill": "TRANSPARENT",
+                "fillH": true,
+                "align": "between",
+                "padding": [8, 0, 0, 0],
+                "children": [
+                  {
+                    "type": "text",
+                    "name": "Price",
+                    "text": "$129",
+                    "textStyle": "Headline 5",
+                    "color": "Text/Headline",
+                    "textProp": "Price"
+                  },
+                  {
+                    "type": "instance",
+                    "name": "AddToCart",
+                    "componentName": "Button",
+                    "variant": { "variant": "primary", "size": "sm", "state": "default" },
+                    "textOverrides": { "Label": "Add to cart" }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "codeConnectProps": {
+        "Name": { "type": "string", "mapsTo": "children", "default": "Running Shoes Pro" }
+      }
+    },
+    {
+      "name": "Alert",
+      "category": "Display",
+      "section": "Alerts",
+      "kind": "atom",
+      "variantAxes": {
+        "tone": ["info", "success", "warning", "error"]
+      },
+      "render": {
+        "layout": "horizontal",
+        "width": 360,
+        "padding": [14, 16],
+        "gap": 12,
+        "radius": "Radius/8",
+        "borderWidth": "Border/1",
+        "align": "left",
+        "fill": {
+          "info":    "Info/Background",
+          "success": "Success/Background",
+          "warning": "Warning/Background",
+          "error":   "Error/Background"
+        },
+        "stroke": {
+          "info":    "Info/Border",
+          "success": "Success/Border",
+          "warning": "Warning/Border",
+          "error":   "Error/Border"
+        },
+        "children": [
+          {
+            "type": "shape",
+            "name": "Icon",
+            "shape": "ellipse",
+            "width": 18,
+            "height": 18,
+            "fill": {
+              "info":    "Info/Default",
+              "success": "Success/Default",
+              "warning": "Warning/Default",
+              "error":   "Error/Default"
+            },
+            "alignSelf": "min",
+            "visibleProp": "Show Icon",
+            "visibleDefault": false
+          },
+          {
+            "type": "frame",
+            "name": "Body",
+            "layout": "vertical",
+            "fill": "TRANSPARENT",
+            "gap": 4,
+            "align": "left",
+            "fillH": true,
+            "grow": 1,
+            "children": [
+              {
+                "type": "text",
+                "name": "Title",
+                "text": "Heads up",
+                "textStyle": "Body 4",
+                "color": {
+                  "info":    "Info/Text",
+                  "success": "Success/Text",
+                  "warning": "Warning/Text",
+                  "error":   "Error/Text"
+                },
+                "fillH": true,
+                "textProp": "Title"
+              },
+              {
+                "type": "text",
+                "name": "Description",
+                "text": "Something needs attention.",
+                "textStyle": "Body 5",
+                "color": {
+                  "info":    "Info/Text",
+                  "success": "Success/Text",
+                  "warning": "Warning/Text",
+                  "error":   "Error/Text"
+                },
+                "fillH": true,
+                "wrap": true,
+                "textProp": "Description"
+              }
+            ]
+          },
+          {
+            "type": "shape",
+            "name": "Close",
+            "shape": "ellipse",
+            "width": 14,
+            "height": 14,
+            "fill": {
+              "info":    "Info/Default",
+              "success": "Success/Default",
+              "warning": "Warning/Default",
+              "error":   "Error/Default"
+            },
+            "alignSelf": "min",
+            "visibleProp": "Dismissable",
+            "visibleDefault": false
+          }
+        ]
+      },
+      "codeConnectProps": {
+        "Title":       { "type": "string", "mapsTo": "title", "default": "Heads up" },
+        "Description": { "type": "string", "mapsTo": "description", "default": "Something needs attention." }
+      }
+    },
+    {
+      "name": "Dialog",
+      "category": "Overlay & Popover",
+      "section": "Dialogs",
+      "kind": "atom",
+      "render": {
+        "layout": "vertical",
+        "width": 480,
+        "padding": [24, 24],
+        "gap": 12,
+        "radius": "Radius/12",
+        "borderWidth": "Border/0",
+        "align": "left",
+        "fill": "Background/Default",
+        "children": [
+          {
+            "type": "text",
+            "name": "Title",
+            "text": "Dialog title",
+            "textStyle": "Headline 4",
+            "color": "Text/Headline",
+            "fillH": true,
+            "textProp": "Title"
+          },
+          {
+            "type": "text",
+            "name": "Description",
+            "text": "Dialog description goes here.",
+            "textStyle": "Body 4",
+            "color": "Text/Body",
+            "fillH": true,
+            "wrap": true,
+            "textProp": "Description"
+          },
+          {
+            "type": "frame",
+            "name": "Close",
+            "layout": "horizontal",
+            "padding": [7, 14],
+            "radius": "Radius/6",
+            "borderWidth": "Border/1",
+            "align": "center",
+            "fill": "Background/Default",
+            "stroke": "Border/Default",
+            "alignSelf": "max",
+            "children": [
+              {
+                "type": "text",
+                "name": "Label",
+                "text": "Close",
+                "textStyle": "Body 5",
+                "color": "Text/Body",
+                "textProp": "Close label"
+              }
+            ]
+          }
+        ]
+      },
+      "codeConnectProps": {
+        "Title":       { "type": "string", "mapsTo": "title", "default": "Dialog title" },
+        "Description": { "type": "string", "mapsTo": "description", "default": "Dialog description goes here." }
+      }
+    },
+    {
+      "name": "Select",
+      "category": "Form",
+      "section": "Selectors",
+      "kind": "atom",
+      "variantAxes": {
+        "state": ["default", "focus", "disabled"]
+      },
+      "render": {
+        "layout": "horizontal",
+        "width": 220,
+        "padding": [8, 12],
+        "gap": 8,
+        "radius": "Radius/8",
+        "borderWidth": "Border/1",
+        "align": "left",
+        "fill": "Background/Default",
+        "stroke": {
+          "default":  "Border/Default",
+          "focus":    "Outline/Default",
+          "disabled": "Disabled/Border"
+        },
+        "opacity": { "disabled": 0.7 },
+        "children": [
+          {
+            "type": "text",
+            "name": "Placeholder",
+            "text": "Select an option",
+            "textStyle": "Body 4",
+            "color": "Text/Light",
+            "fillH": true,
+            "grow": 1,
+            "textProp": "Placeholder"
+          },
+          {
+            "type": "text",
+            "name": "Chevron",
+            "text": "▾",
+            "textStyle": "Body 4",
+            "color": "Text/Light",
+            "alignSelf": "center"
+          }
+        ]
+      },
+      "codeConnectProps": {
+        "Placeholder": { "type": "string",  "mapsTo": "placeholder", "default": "Select an option" },
+        "Disabled":    { "type": "boolean", "mapsTo": "disabled",    "default": false }
+      }
+    },
+    {
+      "name": "Tabs",
+      "category": "Navigation",
+      "section": "Tabs",
+      "kind": "atom",
+      "variantAxes": {
+        "state": ["inactive", "active", "disabled"]
+      },
+      "render": {
+        "layout": "horizontal",
+        "padding": [8, 16],
+        "gap": 8,
+        "borderWidth": "Border/0",
+        "align": "center",
+        "fill": "TRANSPARENT",
+        "stroke": "Outline/Default",
+        "borderTopWidth":    "0",
+        "borderRightWidth":  "0",
+        "borderLeftWidth":   "0",
+        "borderBottomWidth": {
+          "inactive": "0",
+          "active":   "Border/2",
+          "disabled": "0"
+        },
+        "opacity": { "disabled": 0.6 },
+        "children": [
+          {
+            "type": "text",
+            "name": "Label",
+            "text": "Tab",
+            "textStyle": "Button",
+            "color": {
+              "inactive": "Text/Light",
+              "active":   "Outline/Default",
+              "disabled": "Disabled/Text"
+            },
+            "textProp": "Label"
+          },
+          {
+            "type": "shape",
+            "name": "Count Badge",
+            "shape": "ellipse",
+            "width": 16,
+            "height": 16,
+            "fill": "Primary/Blue",
+            "alignSelf": "center",
+            "visibleProp": "Show Count",
+            "visibleDefault": false
+          }
+        ]
+      },
+      "codeConnectProps": {
+        "Label": { "type": "string", "mapsTo": "children", "default": "Tab" }
+      }
+    }
+  ]
+}

@@ -37,7 +37,6 @@ export const NumberInput = React.forwardRef<HTMLInputElement, NumberInputProps>(
           type="button"
           onClick={decrement}
           disabled={disabled || (min !== undefined && (value ?? 0) <= min)}
-          tabIndex={-1}
         >
           −
         </button>
@@ -56,7 +55,6 @@ export const NumberInput = React.forwardRef<HTMLInputElement, NumberInputProps>(
           type="button"
           onClick={increment}
           disabled={disabled || (max !== undefined && (value ?? 0) >= max)}
-          tabIndex={-1}
         >
           +
         </button>

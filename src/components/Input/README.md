@@ -1,6 +1,6 @@
 # Input
 
-An unstyled text input field that forwards refs and supports all native input attributes.
+An unstyled text input field that forwards refs, supports all native input attributes, and renders placeholder text as a stylable span.
 
 ## Import
 
@@ -13,12 +13,15 @@ import { Label } from '@bgunnarsson/react-primitives'
 
 ### `Input`
 
-Extends `React.InputHTMLAttributes<HTMLInputElement>`.
+Extends `React.InputHTMLAttributes<HTMLInputElement>`, except inline `style` is intentionally omitted.
 
 | Prop | Type | Default | Description |
 |---|---|---|---|
+| `className` | `string` | — | Class name for the wrapper element. |
+| `inputClassName` | `string` | — | Class name for the native input element. |
+| `placeholderClassName` | `string` | — | Class name for the placeholder span. |
 | `type` | `string` | `'text'` | Input type (`text`, `email`, `password`, `number`, `tel`, `url`, `search`, etc.). |
-| `placeholder` | `string` | — | Placeholder text. |
+| `placeholder` | `string` | — | Placeholder text rendered in a sibling span for CSS transitions. |
 | `disabled` | `boolean` | `false` | Disables the input. |
 | `required` | `boolean` | `false` | Marks the field as required. |
 | `value` | `string` | — | Controlled value. |
@@ -45,7 +48,9 @@ Extends `React.InputHTMLAttributes<HTMLInputElement>`.
     id="name"
     type="text"
     placeholder="Jane Doe"
-    className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+    className="relative block w-full focus-within:ring-1 focus-within:ring-blue-500"
+    inputClassName="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+    placeholderClassName="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400 transition-transform duration-150"
   />
 </div>
 
@@ -56,7 +61,9 @@ Extends `React.InputHTMLAttributes<HTMLInputElement>`.
     id="password"
     type="password"
     placeholder="••••••••"
-    className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+    className="relative block w-full focus-within:ring-1 focus-within:ring-blue-500"
+    inputClassName="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none"
+    placeholderClassName="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400 transition-transform duration-150"
   />
 </div>
 
@@ -67,7 +74,8 @@ Extends `React.InputHTMLAttributes<HTMLInputElement>`.
     id="email-error"
     type="email"
     defaultValue="not-an-email"
-    className="w-full rounded-md border border-red-400 px-3 py-2 text-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500"
+    className="relative block w-full focus-within:ring-1 focus-within:ring-red-500"
+    inputClassName="w-full rounded-md border border-red-400 px-3 py-2 text-sm focus:border-red-500 focus:outline-none"
   />
   <p className="text-xs text-red-600">Please enter a valid email address.</p>
 </div>
@@ -76,11 +84,12 @@ Extends `React.InputHTMLAttributes<HTMLInputElement>`.
 <Input
   disabled
   value="Read only value"
-  className="w-full rounded-md border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-500 cursor-not-allowed"
+  inputClassName="w-full rounded-md border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-500 cursor-not-allowed"
 />
 ```
 
 ## Notes
 
 - `Input` forwards its ref, making it compatible with `FormControl` (Radix Slot) and third-party form libraries like React Hook Form.
+- `placeholder` is rendered as a sibling `<span aria-hidden="true">` instead of a native placeholder so it can be animated with wrapper focus styles such as `:focus-within`.
 - Use alongside `FormField`, `FormLabel`, `FormControl`, and `FormMessage` for full form field wiring with automatic `id` and error state management.

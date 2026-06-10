@@ -18,9 +18,7 @@ export interface PhoneInputProps
   /** Custom national-number formatter (digits → display string). */
   formatNational?: (digits: string, country: PhoneCountry) => string
   selectClassName?: string
-  selectStyle?: React.CSSProperties
   inputClassName?: string
-  inputStyle?: React.CSSProperties
 }
 
 const onlyDigits = (s: string) => s.replace(/\D+/g, '')
@@ -43,9 +41,7 @@ export const PhoneInput = React.forwardRef<HTMLInputElement, PhoneInputProps>(
       countries = DEFAULT_COUNTRIES,
       formatNational,
       selectClassName,
-      selectStyle,
       inputClassName,
-      inputStyle,
       className,
       style,
       disabled,
@@ -116,7 +112,6 @@ export const PhoneInput = React.forwardRef<HTMLInputElement, PhoneInputProps>(
           onChange={handleCountry}
           disabled={disabled}
           className={selectClassName}
-          style={selectStyle}
         >
           {countries.map((c) => (
             <option key={c.code} value={c.code}>
@@ -134,7 +129,6 @@ export const PhoneInput = React.forwardRef<HTMLInputElement, PhoneInputProps>(
           disabled={disabled}
           placeholder={placeholder}
           className={inputClassName}
-          style={inputStyle}
           {...inputProps}
         />
       </div>

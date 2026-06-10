@@ -11,11 +11,8 @@ export interface SearchInputProps
   clearAriaLabel?: string
   hideClearWhenEmpty?: boolean
   inputClassName?: string
-  inputStyle?: React.CSSProperties
   iconClassName?: string
-  iconStyle?: React.CSSProperties
   clearClassName?: string
-  clearStyle?: React.CSSProperties
 }
 
 export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
@@ -30,11 +27,8 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
       clearAriaLabel = 'Clear search',
       hideClearWhenEmpty = true,
       inputClassName,
-      inputStyle,
       iconClassName,
-      iconStyle,
       clearClassName,
-      clearStyle,
       className,
       style,
       disabled,
@@ -66,7 +60,7 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
     return (
       <div data-disabled={disabled || undefined} className={className} style={style}>
         {icon ? (
-          <span aria-hidden="true" className={iconClassName} style={iconStyle}>
+          <span aria-hidden="true" className={iconClassName}>
             {icon}
           </span>
         ) : null}
@@ -77,7 +71,6 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
           onChange={(e) => setValue(e.target.value)}
           disabled={disabled}
           className={inputClassName}
-          style={inputStyle}
           {...inputProps}
         />
         {showClear ? (
@@ -86,9 +79,7 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
             aria-label={clearAriaLabel}
             onClick={handleClear}
             disabled={disabled || value.length === 0}
-            tabIndex={-1}
             className={clearClassName}
-            style={clearStyle}
           >
             {clearLabel}
           </button>

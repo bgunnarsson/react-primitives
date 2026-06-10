@@ -20,25 +20,28 @@ const wrapStyle: React.CSSProperties = {
   padding: '4px 8px',
   width: 280,
 }
-const inputStyle: React.CSSProperties = { border: 'none', outline: 'none', flex: 1, padding: 4 }
-const iconStyle: React.CSSProperties = { color: '#6b7280' }
-const clearStyle: React.CSSProperties = {
-  border: 'none',
-  background: 'transparent',
-  cursor: 'pointer',
-  color: '#6b7280',
-}
+
+const styles = (
+  <style>{`
+    .search-input-story-input { border: 0; outline: 0; flex: 1; padding: 4px; }
+    .search-input-story-icon { color: #6b7280; }
+    .search-input-story-clear { border: 0; background: transparent; cursor: pointer; color: #6b7280; }
+  `}</style>
+)
 
 export const Default: Story = {
   render: () => (
-    <SearchInput
-      placeholder="Search…"
-      icon="🔍"
-      style={wrapStyle}
-      inputStyle={inputStyle}
-      iconStyle={iconStyle}
-      clearStyle={clearStyle}
-    />
+    <>
+      {styles}
+      <SearchInput
+        placeholder="Search…"
+        icon="🔍"
+        style={wrapStyle}
+        inputClassName="search-input-story-input"
+        iconClassName="search-input-story-icon"
+        clearClassName="search-input-story-clear"
+      />
+    </>
   ),
 }
 
@@ -47,15 +50,16 @@ export const Controlled: Story = {
     const [value, setValue] = React.useState('hello')
     return (
       <div>
+        {styles}
         <SearchInput
           value={value}
           onValueChange={setValue}
           placeholder="Search…"
           icon="🔍"
           style={wrapStyle}
-          inputStyle={inputStyle}
-          iconStyle={iconStyle}
-          clearStyle={clearStyle}
+          inputClassName="search-input-story-input"
+          iconClassName="search-input-story-icon"
+          clearClassName="search-input-story-clear"
         />
         <p style={{ marginTop: 8, fontSize: 12, color: '#6b7280' }}>Value: {JSON.stringify(value)}</p>
       </div>

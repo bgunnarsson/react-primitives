@@ -19,9 +19,9 @@ import type { PhoneCountry } from '@bgunnarsson/react-primitives'
 | `defaultCountry` | `string` | `'US'` | ISO 3166-1 alpha-2 default. |
 | `countries` | `PhoneCountry[]` | `DEFAULT_COUNTRIES` | List shown in the country selector. |
 | `formatNational` | `(digits, country) => string` | — | Custom display formatter for the national portion. |
-| `selectClassName` / `selectStyle` | `string` / `CSSProperties` | — | Country `<select>` styling. |
-| `inputClassName` / `inputStyle` | `string` / `CSSProperties` | — | Phone `<input>` styling. |
-| `className` / `style` | `string` / `CSSProperties` | — | Wrapper styling. |
+| `selectClassName` | `string` | — | Country `<select>` class name. |
+| `inputClassName` | `string` | — | Phone `<input>` class name. |
+| `className` | `string` | — | Wrapper class name. |
 
 Other native input props (`disabled`, `placeholder`, `aria-*`, etc.) are forwarded to the underlying `<input>`.
 

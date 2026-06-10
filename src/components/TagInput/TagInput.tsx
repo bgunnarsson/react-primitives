@@ -10,7 +10,6 @@ export interface TagInputProps extends Omit<React.HTMLAttributes<HTMLDivElement>
   allowDuplicates?: boolean
   maxTags?: number
   inputClassName?: string
-  inputStyle?: React.CSSProperties
   renderTag?: (tag: string, index: number, remove: () => void) => React.ReactNode
 }
 
@@ -26,7 +25,6 @@ export const TagInput = React.forwardRef<HTMLDivElement, TagInputProps>(
       allowDuplicates = false,
       maxTags,
       inputClassName,
-      inputStyle,
       renderTag,
       className,
       style,
@@ -128,7 +126,6 @@ export const TagInput = React.forwardRef<HTMLDivElement, TagInputProps>(
           placeholder={tags.length === 0 ? placeholder : undefined}
           disabled={disabled}
           className={inputClassName}
-          style={inputStyle}
         />
       </div>
     )

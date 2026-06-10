@@ -510,6 +510,7 @@
     "dev": "storybook dev -p 6006",
     "biome:lint": "biome check .",
     "biome:format": "biome format . --write",
+    "check:components": "node scripts/check-component-drift.mjs",
     "build-storybook": "storybook build",
     "figma:publish": "figma connect publish",
     "figma:create": "figma connect create"

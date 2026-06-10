@@ -20,9 +20,9 @@ import { SearchInput } from '@bgunnarsson/react-primitives'
 | `clearLabel` | `ReactNode` | `'×'` | Clear button content. |
 | `clearAriaLabel` | `string` | `'Clear search'` | Clear button accessible name. |
 | `hideClearWhenEmpty` | `boolean` | `true` | Hide the clear button when the value is empty. |
-| `inputClassName` / `inputStyle` | — | — | Apply to the underlying `<input>`. |
-| `iconClassName` / `iconStyle` | — | — | Apply to the icon container. |
-| `clearClassName` / `clearStyle` | — | — | Apply to the clear button. |
+| `inputClassName` | `string` | — | Apply to the underlying `<input>`. |
+| `iconClassName` | `string` | — | Apply to the icon container. |
+| `clearClassName` | `string` | — | Apply to the clear button. |
 
 Plus all native `<input>` attributes except `type`, `value`, `defaultValue`, and `onChange`.
 

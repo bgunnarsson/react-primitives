@@ -18,9 +18,7 @@ import { PasswordInput } from '@bgunnarsson/react-primitives'
 | `toggleLabel` | `(visible: boolean) => ReactNode` | `'Show' / 'Hide'` | Toggle button content. |
 | `toggleAriaLabel` | `(visible: boolean) => string` | `'Show password' / 'Hide password'` | Toggle accessible name. |
 | `inputClassName` | `string` | — | Class on the underlying `<input>`. |
-| `inputStyle` | `CSSProperties` | — | Inline style on the underlying `<input>`. |
 | `toggleClassName` | `string` | — | Class on the toggle button. |
-| `toggleStyle` | `CSSProperties` | — | Inline style on the toggle button. |
 
 Plus all native `<input>` attributes except `type` (managed by the component).
 
@@ -35,5 +33,4 @@ Plus all native `<input>` attributes except `type` (managed by the component).
 
 ## Notes
 
-- The toggle is `tabIndex={-1}` so keyboard users can flow straight from the input to the next field. Override by setting `tabIndex` on the parent or using a custom layout.
-- `aria-pressed` reflects visibility for assistive tech.
+- The toggle is keyboard-focusable and `aria-pressed` reflects visibility for assistive tech.

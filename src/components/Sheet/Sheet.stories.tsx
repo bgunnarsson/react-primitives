@@ -12,7 +12,6 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-const overlayStyle: React.CSSProperties = { position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)' }
 const panelBase: React.CSSProperties = {
   position: 'fixed',
   background: 'white',
@@ -52,11 +51,12 @@ function StorySheet({ side }: { side: 'right' | 'left' | 'bottom' | 'top' }) {
   const [open, setOpen] = useState(false)
   return (
     <>
+      <style>{`.sheet-story-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); }`}</style>
       <button type="button" style={triggerStyle} onClick={() => setOpen(true)}>
         Open ({side})
       </button>
       <Sheet open={open} onOpenChange={setOpen}>
-        <SheetContent side={side} style={sides[side]} overlayStyle={overlayStyle}>
+        <SheetContent side={side} style={sides[side]} overlayClassName="sheet-story-overlay">
           <SheetTitle style={{ margin: 0, fontSize: 16, fontWeight: 600 }}>Sheet title</SheetTitle>
           <SheetDescription style={{ margin: 0, fontSize: 14, color: '#6b7280' }}>
             Sheet description goes here.

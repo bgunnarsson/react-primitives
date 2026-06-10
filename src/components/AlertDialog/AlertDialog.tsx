@@ -19,15 +19,14 @@ AlertDialogOverlay.displayName = 'AlertDialogOverlay'
 
 export interface AlertDialogContentProps extends React.ComponentPropsWithoutRef<typeof RadixAlertDialog.Content> {
   overlayClassName?: string
-  overlayStyle?: React.CSSProperties
 }
 
 export const AlertDialogContent = React.forwardRef<
   React.ElementRef<typeof RadixAlertDialog.Content>,
   AlertDialogContentProps
->(({ className, overlayClassName, overlayStyle, children, ...props }, ref) => (
+>(({ className, overlayClassName, children, ...props }, ref) => (
   <AlertDialogPortal>
-    <AlertDialogOverlay className={overlayClassName} style={overlayStyle} />
+    <AlertDialogOverlay className={overlayClassName} />
     <RadixAlertDialog.Content ref={ref} className={className} {...props}>
       {children}
     </RadixAlertDialog.Content>

@@ -20,7 +20,7 @@ import { TagInput } from '@bgunnarsson/react-primitives'
 | `maxTags` | `number` | — | Maximum tag count. |
 | `disabled` | `boolean` | `false` | Prevent interaction. |
 | `placeholder` | `string` | — | Placeholder shown when there are no tags. |
-| `inputClassName` / `inputStyle` | — | — | Styling for the inner `<input>`. |
+| `inputClassName` | `string` | — | Class name for the inner `<input>`. |
 | `renderTag` | `(tag, index, remove) => ReactNode` | — | Custom renderer for each tag. |
 
 ## Usage

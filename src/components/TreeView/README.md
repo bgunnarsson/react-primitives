@@ -42,7 +42,7 @@ const [selected, setSelected] = useState<string>()
 | `label` | `ReactNode` | Visible label. |
 | `children` | `ReactNode` | Nested `TreeItem`s. Presence makes the item expandable. |
 | `disabled` | `boolean` | Prevent interaction. |
-| `labelClassName` / `labelStyle` | — | Style the clickable label row (not the `<li>` itself). |
+| `labelClassName` | `string` | Style the clickable label row (not the `<li>` itself). |
 
 ## Keyboard
 

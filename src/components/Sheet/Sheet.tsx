@@ -20,13 +20,12 @@ export type SheetSide = 'top' | 'bottom' | 'left' | 'right'
 export interface SheetContentProps extends React.ComponentPropsWithoutRef<typeof RadixDialog.Content> {
   side?: SheetSide
   overlayClassName?: string
-  overlayStyle?: React.CSSProperties
 }
 
 export const SheetContent = React.forwardRef<React.ElementRef<typeof RadixDialog.Content>, SheetContentProps>(
-  ({ side = 'right', className, overlayClassName, overlayStyle, children, ...props }, ref) => (
+  ({ side = 'right', className, overlayClassName, children, ...props }, ref) => (
     <SheetPortal>
-      <SheetOverlay className={overlayClassName} style={overlayStyle} />
+      <SheetOverlay className={overlayClassName} />
       <RadixDialog.Content ref={ref} data-side={side} className={className} {...props}>
         {children}
       </RadixDialog.Content>
