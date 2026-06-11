@@ -21,7 +21,7 @@ Extends `React.InputHTMLAttributes<HTMLInputElement>`, except inline `style` is 
 | `inputClassName` | `string` | — | Class name for the native input element. |
 | `placeholderClassName` | `string` | — | Class name for the placeholder span. |
 | `type` | `string` | `'text'` | Input type (`text`, `email`, `password`, `number`, `tel`, `url`, `search`, etc.). |
-| `placeholder` | `string` | — | Placeholder text rendered in a sibling span for CSS transitions. |
+| `placeholder` | `string` | — | Placeholder text — set natively on the input (so `:placeholder-shown` value detection works) AND rendered in a sibling span for CSS transitions. Hide the native one with `placeholder:text-transparent` when styling the span. |
 | `disabled` | `boolean` | `false` | Disables the input. |
 | `required` | `boolean` | `false` | Marks the field as required. |
 | `value` | `string` | — | Controlled value. |

@@ -10,6 +10,7 @@ var Input = React.forwardRef(
         {
           ref,
           className: inputClassName,
+          placeholder,
           ...props,
           "aria-label": !hasAccessibleName && placeholder ? placeholder : props["aria-label"]
         }
